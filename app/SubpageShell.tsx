@@ -11,6 +11,7 @@ export default function SubpageShell({ kicker, title, intro, sections }: { kicke
         <nav aria-label="Navegação das páginas internas">
           <Link href="/sobre">Sobre</Link><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/aulas">Aulas</Link><Link href="/eventos">Eventos</Link><Link href="/contato">Contato</Link>
         </nav>
+        <details className="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav aria-label="Navegação mobile"><Link href="/sobre">A No Ritmo</Link><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/aulas">Aulas</Link><Link href="/eventos">Eventos</Link><Link href="/contato">Contato</Link></nav></details>
         <Link className="subpage-back" href="/">← Início</Link>
       </header>
       <section className="subpage-hero">
