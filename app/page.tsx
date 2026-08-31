@@ -30,6 +30,7 @@ export default function Home() {
           <a href="#modalidades">Modalidades</a>
           <a href="#horarios">Horários</a>
           <a href="#sobre">Sobre</a>
+          <a href="#metodologia">Metodologia</a>
           <a href="#equipe">Equipe</a>
           <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
@@ -111,6 +112,12 @@ export default function Home() {
           <article><strong>8+</strong><span>ritmos de salão</span></article>
           <article><strong>1</strong><span>comunidade que dança junto</span></article>
         </div>
+      </section>
+
+      <section className="methodology section" id="metodologia">
+        <div className="section-label"><span>07</span> Nossa forma de ensinar</div>
+        <div className="methodology-heading"><h2>Aprender é mais<br /><em>que repetir passos.</em></h2><p>Esta estrutura apresenta os pilares de trabalho da No Ritmo. Os textos definitivos devem ser validados pela equipe.</p></div>
+        <div className="methodology-grid"><article><strong>01</strong><h3>Movimento</h3><p>Consciência corporal, equilíbrio e clareza para construir cada gesto.</p></article><article><strong>02</strong><h3>Musicalidade</h3><p>Escuta, tempo e interpretação para dançar em relação com a música.</p></article><article><strong>03</strong><h3>Comunicação</h3><p>Atenção, condução e resposta como uma conversa respeitosa.</p></article><article><strong>04</strong><h3>Conexão</h3><p>Um ambiente de convivência que acolhe diferentes histórias.</p></article></div>
       </section>
 
       <section className="team section" id="equipe">
