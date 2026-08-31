@@ -16,6 +16,7 @@ export default function SubpageShell({ kicker, title, intro, sections }: { kicke
       <section className="subpage-hero">
         <p>{kicker}</p><h1>{title}</h1><div><span>No Ritmo • Apucarana</span><p>{intro}</p></div>
       </section>
+      <nav className="subpage-breadcrumb" aria-label="Navegação estrutural"><Link href="/">Início</Link><span aria-hidden="true">/</span><span>{title}</span></nav>
       <section className="subpage-sections">
         {sections.map((section) => <article key={section.number}><span>{section.number}</span><h2>{section.title}</h2><p>{section.text}</p></article>)}
       </section>
