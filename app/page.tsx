@@ -37,11 +37,11 @@ export default function Home() {
 
       <section className="hero" id="inicio">
         <div className="hero-content">
-          <h1><span>No Ritmo</span><small>Academia de Dança</small></h1>
-          <p className="hero-text">Dança de salão em Apucarana para quem quer começar, evoluir ou viver um momento especial. Turmas por nível, aulas particulares e coreografias personalizadas.</p>
+          <p className="hero-kicker">Dança, conexão e desenvolvimento.</p><h1><span>No Ritmo</span><small>Academia de Dança</small></h1>
+          <p className="hero-text">A dança vai além da execução de passos: é comunicação, percepção, convivência e desenvolvimento humano.</p>
           <div className="hero-actions">
-            <a className="button button-black" href="#modalidades">Consultar modalidades</a>
-            <a className="button button-red" href="#horarios">Consultar horários</a>
+            <a className="button button-black" href="#sobre">Conheça a No Ritmo</a>
+            <a className="button button-red" href="#metodologia">Nossa visão</a>
             <Link className="button button-ghost" href="/artigos">Consultar artigos</Link>
           </div>
         </div>

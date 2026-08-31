@@ -150,3 +150,4 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .modality-grid { gap:18px; }
 .modality-copy>a { display:block; width:max-content; margin:18px auto 0; color:#626875; font-size:15px; font-weight:600; border-bottom:1px solid currentColor; padding-bottom:5px; }
 .schedule-row:hover { background:transparent!important; transform:none!important; }
+.hero-kicker { margin:0 0 20px; text-transform:uppercase; letter-spacing:3px; font-size:11px; font-weight:600; color:#d9e2ff; }
