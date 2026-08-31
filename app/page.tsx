@@ -21,6 +21,7 @@ const schedule = [
 export default function Home() {
   return (
     <main>
+      <a className="skip-link" href="#modalidades">Pular para o conteúdo</a>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="No Ritmo — página inicial">
           <Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" priority unoptimized />
