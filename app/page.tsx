@@ -27,19 +27,7 @@ export default function Home() {
         <a className="brand" href="#inicio" aria-label="No Ritmo — página inicial">
           <Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" priority unoptimized />
         </a>
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          <a href="#inicio">Início</a>
-          <a href="#modalidades">Modalidades</a>
-          <a href="#horarios">Horários</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#metodologia">Metodologia</a>
-          <Link href="/conhecimento">Conhecimento</Link>
-          <Link href="/artigos">Artigos</Link>
-          <Link href="/eventos">Eventos</Link>
-          <a href="#equipe">Equipe</a>
-          <a href="#faq">Dúvidas</a>
-          <a href="#contato">Contato</a>
-        </nav>
+        <nav className="desktop-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><details className="nav-group"><summary>A No Ritmo</summary><div><a href="#sobre">Quem Somos</a><a href="/sobre">História</a><a href="#equipe">Professores</a><a href="#sobre">Filosofia</a><a href="#metodologia">Nossa Metodologia</a></div></details><details className="nav-group"><summary>Conhecimento</summary><div><Link href="/conhecimento/danca-de-salao">Dança de Salão</Link><Link href="/conhecimento">Corpo e Movimento</Link><Link href="/conhecimento/comunicacao">Comunicação</Link><Link href="/conhecimento">Percepção</Link><Link href="/conhecimento">Desenvolvimento Humano</Link><Link href="/conhecimento">Musicalidade</Link><Link href="/conhecimento">Ensino da Dança</Link><Link href="/conhecimento">Cultura da Dança</Link></div></details><details className="nav-group"><summary>Artigos</summary><div><Link href="/artigos">Todos os artigos</Link><Link href="/artigos">Destaques</Link><Link href="/artigos">Mais recentes</Link><Link href="/artigos">Categorias</Link></div></details><details className="nav-group"><summary>Aulas</summary><div><Link href="/modalidades">Modalidades</Link><Link href="/aulas">Como funcionam</Link><Link href="/aulas">Comece a dançar</Link></div></details><Link href="/eventos">Eventos</Link><a href="#contato">Contato</a></nav>
         <div className="header-actions">
           <a className="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da No Ritmo"><FaInstagram aria-hidden="true" /></a>
           <a className="social-link" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da No Ritmo"><FaFacebookF aria-hidden="true" /></a>
