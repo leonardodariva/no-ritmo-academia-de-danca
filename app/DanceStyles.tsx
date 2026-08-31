@@ -7,10 +7,10 @@ const modalities = [
 export default function DanceStyles() {
   return (
     <section className="modalities section" id="modalidades">
-      <div className="section-label"><span>02</span> Modalidades e formatos</div>
+      <div className="section-label"><span>02</span> Explore nosso conteúdo</div>
       <div className="modalities-heading">
-        <h2>Várias formas<br /><em>de começar.</em></h2>
-        <p>Escolha a experiência que combina com seu momento. Em todas elas, o ensino respeita seu ritmo e seus objetivos.</p>
+        <h2>Conhecimento para<br /><em>viver a dança.</em></h2>
+        <p>Explore caminhos sobre movimento, comunicação, percepção e desenvolvimento humano através da dança.</p>
       </div>
       <div className="modality-grid">
         {modalities.map((item) => (
