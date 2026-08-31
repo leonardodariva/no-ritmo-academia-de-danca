@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function manifest(): MetadataRoute.Manifest { return { name: "No Ritmo Academia de Dança", short_name: "No Ritmo", description: "Dança, conhecimento e experiências em Apucarana.", start_url: "/", display: "standalone", background_color: "#f6f7fb", theme_color: "#17479e", icons: [{ src: "/favicon.svg", sizes: "any", type: "image/svg+xml" }] }; }

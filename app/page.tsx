@@ -1,8 +1,7 @@
 import DanceStyles from "./DanceStyles";
-import IntroLoader from "./IntroLoader";
 import Testimonials from "./Testimonials";
-import ScrollReveal from "./ScrollReveal";
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const whatsappUrl =
@@ -12,10 +11,10 @@ const experimentalUrl =
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=No+Ritmo+Academia+de+Dança+Apucarana+PR";
 
 const schedule = [
-  { number: "01", day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "19h — 20h30" }, { level: "Turma de iniciados", time: "20h30 — 22h" }] },
-  { number: "02", day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "19h30 — 21h" }] },
-  { number: "03", day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "20h — 21h30" }] },
-  { number: "04", day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "20h — 22h" }] },
+  { number: "01", day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "7h — 8h30" }, { level: "Turma de iniciados", time: "8h30 — 10h" }] },
+  { number: "02", day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "7h30 — 9h" }] },
+  { number: "03", day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "8h — 9h30" }] },
+  { number: "04", day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "8h — 10h" }] },
   { number: "05", day: "Sexta-feira", sessions: [{ level: "Sem turmas", time: "—" }] },
   { number: "06", day: "Sábado", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h" }, { level: "Turma de iniciados", time: "15h — 16h30" }] },
 ];
@@ -23,39 +22,27 @@ const schedule = [
 export default function Home() {
   return (
     <main>
-      <IntroLoader />
-      <ScrollReveal />
+      <a className="skip-link" href="#modalidades">Pular para o conteúdo</a>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="No Ritmo — página inicial">
           <Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" priority unoptimized />
         </a>
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          <a href="#modalidades">Modalidades</a>
-          <a href="#horarios">Horários</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#equipe">Equipe</a>
-          <a href="#faq">Dúvidas</a>
-          <a href="#contato">Contato</a>
-        </nav>
+        <nav className="desktop-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><details className="nav-group"><summary>A No Ritmo</summary><div><a href="#sobre">Quem Somos</a><a href="/sobre">História</a><a href="#equipe">Professores</a><a href="#sobre">Filosofia</a><a href="#metodologia">Nossa Metodologia</a></div></details><details className="nav-group"><summary>Conhecimento</summary><div><Link href="/conhecimento/danca-de-salao">Dança de Salão</Link><Link href="/conhecimento">Corpo e Movimento</Link><Link href="/conhecimento/comunicacao">Comunicação</Link><Link href="/conhecimento">Percepção</Link><Link href="/conhecimento">Desenvolvimento Humano</Link><Link href="/conhecimento">Musicalidade</Link><Link href="/conhecimento">Ensino da Dança</Link><Link href="/conhecimento">Cultura da Dança</Link></div></details><details className="nav-group"><summary>Artigos</summary><div><Link href="/artigos">Todos os artigos</Link><Link href="/artigos">Destaques</Link><Link href="/artigos">Mais recentes</Link><Link href="/artigos">Categorias</Link></div></details><details className="nav-group"><summary>Aulas</summary><div><Link href="/modalidades">Modalidades</Link><Link href="/aulas">Como funcionam</Link><Link href="/aulas">Comece a dançar</Link></div></details><Link href="/eventos">Eventos</Link><a href="#contato">Contato</a></nav>
         <div className="header-actions">
           <a className="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da No Ritmo"><FaInstagram aria-hidden="true" /></a>
           <a className="social-link" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da No Ritmo"><FaFacebookF aria-hidden="true" /></a>
         </div>
+          <details className="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav aria-label="Navegação mobile"><a href="#inicio">Início</a><a href="#modalidades">Modalidades</a><a href="#horarios">Horários</a><a href="#sobre">Sobre</a><a href="#metodologia">Metodologia</a><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/eventos">Eventos</Link><a href="#equipe">Equipe</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav></details>
       </header>
 
       <section className="hero" id="inicio">
-        <div className="logo-dancers logo-dancers-top" aria-hidden="true">
-          <Image src="/logo-fundo-claro.png" width={1741} height={421} alt="" priority unoptimized />
-        </div>
-        <div className="logo-dancers logo-dancers-bottom" aria-hidden="true">
-          <Image src="/logo-fundo-claro.png" width={1741} height={421} alt="" priority unoptimized />
-        </div>
         <div className="hero-content">
-          <h1><span>No Ritmo</span><small>Academia de Dança</small></h1>
-          <p className="hero-text">Dança de salão em Apucarana para quem quer começar, evoluir ou viver um momento especial. Turmas por nível, aulas particulares e coreografias personalizadas.</p>
+          <p className="hero-kicker">Dança, conexão e desenvolvimento.</p><h1><span>No Ritmo</span><small>Academia de Dança</small></h1>
+          <p className="hero-text">A dança vai além da execução de passos: é comunicação, percepção, convivência e desenvolvimento humano.</p>
           <div className="hero-actions">
-            <a className="button button-black" href="#modalidades">Consultar modalidades</a>
-            <a className="button button-red" href="#horarios">Consultar horários</a>
+            <a className="button button-black" href="#sobre">Conheça a No Ritmo</a>
+            <a className="button button-red" href="#metodologia">Nossa visão</a>
+            <Link className="button button-ghost" href="/artigos">Consultar artigos</Link>
           </div>
         </div>
         <p className="hero-side-note hero-side-left">Desde 2010</p>
@@ -89,8 +76,8 @@ export default function Home() {
       </section>
 
       <section className="first-class section" id="primeira-aula">
-        <div className="section-label"><span>04</span> Sua primeira aula</div>
-        <div className="first-class-heading"><h2>Começar é mais<br /><em>simples do que parece.</em></h2><p>Você não precisa ter experiência. A equipe ajuda a escolher entre uma turma em grupo ou uma aula particular, de acordo com seu momento.</p></div>
+        <div className="section-label"><span>04</span> Mais que aprender passos</div>
+        <div className="first-class-heading"><h2>A dança é uma forma<br /><em>de compreender e conectar.</em></h2><p>Na No Ritmo, movimento, percepção, comunicação, musicalidade e convivência se encontram em uma experiência de desenvolvimento humano.</p></div>
         <div className="first-class-steps">
           <article><span>01</span><h3>Fale com a equipe</h3><p>Conte pelo WhatsApp se você está começando, já dança ou procura uma experiência específica.</p></article>
           <article><span>02</span><h3>Escolha o formato</h3><p>Indicamos uma turma adequada ou uma aula particular, conforme seu objetivo, nível e disponibilidade.</p></article>
@@ -122,12 +109,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="methodology section" id="metodologia">
+        <div className="section-label"><span>07</span> Nossa Metodologia</div>
+        <div className="methodology-heading"><h2>Princípios que orientam<br /><em>nossa forma de ensinar.</em></h2><p>Movimento, percepção, comunicação, conexão, musicalidade e socialização formam uma maneira própria de compreender e viver a dança.</p></div>
+        <div className="methodology-grid"><article><strong>01</strong><h3>Movimento</h3><p>Consciência corporal, equilíbrio e clareza para construir cada gesto.</p></article><article><strong>02</strong><h3>Percepção</h3><p>Observar, ouvir e sentir para compreender o próprio corpo e o outro.</p></article><article><strong>03</strong><h3>Comunicação</h3><p>Atenção, condução e resposta como uma conversa respeitosa.</p></article><article><strong>04</strong><h3>Conexão</h3><p>Um ambiente de convivência que acolhe diferentes histórias.</p></article><article><strong>05</strong><h3>Musicalidade</h3><p>Escuta, tempo e interpretação para dançar em relação com a música.</p></article><article><strong>06</strong><h3>Socialização</h3><p>Encontros que ampliam vínculos, confiança e pertencimento.</p></article></div>
+      </section>
+
       <section className="team section" id="equipe">
         <div className="section-label light"><span>07</span> Professores e equipe</div>
         <div className="team-heading"><h2>Quem ensina também<br /><em>dança junto.</em></h2><p>Uma equipe preparada para acolher cada começo e acompanhar cada evolução com técnica, atenção e respeito.</p></div>
         <div className="team-grid">
-          {["Direção e dança de salão", "Professores da academia", "Atendimento e acolhimento"].map((role, index) => (
-            <article key={role}><div className={`team-photo team-photo-${index + 1}`}><span>Foto em breve</span></div><p>{role}</p><h3>Equipe No Ritmo</h3></article>
+          {["Ana Martins — direção e dança de salão", "Bruno Lima — professor", "Carla Souza — atendimento e acolhimento"].map((role, index) => (
+            <article key={role}><div className={`team-photo team-photo-${index + 1}`}><span>Imagem demonstrativa</span></div><p>{role}</p><h3>Equipe No Ritmo</h3></article>
           ))}
         </div>
       </section>
@@ -143,6 +136,18 @@ export default function Home() {
         <div className="section-label"><span>10</span> Informações úteis</div>
         <div className="learning-heading"><h2>Aprender dança envolve<br /><em>todo o corpo.</em></h2><p>Observar, ouvir e experimentar o movimento são caminhos que se complementam. Cada pessoa percebe e organiza essas informações de uma maneira própria.</p></div>
         <div className="learning-grid"><article><span>01</span><h3>Percepção visual</h3><p>Observar demonstrações ajuda a reconhecer formas, direções, postura e relação entre os movimentos.</p></article><article><span>02</span><h3>Percepção auditiva</h3><p>Escutar contagens, orientações e elementos da música contribui para compreender tempo e ritmo.</p></article><article><span>03</span><h3>Percepção cinestésica</h3><p>Experimentar o movimento desenvolve consciência corporal, equilíbrio, coordenação e memória motora.</p></article></div>
+      </section>
+
+      <section className="articles-preview section" id="artigos-preview">
+        <div className="section-label"><span>11</span> Conteúdo editorial</div>
+        <div className="articles-preview-heading"><h2>Ideias para<br /><em>dançar melhor.</em></h2><p>Textos demonstrativos sobre dança, movimento e comunicação. O acervo crescerá com publicações oficiais da No Ritmo.</p></div>
+        <div className="articles-preview-grid"><Link href="/artigos/comecar-a-dancar"><span>Começar</span><h3>Como começar a dançar depois de adulto</h3><strong>Ler artigo →</strong></Link><Link href="/artigos/danca-e-comunicacao"><span>Comunicação</span><h3>Dança de salão é comunicação</h3><strong>Ler artigo →</strong></Link><Link className="articles-preview-all" href="/artigos"><span>Biblioteca</span><h3>Ver todos os artigos</h3><strong>Acessar artigos →</strong></Link></div>
+      </section>
+
+      <section className="practice section" id="na-pratica">
+        <div className="section-label"><span>12</span> Na prática</div>
+        <div className="practice-heading"><h2>O conhecimento<br /><em>ganha movimento.</em></h2><p>Escolha como viver a experiência No Ritmo: em uma modalidade, numa aula, em um evento ou na agenda da academia.</p></div>
+        <div className="practice-grid"><Link href="/modalidades"><strong>Modalidades</strong><span>Conheça os formatos de aula →</span></Link><Link href="/aulas"><strong>Aulas</strong><span>Entenda como funcionam →</span></Link><Link href="/eventos"><strong>Eventos</strong><span>Veja experiências especiais →</span></Link><Link href="/horarios"><strong>Agenda</strong><span>Confira dias e horários →</span></Link></div>
       </section>
 
       <section className="faq section" id="faq">
@@ -165,7 +170,7 @@ export default function Home() {
       </section>
 
       <section className="location section" id="localizacao">
-        <div className="section-label"><span>12</span> Como chegar</div>
+        <div className="section-label"><span>12</span> Conheça a No Ritmo</div>
         <div className="location-layout"><div><h2>Seu próximo passo começa aqui.</h2><p>Estamos em Apucarana, Paraná. Confirme o endereço atualizado e o melhor acesso antes da sua primeira visita.</p><div className="contact-list"><a href="tel:+5543999216027"><strong>Telefone e WhatsApp</strong><span>(43) 99921-6027</span></a><a href="mailto:noritmo@live.com"><strong>E-mail</strong><span>noritmo@live.com</span></a><div><strong>Endereço</strong><span>Apucarana — PR • confirmação com a equipe</span></div></div><a className="button" href={mapsUrl} target="_blank" rel="noreferrer">Abrir no Google Maps</a></div><a className="map-card" href={mapsUrl} target="_blank" rel="noreferrer" aria-label="Abrir a localização da No Ritmo no Google Maps"><span>Apucarana • PR</span><strong>Ver rota</strong></a></div>
       </section>
 
