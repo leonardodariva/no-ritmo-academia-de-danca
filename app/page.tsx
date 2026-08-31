@@ -76,8 +76,8 @@ export default function Home() {
       </section>
 
       <section className="first-class section" id="primeira-aula">
-        <div className="section-label"><span>04</span> Sua primeira aula</div>
-        <div className="first-class-heading"><h2>Começar é mais<br /><em>simples do que parece.</em></h2><p>Você não precisa ter experiência. A equipe ajuda a escolher entre uma turma em grupo ou uma aula particular, de acordo com seu momento.</p></div>
+        <div className="section-label"><span>04</span> Mais que aprender passos</div>
+        <div className="first-class-heading"><h2>A dança é uma forma<br /><em>de compreender e conectar.</em></h2><p>Na No Ritmo, movimento, percepção, comunicação, musicalidade e convivência se encontram em uma experiência de desenvolvimento humano.</p></div>
         <div className="first-class-steps">
           <article><span>01</span><h3>Fale com a equipe</h3><p>Conte pelo WhatsApp se você está começando, já dança ou procura uma experiência específica.</p></article>
           <article><span>02</span><h3>Escolha o formato</h3><p>Indicamos uma turma adequada ou uma aula particular, conforme seu objetivo, nível e disponibilidade.</p></article>
@@ -110,8 +110,8 @@ export default function Home() {
       </section>
 
       <section className="methodology section" id="metodologia">
-        <div className="section-label"><span>07</span> Nossa forma de ensinar</div>
-        <div className="methodology-heading"><h2>Aprender é mais<br /><em>que repetir passos.</em></h2><p>Esta estrutura apresenta os pilares de trabalho da No Ritmo. Os textos definitivos devem ser validados pela equipe.</p></div>
+        <div className="section-label"><span>07</span> Nossa Metodologia</div>
+        <div className="methodology-heading"><h2>Princípios que orientam<br /><em>nossa forma de ensinar.</em></h2><p>Movimento, percepção, comunicação, conexão, musicalidade e socialização formam uma maneira própria de compreender e viver a dança.</p></div>
         <div className="methodology-grid"><article><strong>01</strong><h3>Movimento</h3><p>Consciência corporal, equilíbrio e clareza para construir cada gesto.</p></article><article><strong>02</strong><h3>Musicalidade</h3><p>Escuta, tempo e interpretação para dançar em relação com a música.</p></article><article><strong>03</strong><h3>Comunicação</h3><p>Atenção, condução e resposta como uma conversa respeitosa.</p></article><article><strong>04</strong><h3>Conexão</h3><p>Um ambiente de convivência que acolhe diferentes histórias.</p></article></div>
       </section>
 
