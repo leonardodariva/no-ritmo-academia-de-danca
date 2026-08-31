@@ -42,6 +42,7 @@ export default function Home() {
           <div className="hero-actions">
             <a className="button button-black" href="#modalidades">Consultar modalidades</a>
             <a className="button button-red" href="#horarios">Consultar horários</a>
+            <Link className="button button-ghost" href="/artigos">Consultar artigos</Link>
           </div>
         </div>
         <p className="hero-side-note hero-side-left">Desde 2010</p>
