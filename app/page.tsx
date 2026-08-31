@@ -144,6 +144,12 @@ export default function Home() {
         <div className="articles-preview-grid"><Link href="/artigos/comecar-a-dancar"><span>Começar</span><h3>Como começar a dançar depois de adulto</h3><strong>Ler artigo →</strong></Link><Link href="/artigos/danca-e-comunicacao"><span>Comunicação</span><h3>Dança de salão é comunicação</h3><strong>Ler artigo →</strong></Link><Link className="articles-preview-all" href="/artigos"><span>Biblioteca</span><h3>Ver todos os artigos</h3><strong>Acessar artigos →</strong></Link></div>
       </section>
 
+      <section className="practice section" id="na-pratica">
+        <div className="section-label"><span>12</span> Na prática</div>
+        <div className="practice-heading"><h2>O conhecimento<br /><em>ganha movimento.</em></h2><p>Escolha como viver a experiência No Ritmo: em uma modalidade, numa aula, em um evento ou na agenda da academia.</p></div>
+        <div className="practice-grid"><Link href="/modalidades"><strong>Modalidades</strong><span>Conheça os formatos de aula →</span></Link><Link href="/aulas"><strong>Aulas</strong><span>Entenda como funcionam →</span></Link><Link href="/eventos"><strong>Eventos</strong><span>Veja experiências especiais →</span></Link><Link href="/horarios"><strong>Agenda</strong><span>Confira dias e horários →</span></Link></div>
+      </section>
+
       <section className="faq section" id="faq">
         <div className="section-label"><span>11</span> Perguntas frequentes</div>
         <div className="faq-layout"><div><h2>Antes do primeiro passo.</h2><p>Reunimos respostas rápidas para você chegar mais tranquilo à sua primeira experiência.</p></div><div className="faq-list">
