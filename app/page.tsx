@@ -112,7 +112,7 @@ export default function Home() {
       <section className="methodology section" id="metodologia">
         <div className="section-label"><span>07</span> Nossa Metodologia</div>
         <div className="methodology-heading"><h2>Princípios que orientam<br /><em>nossa forma de ensinar.</em></h2><p>Movimento, percepção, comunicação, conexão, musicalidade e socialização formam uma maneira própria de compreender e viver a dança.</p></div>
-        <div className="methodology-grid"><article><strong>01</strong><h3>Movimento</h3><p>Consciência corporal, equilíbrio e clareza para construir cada gesto.</p></article><article><strong>02</strong><h3>Musicalidade</h3><p>Escuta, tempo e interpretação para dançar em relação com a música.</p></article><article><strong>03</strong><h3>Comunicação</h3><p>Atenção, condução e resposta como uma conversa respeitosa.</p></article><article><strong>04</strong><h3>Conexão</h3><p>Um ambiente de convivência que acolhe diferentes histórias.</p></article></div>
+        <div className="methodology-grid"><article><strong>01</strong><h3>Movimento</h3><p>Consciência corporal, equilíbrio e clareza para construir cada gesto.</p></article><article><strong>02</strong><h3>Percepção</h3><p>Observar, ouvir e sentir para compreender o próprio corpo e o outro.</p></article><article><strong>03</strong><h3>Comunicação</h3><p>Atenção, condução e resposta como uma conversa respeitosa.</p></article><article><strong>04</strong><h3>Conexão</h3><p>Um ambiente de convivência que acolhe diferentes histórias.</p></article><article><strong>05</strong><h3>Musicalidade</h3><p>Escuta, tempo e interpretação para dançar em relação com a música.</p></article><article><strong>06</strong><h3>Socialização</h3><p>Encontros que ampliam vínculos, confiança e pertencimento.</p></article></div>
       </section>
 
       <section className="team section" id="equipe">
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       <section className="location section" id="localizacao">
-        <div className="section-label"><span>12</span> Como chegar</div>
+        <div className="section-label"><span>12</span> Conheça a No Ritmo</div>
         <div className="location-layout"><div><h2>Seu próximo passo começa aqui.</h2><p>Estamos em Apucarana, Paraná. Confirme o endereço atualizado e o melhor acesso antes da sua primeira visita.</p><div className="contact-list"><a href="tel:+5543999216027"><strong>Telefone e WhatsApp</strong><span>(43) 99921-6027</span></a><a href="mailto:noritmo@live.com"><strong>E-mail</strong><span>noritmo@live.com</span></a><div><strong>Endereço</strong><span>Apucarana — PR • confirmação com a equipe</span></div></div><a className="button" href={mapsUrl} target="_blank" rel="noreferrer">Abrir no Google Maps</a></div><a className="map-card" href={mapsUrl} target="_blank" rel="noreferrer" aria-label="Abrir a localização da No Ritmo no Google Maps"><span>Apucarana • PR</span><strong>Ver rota</strong></a></div>
       </section>
 
