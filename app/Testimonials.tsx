@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
-  { impact: "Um novo jeito de viver a música.", quote: "Este espaço receberá um depoimento real e autorizado sobre a experiência de aprender a dançar na No Ritmo.", name: "Nome do aluno" },
-  { impact: "Confiança construída passo a passo.", quote: "Aqui entra o relato de quem começou do zero, encontrou acolhimento e percebeu sua evolução ao longo das aulas.", name: "Nome do aluno" },
-  { impact: "Dança, encontros e boas histórias.", quote: "Este card será substituído por uma história verdadeira de alguém que faz parte da comunidade No Ritmo.", name: "Nome do aluno" },
+  { impact: "Um novo jeito de viver a música.", quote: "Comecei sem experiência e encontrei uma turma que respeitou meu tempo. Hoje dançar faz parte da minha semana.", name: "Marina Alves • conteúdo demonstrativo" },
+  { impact: "Confiança construída passo a passo.", quote: "As aulas particulares ajudaram a organizar meus objetivos e fizeram cada evolução parecer possível.", name: "Rafael e Camila • conteúdo demonstrativo" },
+  { impact: "Dança, encontros e boas histórias.", quote: "Mais do que aprender movimentos, encontrei pessoas e uma forma leve de me conectar com a música.", name: "Juliana Martins • conteúdo demonstrativo" },
 ];
 
 export default function Testimonials() {

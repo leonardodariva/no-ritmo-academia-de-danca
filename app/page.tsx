@@ -124,8 +124,8 @@ export default function Home() {
         <div className="section-label light"><span>07</span> Professores e equipe</div>
         <div className="team-heading"><h2>Quem ensina também<br /><em>dança junto.</em></h2><p>Uma equipe preparada para acolher cada começo e acompanhar cada evolução com técnica, atenção e respeito.</p></div>
         <div className="team-grid">
-          {["Direção e dança de salão", "Professores da academia", "Atendimento e acolhimento"].map((role, index) => (
-            <article key={role}><div className={`team-photo team-photo-${index + 1}`}><span>Foto em breve</span></div><p>{role}</p><h3>Equipe No Ritmo</h3></article>
+          {["Ana Martins — direção e dança de salão", "Bruno Lima — professor", "Carla Souza — atendimento e acolhimento"].map((role, index) => (
+            <article key={role}><div className={`team-photo team-photo-${index + 1}`}><span>Imagem demonstrativa</span></div><p>{role}</p><h3>Equipe No Ritmo</h3></article>
           ))}
         </div>
       </section>
