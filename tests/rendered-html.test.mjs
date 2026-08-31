@@ -35,12 +35,10 @@ test("renderiza a página inicial da No Ritmo", async () => {
   assert.match(html, /aria-label="Conversar com a No Ritmo pelo WhatsApp"/i);
 });
 
-test("mantém a tela de abertura acessível e sem título principal duplicado", async () => {
+test("entra diretamente na home sem tela de carregamento e sem título duplicado", async () => {
   const response = await render();
   const html = await response.text();
 
-  assert.match(html, /class="intro-loader"[^>]*role="status"/i);
-  assert.match(html, /aria-live="polite"/i);
-  assert.match(html, /Boas-vindas à/i);
+  assert.doesNotMatch(html, /class="intro-loader"/i);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
 });
