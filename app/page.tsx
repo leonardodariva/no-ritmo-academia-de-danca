@@ -1,6 +1,7 @@
 import DanceStyles from "./DanceStyles";
 import Testimonials from "./Testimonials";
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const whatsappUrl =
@@ -32,6 +33,9 @@ export default function Home() {
           <a href="#horarios">Horários</a>
           <a href="#sobre">Sobre</a>
           <a href="#metodologia">Metodologia</a>
+          <Link href="/conhecimento">Conhecimento</Link>
+          <Link href="/artigos">Artigos</Link>
+          <Link href="/eventos">Eventos</Link>
           <a href="#equipe">Equipe</a>
           <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
@@ -40,7 +44,7 @@ export default function Home() {
           <a className="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da No Ritmo"><FaInstagram aria-hidden="true" /></a>
           <a className="social-link" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da No Ritmo"><FaFacebookF aria-hidden="true" /></a>
         </div>
-        <details className="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav aria-label="Navegação mobile"><a href="#inicio">Início</a><a href="#modalidades">Modalidades</a><a href="#horarios">Horários</a><a href="#sobre">Sobre</a><a href="#metodologia">Metodologia</a><a href="#equipe">Equipe</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav></details>
+          <details className="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav aria-label="Navegação mobile"><a href="#inicio">Início</a><a href="#modalidades">Modalidades</a><a href="#horarios">Horários</a><a href="#sobre">Sobre</a><a href="#metodologia">Metodologia</a><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/eventos">Eventos</Link><a href="#equipe">Equipe</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav></details>
       </header>
 
       <section className="hero" id="inicio">
