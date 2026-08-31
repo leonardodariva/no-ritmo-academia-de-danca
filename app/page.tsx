@@ -149,6 +149,12 @@ export default function Home() {
         <div className="learning-grid"><article><span>01</span><h3>Percepção visual</h3><p>Observar demonstrações ajuda a reconhecer formas, direções, postura e relação entre os movimentos.</p></article><article><span>02</span><h3>Percepção auditiva</h3><p>Escutar contagens, orientações e elementos da música contribui para compreender tempo e ritmo.</p></article><article><span>03</span><h3>Percepção cinestésica</h3><p>Experimentar o movimento desenvolve consciência corporal, equilíbrio, coordenação e memória motora.</p></article></div>
       </section>
 
+      <section className="articles-preview section" id="artigos-preview">
+        <div className="section-label"><span>11</span> Conteúdo editorial</div>
+        <div className="articles-preview-heading"><h2>Ideias para<br /><em>dançar melhor.</em></h2><p>Textos demonstrativos sobre dança, movimento e comunicação. O acervo crescerá com publicações oficiais da No Ritmo.</p></div>
+        <div className="articles-preview-grid"><Link href="/artigos/comecar-a-dancar"><span>Começar</span><h3>Como começar a dançar depois de adulto</h3><strong>Ler artigo →</strong></Link><Link href="/artigos/danca-e-comunicacao"><span>Comunicação</span><h3>Dança de salão é comunicação</h3><strong>Ler artigo →</strong></Link><Link className="articles-preview-all" href="/artigos"><span>Biblioteca</span><h3>Ver todos os artigos</h3><strong>Acessar artigos →</strong></Link></div>
+      </section>
+
       <section className="faq section" id="faq">
         <div className="section-label"><span>11</span> Perguntas frequentes</div>
         <div className="faq-layout"><div><h2>Antes do primeiro passo.</h2><p>Reunimos respostas rápidas para você chegar mais tranquilo à sua primeira experiência.</p></div><div className="faq-list">
