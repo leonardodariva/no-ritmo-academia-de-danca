@@ -17,7 +17,6 @@ export default function DanceStyles() {
           <article className={`modality-card modality-card-${item.tone}`} key={item.name}>
             <div className="modality-photo"><span>Foto em breve</span></div>
             <div className="modality-copy">
-              <span>{item.number}</span>
               <p>{item.phrase}</p>
               <h3>{item.name}</h3>
               <p className="modality-detail">{item.detail}</p>
