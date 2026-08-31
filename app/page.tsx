@@ -10,10 +10,10 @@ const experimentalUrl =
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=No+Ritmo+Academia+de+Dança+Apucarana+PR";
 
 const schedule = [
-  { number: "01", day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "19h — 20h30" }, { level: "Turma de iniciados", time: "20h30 — 22h" }] },
-  { number: "02", day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "19h30 — 21h" }] },
-  { number: "03", day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "20h — 21h30" }] },
-  { number: "04", day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "20h — 22h" }] },
+  { number: "01", day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "7h — 8h30" }, { level: "Turma de iniciados", time: "8h30 — 10h" }] },
+  { number: "02", day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "7h30 — 9h" }] },
+  { number: "03", day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "8h — 9h30" }] },
+  { number: "04", day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "8h — 10h" }] },
   { number: "05", day: "Sexta-feira", sessions: [{ level: "Sem turmas", time: "—" }] },
   { number: "06", day: "Sábado", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h" }, { level: "Turma de iniciados", time: "15h — 16h30" }] },
 ];
