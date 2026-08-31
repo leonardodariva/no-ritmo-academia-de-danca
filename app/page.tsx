@@ -1,7 +1,5 @@
 import DanceStyles from "./DanceStyles";
-import IntroLoader from "./IntroLoader";
 import Testimonials from "./Testimonials";
-import ScrollReveal from "./ScrollReveal";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
@@ -23,13 +21,12 @@ const schedule = [
 export default function Home() {
   return (
     <main>
-      <IntroLoader />
-      <ScrollReveal />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="No Ritmo — página inicial">
           <Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" priority unoptimized />
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
           <a href="#modalidades">Modalidades</a>
           <a href="#horarios">Horários</a>
           <a href="#sobre">Sobre</a>
@@ -44,12 +41,6 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio">
-        <div className="logo-dancers logo-dancers-top" aria-hidden="true">
-          <Image src="/logo-fundo-claro.png" width={1741} height={421} alt="" priority unoptimized />
-        </div>
-        <div className="logo-dancers logo-dancers-bottom" aria-hidden="true">
-          <Image src="/logo-fundo-claro.png" width={1741} height={421} alt="" priority unoptimized />
-        </div>
         <div className="hero-content">
           <h1><span>No Ritmo</span><small>Academia de Dança</small></h1>
           <p className="hero-text">Dança de salão em Apucarana para quem quer começar, evoluir ou viver um momento especial. Turmas por nível, aulas particulares e coreografias personalizadas.</p>
