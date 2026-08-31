@@ -8,5 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body>{children}</body></html>;
+  const structuredData = { "@context": "https://schema.org", "@type": "DanceSchool", name: "No Ritmo Academia de Dança", description: "Academia de dança de salão em Apucarana, Paraná.", telephone: "+55 43 99921-6027", email: "noritmo@live.com", areaServed: "Apucarana, PR", sameAs: [] };
+  return <html lang="pt-BR"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }

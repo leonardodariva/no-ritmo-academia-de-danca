@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function sitemap(): MetadataRoute.Sitemap { const routes = ["/", "/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/coreografias", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/artigos"]; return routes.map((route) => ({ url: route, lastModified: new Date(), changeFrequency: route === "/artigos" ? "weekly" : "monthly", priority: route === "/" ? 1 : 0.7 })); }
