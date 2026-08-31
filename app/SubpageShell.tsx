@@ -9,7 +9,7 @@ export default function SubpageShell({ kicker, title, intro, sections }: { kicke
       <header className="subpage-header">
         <Link href="/" aria-label="Voltar para a página inicial"><Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" unoptimized /></Link>
         <nav aria-label="Navegação das páginas internas">
-          <Link href="/sobre">Sobre</Link><Link href="/aulas-particulares">Particulares</Link><Link href="/coreografias">Coreografias</Link><Link href="/horarios">Horários</Link><Link href="/contato">Contato</Link>
+          <Link href="/sobre">Sobre</Link><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/aulas">Aulas</Link><Link href="/eventos">Eventos</Link><Link href="/contato">Contato</Link>
         </nav>
         <Link className="subpage-back" href="/">← Início</Link>
       </header>
