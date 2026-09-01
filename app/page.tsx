@@ -76,6 +76,11 @@ export default function Home() {
       <div><p>A história completa, os marcos da academia e os perfis profissionais serão publicados com informações fornecidas e validadas pela equipe.</p><div><Link href="/sobre">Conheça a escola →</Link><Link href="/professores">Professores e equipe →</Link></div></div>
     </section>
 
+    <section className="home-team" aria-labelledby="home-team-title">
+      <div className="home-team-heading"><p>Quem faz a No Ritmo</p><h2 id="home-team-title">Pessoas que colocam a dança em movimento.</h2><span>Esta seção está preparada para receber os perfis reais da direção, dos professores e dos colaboradores.</span></div>
+      <div className="home-team-grid"><div className="home-team-feature"><small>Equipe No Ritmo</small><strong>Perfis em construção</strong><p>Nomes, fotografias, trajetórias e áreas de atuação serão publicados após validação com a equipe.</p><Link href="/professores">Conheça a equipe →</Link></div>{["Direção", "Professores", "Colaboradores"].map((role, index) => <div className={`home-team-placeholder home-team-placeholder-${index + 1}`} key={role}><span>0{index + 1}</span><strong>{role}</strong><small>Informações em atualização</small></div>)}</div>
+    </section>
+
     <section className="home-practical">
       <div className="v4-section-heading"><p>Informações práticas</p><h2>Planeje seu próximo passo.</h2><span>Os horários abaixo refletem a estrutura atual do site. Confirme vagas e alterações antes de visitar a academia.</span></div>
       <div className="home-practical-grid">
