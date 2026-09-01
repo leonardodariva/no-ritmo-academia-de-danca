@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siteContact } from "../content/site";
 
 type Section = { number: string; title: string; text: string };
 
@@ -26,7 +27,7 @@ export default function SubpageShell({ kicker, title, intro, sections }: { kicke
       <section className="subpage-sections">
         {sections.map((section) => <article key={section.number}><span>{section.number}</span><h2>{section.title}</h2><p>{section.text}</p></article>)}
       </section>
-      <section className="subpage-cta"><p>Fale diretamente com a equipe</p><h2>Vamos encontrar a melhor experiência para você?</h2><a href="https://wa.me/5543999216027" target="_blank" rel="noreferrer">Conversar no WhatsApp</a></section>
+      <section className="subpage-cta"><p>Fale diretamente com a equipe</p><h2>Vamos encontrar a melhor experiência para você?</h2><a href={siteContact.whatsappHref} target="_blank" rel="noreferrer">Conversar no WhatsApp</a></section>
       <footer className="subpage-footer"><span>No Ritmo Academia de Dança</span><Link href="/">Voltar para o site</Link></footer>
     </main>
   );

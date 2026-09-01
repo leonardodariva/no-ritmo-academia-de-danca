@@ -2,22 +2,12 @@ import DanceStyles from "./DanceStyles";
 import Testimonials from "./Testimonials";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { frequentlyAskedQuestions } from "../content/faq";
+import { siteContact, weeklySchedule } from "../content/site";
+import { danceModalities } from "../content/classes";
 
-const whatsappUrl =
-  "https://wa.me/5543999216027?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20No%20Ritmo%20e%20quero%20conhecer%20as%20aulas.";
-const experimentalUrl =
-  "https://wa.me/5543999216027?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental.";
-const mapsUrl = "https://www.google.com/maps/search/?api=1&query=No+Ritmo+Academia+de+Dança+Apucarana+PR";
-
-const schedule = [
-  { number: "01", day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "7h — 8h30" }, { level: "Turma de iniciados", time: "8h30 — 10h" }] },
-  { number: "02", day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "7h30 — 9h" }] },
-  { number: "03", day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "8h — 9h30" }] },
-  { number: "04", day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "8h — 10h" }] },
-  { number: "05", day: "Sexta-feira", sessions: [{ level: "Sem turmas", time: "—" }] },
-  { number: "06", day: "Sábado", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h" }, { level: "Turma de iniciados", time: "15h — 16h30" }] },
-];
+const modalityMarquee = danceModalities.map((item) => item.name.toUpperCase()).join(" ✦ ");
 
 export default function Home() {
   return (
@@ -28,10 +18,7 @@ export default function Home() {
           <Image className="brand-logo" src="/logo-fundo-claro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" priority unoptimized />
         </a>
         <nav className="desktop-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><details className="nav-group"><summary>A No Ritmo</summary><div><a href="#sobre">Quem Somos</a><a href="/sobre">História</a><a href="#equipe">Professores</a><a href="#sobre">Filosofia</a><a href="#metodologia">Nossa Metodologia</a></div></details><details className="nav-group"><summary>Conhecimento</summary><div><Link href="/conhecimento/danca-de-salao">Dança de Salão</Link><Link href="/conhecimento">Corpo e Movimento</Link><Link href="/conhecimento/comunicacao">Comunicação</Link><Link href="/conhecimento">Percepção</Link><Link href="/conhecimento">Desenvolvimento Humano</Link><Link href="/conhecimento">Musicalidade</Link><Link href="/conhecimento">Ensino da Dança</Link><Link href="/conhecimento">Cultura da Dança</Link></div></details><details className="nav-group"><summary>Artigos</summary><div><Link href="/artigos">Todos os artigos</Link><Link href="/artigos">Destaques</Link><Link href="/artigos">Mais recentes</Link><Link href="/artigos">Categorias</Link></div></details><details className="nav-group"><summary>Aulas</summary><div><Link href="/modalidades">Modalidades</Link><Link href="/aulas">Como funcionam</Link><Link href="/aulas">Comece a dançar</Link></div></details><Link href="/eventos">Eventos</Link><a href="#contato">Contato</a></nav>
-        <div className="header-actions">
-          <a className="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da No Ritmo"><FaInstagram aria-hidden="true" /></a>
-          <a className="social-link" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da No Ritmo"><FaFacebookF aria-hidden="true" /></a>
-        </div>
+        <a className="button button-small" href={siteContact.experimentalHref} target="_blank" rel="noreferrer">Agendar aula</a>
           <details className="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav aria-label="Navegação mobile"><a href="#inicio">Início</a><a href="#modalidades">Modalidades</a><a href="#horarios">Horários</a><a href="#sobre">Sobre</a><a href="#metodologia">Metodologia</a><Link href="/conhecimento">Conhecimento</Link><Link href="/artigos">Artigos</Link><Link href="/eventos">Eventos</Link><a href="#equipe">Equipe</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav></details>
       </header>
 
@@ -45,14 +32,14 @@ export default function Home() {
             <Link className="button button-ghost" href="/artigos">Consultar artigos</Link>
           </div>
         </div>
-        <p className="hero-side-note hero-side-left">Desde 2010</p>
+        <p className="hero-side-note hero-side-left">No seu ritmo</p>
         <p className="hero-side-note hero-side-right">Apucarana • PR</p>
       </section>
 
       <section className="marquee" aria-label="Modalidades em destaque">
         <div className="marquee-track">
-          <span>TANGO <i>✦</i> BOLERO <i>✦</i> ZOUK <i>✦</i> FORRÓ <i>✦</i> ARRASTA-PÉ <i>✦</i> VANERÃO <i>✦</i> ROCK <i>✦</i> SOLTINHO <i>✦</i> SALSA <i>✦</i> SALSA CUBANA <i>✦</i> SALSA LOS ANGELES <i>✦</i> CHAMAMÉ <i>✦</i> VALSA <i>✦</i></span>
-          <span aria-hidden="true">TANGO <i>✦</i> BOLERO <i>✦</i> ZOUK <i>✦</i> FORRÓ <i>✦</i> ARRASTA-PÉ <i>✦</i> VANERÃO <i>✦</i> ROCK <i>✦</i> SOLTINHO <i>✦</i> SALSA <i>✦</i> SALSA CUBANA <i>✦</i> SALSA LOS ANGELES <i>✦</i> CHAMAMÉ <i>✦</i> VALSA <i>✦</i></span>
+          <span>{modalityMarquee} <i>✦</i>&nbsp;</span>
+          <span aria-hidden="true">{modalityMarquee} <i>✦</i>&nbsp;</span>
         </div>
       </section>
 
@@ -64,11 +51,11 @@ export default function Home() {
           <div className="schedule-heading"><h2>Encontre o melhor<br />momento para dançar.</h2></div>
         </div>
         <div className="rhythm-list">
-          {schedule.map((item) => (
-            <article className="rhythm-row schedule-row" key={item.number}>
-              <span>{item.number}</span><h3>{item.day}</h3>
+          {weeklySchedule.map((item, index) => (
+            <article className="rhythm-row schedule-row" key={item.day}>
+              <span>{String(index + 1).padStart(2, "0")}</span><h3>{item.day}</h3>
               <div className="schedule-sessions">
-                {item.sessions.map((session) => <div className="schedule-session" key={`${item.day}-${session.time}`}><p>{session.level}</p><strong>{session.time}</strong></div>)}
+                {item.sessions.length > 0 ? item.sessions.map((session) => <div className="schedule-session" key={`${item.day}-${session.time}`}><p>{session.level}</p><strong>{session.time}</strong></div>) : <div className="schedule-session"><p>Sem turma regular</p><strong>—</strong></div>}
               </div>
             </article>
           ))}
@@ -83,7 +70,7 @@ export default function Home() {
           <article><span>02</span><h3>Escolha o formato</h3><p>Indicamos uma turma adequada ou uma aula particular, conforme seu objetivo, nível e disponibilidade.</p></article>
           <article><span>03</span><h3>Agende sua experimental</h3><p>A aula experimental acontece mediante aviso prévio para que possamos receber você com atenção.</p></article>
         </div>
-        <a className="button" href={experimentalUrl} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a>
+        <a className="button" href={siteContact.experimentalHref} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a>
       </section>
 
       <section className="private-lessons section" id="particulares">
@@ -96,15 +83,15 @@ export default function Home() {
         <div className="about-grid">
           <h2>Mais que passos.<br /><em>Encontros.</em></h2>
           <div className="about-copy">
-            <p className="lead">Desde 2010, a No Ritmo transforma música em movimento e alunos em uma comunidade apaixonada pela dança.</p>
+            <p className="lead">A No Ritmo transforma música em movimento e reúne pessoas em torno da dança.</p>
             <p>Somos uma academia de Apucarana dedicada ao ensino da dança. Acreditamos que todo mundo pode dançar — no seu tempo, com o seu jeito e por suas próprias razões.</p>
             <p>Da primeira aula ao salão, unimos técnica, consciência musical e um ambiente acolhedor para você ganhar confiança e se divertir.</p>
             <a className="section-more" href="/sobre">Conheça nossa história</a>
           </div>
         </div>
         <div className="values">
-          <article><strong>15+</strong><span>anos de história</span></article>
-          <article><strong>8+</strong><span>ritmos de salão</span></article>
+          <article><strong>8</strong><span>ritmos apresentados</span></article>
+          <article><strong>3</strong><span>formatos de experiência</span></article>
           <article><strong>1</strong><span>comunidade que dança junto</span></article>
         </div>
       </section>
@@ -153,37 +140,30 @@ export default function Home() {
       <section className="faq section" id="faq">
         <div className="section-label"><span>11</span> Perguntas frequentes</div>
         <div className="faq-layout"><div><h2>Antes do primeiro passo.</h2><p>Reunimos respostas rápidas para você chegar mais tranquilo à sua primeira experiência.</p></div><div className="faq-list">
-          <details><summary>Preciso saber dançar para começar?<span>+</span></summary><p>Não. As aulas são pensadas para receber iniciantes e acompanhar a evolução de cada pessoa.</p></details>
-          <details><summary>Como funciona a aula experimental?<span>+</span></summary><p>A aula experimental acontece mediante aviso prévio. Entre em contato pelo WhatsApp para verificar a turma adequada e agendar.</p></details>
-          <details><summary>Posso fazer aula sem ter um par?<span>+</span></summary><p>Converse com a equipe sobre a modalidade desejada. Orientaremos você de acordo com a dinâmica e a disponibilidade da turma.</p></details>
-          <details><summary>Vocês criam coreografias para eventos?<span>+</span></summary><p>Sim. Criamos coreografias personalizadas para casamentos, debutantes, formaturas e outras celebrações.</p></details>
-          <details><summary>Há aulas particulares?<span>+</span></summary><p>Sim. Elas podem ser individuais ou em casal, com conteúdo e ritmo personalizados para seus objetivos.</p></details>
-          <details><summary>Que roupa e calçado devo usar?<span>+</span></summary><p>Prefira roupas confortáveis e um calçado que permita movimentação segura. A equipe pode orientar opções conforme a aula.</p></details>
-          <details><summary>Como sei qual é o meu nível?<span>+</span></summary><p>Ao entrar em contato, conte sua experiência. A equipe indicará a turma mais adequada e poderá confirmar isso na aula experimental.</p></details>
-          <details><summary>Como funcionam as coreografias para eventos?<span>+</span></summary><p>O projeto é personalizado para debutantes, casamentos, aniversários de 15 anos e outras ocasiões. Música, objetivo e cronograma são alinhados com a equipe.</p></details>
+          {frequentlyAskedQuestions.map((item) => <details key={item.question}><summary>{item.question}<span>+</span></summary><p>{item.answer}</p></details>)}
         </div></div>
       </section>
 
       <section className="trial section" id="experimental">
         <div><p className="eyebrow"><span /> Seu primeiro encontro com a dança</p><h2>Aula experimental<br /><em>com hora marcada.</em></h2></div>
-        <div><p>Para receber você com atenção e indicar a melhor turma, a aula experimental precisa ser combinada previamente com a nossa equipe.</p><a className="button" href={experimentalUrl} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a></div>
+        <div><p>Para receber você com atenção e indicar a melhor turma, a aula experimental precisa ser combinada previamente com a nossa equipe.</p><a className="button" href={siteContact.experimentalHref} target="_blank" rel="noreferrer">Agendar pelo WhatsApp</a></div>
       </section>
 
       <section className="location section" id="localizacao">
         <div className="section-label"><span>12</span> Conheça a No Ritmo</div>
-        <div className="location-layout"><div><h2>Seu próximo passo começa aqui.</h2><p>Estamos em Apucarana, Paraná. Confirme o endereço atualizado e o melhor acesso antes da sua primeira visita.</p><div className="contact-list"><a href="tel:+5543999216027"><strong>Telefone e WhatsApp</strong><span>(43) 99921-6027</span></a><a href="mailto:noritmo@live.com"><strong>E-mail</strong><span>noritmo@live.com</span></a><div><strong>Endereço</strong><span>Apucarana — PR • confirmação com a equipe</span></div></div><a className="button" href={mapsUrl} target="_blank" rel="noreferrer">Abrir no Google Maps</a></div><a className="map-card" href={mapsUrl} target="_blank" rel="noreferrer" aria-label="Abrir a localização da No Ritmo no Google Maps"><span>Apucarana • PR</span><strong>Ver rota</strong></a></div>
+        <div className="location-layout"><div><h2>Seu próximo passo começa aqui.</h2><p>Estamos em {siteContact.city}, {siteContact.state}. Confirme o endereço atualizado e o melhor acesso antes da sua primeira visita.</p><div className="contact-list"><a href={siteContact.phoneHref}><strong>Telefone e WhatsApp</strong><span>{siteContact.phoneDisplay}</span></a><a href={siteContact.emailHref}><strong>E-mail</strong><span>{siteContact.email}</span></a><div><strong>Endereço</strong><span>{siteContact.city} — {siteContact.state} • confirmação com a equipe</span></div></div><a className="button" href={siteContact.mapsHref} target="_blank" rel="noreferrer">Abrir no Google Maps</a></div><a className="map-card" href={siteContact.mapsHref} target="_blank" rel="noreferrer" aria-label="Abrir a localização da No Ritmo no Google Maps"><span>{siteContact.city} • {siteContact.state}</span><strong>Ver rota</strong></a></div>
       </section>
 
       <footer id="contato">
         <div className="footer-main">
           <a className="brand brand-footer" href="#inicio" aria-label="Voltar ao início"><Image className="brand-logo brand-logo-footer" src="/logo-fundo-escuro.png" width={1741} height={421} alt="No Ritmo Academia de Dança" unoptimized /></a>
-          <div><span className="footer-label">Contato</span><a href="tel:+5543999216027">(43) 99921-6027</a><a href="mailto:noritmo@live.com">noritmo@live.com</a></div>
-          <div><span className="footer-label">Onde estamos</span><p>Apucarana — Paraná</p><a href={mapsUrl} target="_blank" rel="noreferrer">Abrir no mapa</a></div>
-          <div><span className="footer-label">Acompanhe</span><p>Novidades, turmas e bastidores</p><div className="footer-socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram da No Ritmo"><FaInstagram aria-hidden="true" /> Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook da No Ritmo"><FaFacebookF aria-hidden="true" /> Facebook</a></div></div>
+          <div><span className="footer-label">Contato</span><a href={siteContact.phoneHref}>{siteContact.phoneDisplay}</a><a href={siteContact.emailHref}>{siteContact.email}</a></div>
+          <div><span className="footer-label">Onde estamos</span><p>{siteContact.city} — {siteContact.state}</p><a href={siteContact.mapsHref} target="_blank" rel="noreferrer">Abrir no mapa</a></div>
+          <div><span className="footer-label">Acompanhe</span><p>Os perfis oficiais serão adicionados após confirmação.</p></div>
         </div>
         <div className="footer-bottom"><span>© {new Date().getFullYear()} No Ritmo Academia de Dança</span><span>Ensino de dança • Apucarana, PR</span></div>
       </footer>
-      <a className="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Conversar com a No Ritmo pelo WhatsApp">
+      <a className="whatsapp-float" href={siteContact.whatsappGeneralHref} target="_blank" rel="noreferrer" aria-label="Conversar com a No Ritmo pelo WhatsApp">
         <span className="whatsapp-icon" aria-hidden="true"><FaWhatsapp /></span><span className="whatsapp-label"><strong>Agendar</strong><small>uma aula</small></span>
       </a>
     </main>

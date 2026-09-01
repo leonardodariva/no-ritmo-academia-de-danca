@@ -40,6 +40,50 @@ test("todas as rotas públicas principais respondem sem erro", async () => {
   for (const route of routes) { const response = await render(route); assert.equal(response.status, 200, `${route} deveria responder 200`); }
 });
 
+test("contato e horários exibem os dados centralizados", async () => {
+  const contactHtml = await (await render("/contato")).text();
+  assert.match(contactHtml, /\(43\) 99921-6027/);
+  assert.match(contactHtml, /noritmo@live\.com/);
+  assert.doesNotMatch(contactHtml, /Lorem ipsum/i);
+
+  const scheduleHtml = await (await render("/horarios")).text();
+  assert.match(scheduleHtml, /Segunda-feira/);
+  assert.match(scheduleHtml, /Turma iniciante, das 7h às 8h30/);
+});
+
+test("modalidades e aulas apresentam conteúdo útil sem texto de preparação", async () => {
+  const modalitiesHtml = await (await render("/modalidades")).text();
+  assert.match(modalitiesHtml, /Samba de gafieira/);
+  assert.match(modalitiesHtml, /Para quem está começando/);
+  assert.doesNotMatch(modalitiesHtml, /será atualizada|terá uma explicação/i);
+
+  const classesHtml = await (await render("/aulas")).text();
+  assert.match(classesHtml, /Aulas em grupo/);
+  assert.match(classesHtml, /Coreografias para eventos/);
+  assert.doesNotMatch(classesHtml, /Aqui explicaremos/i);
+});
+
+test("sobre e FAQ usam conteúdo consolidado sem placeholders", async () => {
+  const aboutHtml = await (await render("/sobre")).text();
+  assert.match(aboutHtml, /Nossa forma de ensinar/);
+  assert.match(aboutHtml, /Aprender no seu ritmo/);
+  assert.doesNotMatch(aboutHtml, /Lorem ipsum|será ampliada|A página contará/i);
+
+  const faqHtml = await (await render("/faq")).text();
+  const homeHtml = await (await render("/")).text();
+  assert.match(faqHtml, /Como funciona a aula experimental/);
+  assert.match(homeHtml, /A aula experimental deve ser agendada pelo WhatsApp/);
+});
+
+test("home usa contatos, horários e modalidades consolidados", async () => {
+  const html = await (await render("/")).text();
+  assert.match(html, /Samba de gafieira/i);
+  assert.match(html, /Turma iniciante/);
+  assert.match(html, /\(43\) 99921-6027/);
+  assert.doesNotMatch(html, /https:\/\/www\.(instagram|facebook)\.com\//i);
+  assert.doesNotMatch(html, /Desde 2010|15\+.*anos de história/i);
+});
+
 test("entra diretamente na home sem tela de carregamento e sem título duplicado", async () => {
   const response = await render();
   const html = await response.text();
