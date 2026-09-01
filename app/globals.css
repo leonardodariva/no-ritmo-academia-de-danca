@@ -336,4 +336,10 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .v4-section-heading>p,.home-team-heading>p { grid-column:1/-1; margin-bottom:8px; }
 .v4-section-heading>h2,.home-team-heading>h2 { grid-column:1; }
 .v4-section-heading>span,.home-team-heading>span { grid-column:2; margin-top:6px; }
+.v4-statement { grid-template-columns:1.2fr .8fr; gap:18px 6vw; }
+.v4-statement>p { grid-column:1/-1; margin-bottom:8px; }
+.v4-statement>h2 { grid-column:1; font-size:clamp(38px,4.6vw,68px); letter-spacing:-2.5px; }
+.v4-statement>div { grid-column:2; margin-top:6px; }
+.v4-section-heading>h2,.home-team-heading>h2,.v4-institution h2,.v4-invitation h2 { font-size:clamp(38px,4.6vw,68px); letter-spacing:-2.5px; }
 @media(max-width:680px){ .v4-section-heading,.home-team-heading { grid-template-columns:1fr; }.v4-section-heading>p,.v4-section-heading>h2,.v4-section-heading>span,.home-team-heading>p,.home-team-heading>h2,.home-team-heading>span { grid-column:1; }.v4-section-heading>span,.home-team-heading>span { margin-top:0; } }
+@media(max-width:680px){ .v4-statement { grid-template-columns:1fr; }.v4-statement>p,.v4-statement>h2,.v4-statement>div { grid-column:1; }.v4-statement>div { margin-top:0; } }
