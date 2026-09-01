@@ -38,8 +38,8 @@ export default function Home() {
 
     <section className="v4-statement">
       <p>Mais que aprender passos</p>
-      <h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2>
-      <div><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><Link href="/sobre">Conheça nossa visão →</Link></div>
+      <div className="statement-visual" role="img" aria-label="Imagem ilustrativa temporária de uma dança em movimento"><span>Imagem de demonstração</span></div>
+      <div className="statement-copy"><h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><Link href="/sobre">Conheça nossa visão →</Link></div>
     </section>
 
     <section className="v4-method">
