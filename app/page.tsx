@@ -37,9 +37,9 @@ export default function Home() {
     </section>
 
     <section className="v4-statement">
-      <p>Sobre a No Ritmo</p>
+      <p className="statement-eyebrow">Sobre a No Ritmo</p>
       <div className="statement-visual" role="img" aria-label="Imagem ilustrativa temporária de uma dança em movimento"><span>Imagem de demonstração</span></div>
-      <div className="statement-copy"><h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><div className="statement-highlights"><div><span aria-hidden="true">◌</span><strong>Aprendizado vivo</strong><small>Corpo, ritmo e presença em prática.</small></div><div><span aria-hidden="true">♡</span><strong>Conexão real</strong><small>Encontro, escuta e convivência.</small></div></div><Link href="/sobre">Conheça nossa visão →</Link></div>
+      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><div className="statement-highlights"><div><span aria-hidden="true">◌</span><strong>Aprendizado vivo</strong><small>Corpo, ritmo e presença em prática.</small></div><div><span aria-hidden="true">♡</span><strong>Conexão real</strong><small>Encontro, escuta e convivência.</small></div></div><Link className="statement-button" href="/sobre">Conheça nossa visão</Link></div>
     </section>
 
     <section className="v4-method">
