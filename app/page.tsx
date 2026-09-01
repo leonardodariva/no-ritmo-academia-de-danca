@@ -14,7 +14,6 @@ const teachingThemes = [
   ["Percepção", "Observar, escutar e sentir o que acontece durante a dança."],
   ["Comunicação", "Construir uma dança compartilhada com atenção, clareza e respeito."],
   ["Musicalidade", "Relacionar tempo, pausa, dinâmica e interpretação ao movimento."],
-  ["Conexão", "Encontrar presença, parceria e pertencimento em cada experiência."],
 ];
 
 export default function Home() {
