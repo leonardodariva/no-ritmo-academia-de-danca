@@ -43,9 +43,9 @@ export default function Home() {
     </section>
 
     <section className="v4-method">
-      <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Esta estrutura será refinada com a equipe antes de ser apresentada como metodologia oficial.</span></div>
-      <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
-      <Link className="section-action" href="/sobre#metodologia">Entenda a proposta pedagógica →</Link>
+      <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Esta estrutura será refinada com a equipe antes de ser apresentada como metodologia oficial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, para visualizarmos melhor o equilíbrio entre título e conteúdo.</span></div>
+      <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => <article key={title}><span aria-hidden="true">{["◌", "⌁", "◈", "♫", "♡"][index]}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+      <Link className="method-button" href="/sobre#metodologia">Entenda a proposta pedagógica</Link>
     </section>
 
     <section className="home-modalities">
