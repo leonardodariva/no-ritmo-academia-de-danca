@@ -1,6 +1,7 @@
 export type DanceModality = {
   slug: string;
   name: string;
+  summary: string;
 };
 
 export type ClassFormat = {
@@ -12,14 +13,14 @@ export type ClassFormat = {
 };
 
 export const danceModalities: DanceModality[] = [
-  { slug: "forro", name: "Forró" },
-  { slug: "bolero", name: "Bolero" },
-  { slug: "samba-de-gafieira", name: "Samba de gafieira" },
-  { slug: "salsa", name: "Salsa" },
-  { slug: "zouk", name: "Zouk" },
-  { slug: "tango", name: "Tango" },
-  { slug: "sertanejo", name: "Sertanejo" },
-  { slug: "vaneira", name: "Vaneira" },
+  { slug: "forro", name: "Forró", summary: "Conexão, ritmo e repertório da dança brasileira." },
+  { slug: "bolero", name: "Bolero", summary: "Deslocamento, elegância e diálogo a dois." },
+  { slug: "samba-de-gafieira", name: "Samba de gafieira", summary: "Balanço, musicalidade e presença na dança de salão." },
+  { slug: "salsa", name: "Salsa", summary: "Energia, coordenação e interpretação musical." },
+  { slug: "zouk", name: "Zouk", summary: "Fluidez, conexão e possibilidades de movimento." },
+  { slug: "tango", name: "Tango", summary: "Caminhada, escuta e comunicação no abraço." },
+  { slug: "sertanejo", name: "Sertanejo", summary: "Ritmo popular, parceria e diversão na pista." },
+  { slug: "vaneira", name: "Vaneira", summary: "Dinâmica, tradição e movimentos compartilhados." },
 ];
 
 export const classFormats: ClassFormat[] = [
