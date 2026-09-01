@@ -71,7 +71,7 @@ export default function Home() {
 
     <section className="v4-articles">
       <div className="v4-section-heading"><p>Publicações recentes</p><h2>Ideias em movimento.</h2><span>Artigos ajudam a observar os conceitos em situações, perguntas e experiências específicas.</span></div>
-      <div className="v4-article-grid">{articles.map((article, index) => <Link key={article.slug} href={`/artigos/${article.slug}`}><div className={`article-thumb article-thumb-${index + 1}`} role="img" aria-label="Imagem ilustrativa temporária do artigo"><span>Imagem de demonstração</span></div><p>{article.category}</p><h3>{article.title}</h3><span>{article.summary}</span><small>{article.author.name} · {article.readingTime} min</small></Link>)}<Link className="v4-all-articles" href="/artigos"><p>Acervo editorial</p><h3>Veja todas as publicações</h3><strong>Explorar artigos →</strong></Link></div>
+      <div className="v4-article-grid">{articles.map((article, index) => <Link key={article.slug} href={`/artigos/${article.slug}`}><p>{article.category}</p><div className={`article-thumb article-thumb-${index + 1}`} role="img" aria-label="Imagem ilustrativa temporária do artigo"><span>Imagem de demonstração</span></div><h3>{article.title}</h3><span>{article.summary}</span><small>{article.author.name} · {article.readingTime} min</small></Link>)}<Link className="v4-all-articles" href="/artigos"><p>Acervo editorial</p><h3>Veja todas as publicações</h3><strong>Explorar artigos →</strong></Link></div>
     </section>
 
     <section className="v4-institution">
