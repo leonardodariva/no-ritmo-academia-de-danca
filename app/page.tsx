@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaCircleNotch, FaHeart, FaMusic, FaWaveSquare, FaGem, FaWhatsapp } from "react-icons/fa";
 import { classFormats, danceModalities } from "../content/classes";
 import { articles, knowledgePages } from "../content/editorial";
 import { siteContact, weeklySchedule } from "../content/site";
@@ -14,7 +14,10 @@ const teachingThemes = [
   ["Percepção", "Observar, escutar e sentir o que acontece durante a dança."],
   ["Comunicação", "Construir uma dança compartilhada com atenção, clareza e respeito."],
   ["Musicalidade", "Relacionar tempo, pausa, dinâmica e interpretação ao movimento."],
+  ["Conexão", "Encontrar presença, parceria e pertencimento em cada experiência."],
 ];
+
+const teachingIcons = [FaCircleNotch, FaWaveSquare, FaGem, FaMusic, FaHeart];
 
 export default function Home() {
   return <main className="v4-home">
@@ -44,7 +47,7 @@ export default function Home() {
 
     <section className="v4-method">
       <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Esta estrutura será refinada com a equipe antes de ser apresentada como metodologia oficial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, para visualizarmos melhor o equilíbrio entre título e conteúdo.</span></div>
-      <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => <article key={title}><span aria-hidden="true">{["◌", "⌁", "◈", "♫", "♡"][index]}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+      <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => { const Icon = teachingIcons[index]; return <article key={title}><span aria-hidden="true"><Icon /></span><h3>{title}</h3><p>{description}</p></article>; })}</div>
       <Link className="method-button" href="/sobre#metodologia">Entenda a proposta pedagógica</Link>
     </section>
 
