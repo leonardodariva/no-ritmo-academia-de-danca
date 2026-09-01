@@ -81,7 +81,8 @@ test("home apresenta os três caminhos e a rede editorial da V4", async () => {
   assert.match(html, /Aprender/);
   assert.match(html, /Participar/);
   assert.match(html, /Biblioteca de conhecimento/);
-  assert.doesNotMatch(html, /https:\/\/www\.(instagram|facebook)\.com\//i);
+  assert.match(html, /instagram\.com\/noritmoacademiadedanca/i);
+  assert.match(html, /facebook\.com\/NoRitmoAcademiadeDanca/i);
   assert.doesNotMatch(html, /Desde 2010|15\+.*anos de história/i);
 });
 
