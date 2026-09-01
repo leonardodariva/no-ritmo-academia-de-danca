@@ -22,6 +22,7 @@ export default function Home() {
     <SiteHeader floating />
 
     <section className="v4-hero" id="conteudo">
+      <div className="home-hero-photo" aria-hidden="true" />
       <div className="v4-hero-copy">
         <p>Dança, conexão e conhecimento</p>
         <h1>A dança começa no movimento.<br /><em>E continua nas relações.</em></h1>
@@ -41,6 +42,10 @@ export default function Home() {
       <div><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><Link href="/sobre">Conheça nossa visão →</Link></div>
     </section>
 
+    <section className="home-photo-break home-photo-movement" aria-label="Imagem ilustrativa temporária de pessoas dançando">
+      <span>Imagem de demonstração</span>
+    </section>
+
     <section className="v4-method">
       <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Esta estrutura será refinada com a equipe antes de ser apresentada como metodologia oficial.</span></div>
       <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
@@ -57,6 +62,7 @@ export default function Home() {
       <div className="v4-section-heading light"><p>Como funcionam as aulas</p><h2>Um formato para cada momento.</h2><span>Escolha uma experiência inicial e consulte disponibilidade, valores e horários diretamente com a equipe.</span></div>
       <div className="home-class-grid">{classFormats.map((item, index) => <article key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.detail}</p></article>)}</div>
       <div className="home-class-actions"><Link href="/aulas">Entenda como funcionam →</Link><Link href="/horarios">Consultar horários →</Link></div>
+      <div className="home-class-photo" role="img" aria-label="Imagem ilustrativa temporária de uma aula de dança em grupo"><span>Imagem de demonstração</span></div>
     </section>
 
     <section className="v4-knowledge">
@@ -71,7 +77,7 @@ export default function Home() {
     </section>
 
     <section className="v4-institution">
-      <div><p>A No Ritmo</p><h2>Uma escola feita de pessoas, prática e convivência.</h2></div>
+      <div><p>A No Ritmo</p><h2>Uma escola feita de pessoas, prática e convivência.</h2><div className="home-institution-photo" role="img" aria-label="Imagem ilustrativa temporária de movimento durante uma dança"><span>Imagem de demonstração</span></div></div>
       <div><p>A história completa, os marcos da academia e os perfis profissionais serão publicados com informações fornecidas e validadas pela equipe.</p><div><Link href="/sobre">Conheça a escola →</Link><Link href="/professores">Professores e equipe →</Link></div></div>
     </section>
 
