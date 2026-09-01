@@ -30,7 +30,7 @@ test("renderiza a página inicial da No Ritmo", async () => {
   const html = await response.text();
   assert.match(html, /<html lang="pt-BR">/i);
   assert.match(html, /<title>No Ritmo Academia de Dança \| Apucarana<\/title>/i);
-  assert.match(html, /<h1><span>No Ritmo<\/span>/i);
+  assert.match(html, /A dança começa no movimento/i);
   assert.match(html, /aria-label="Navegação principal"/i);
   assert.match(html, /aria-label="Conversar com a No Ritmo pelo WhatsApp"/i);
 });
@@ -70,16 +70,17 @@ test("sobre e FAQ usam conteúdo consolidado sem placeholders", async () => {
   assert.doesNotMatch(aboutHtml, /Lorem ipsum|será ampliada|A página contará/i);
 
   const faqHtml = await (await render("/faq")).text();
-  const homeHtml = await (await render("/")).text();
   assert.match(faqHtml, /Como funciona a aula experimental/);
-  assert.match(homeHtml, /A aula experimental deve ser agendada pelo WhatsApp/);
+  assert.match(faqHtml, /A aula experimental deve ser agendada pelo WhatsApp/);
 });
 
-test("home usa contatos, horários e modalidades consolidados", async () => {
+test("home apresenta os três caminhos e a rede editorial da V4", async () => {
   const html = await (await render("/")).text();
   assert.match(html, /Samba de gafieira/i);
-  assert.match(html, /Turma iniciante/);
-  assert.match(html, /\(43\) 99921-6027/);
+  assert.match(html, /Conhecer/);
+  assert.match(html, /Aprender/);
+  assert.match(html, /Participar/);
+  assert.match(html, /Biblioteca de conhecimento/);
   assert.doesNotMatch(html, /https:\/\/www\.(instagram|facebook)\.com\//i);
   assert.doesNotMatch(html, /Desde 2010|15\+.*anos de história/i);
 });
@@ -90,4 +91,16 @@ test("entra diretamente na home sem tela de carregamento e sem título duplicado
 
   assert.doesNotMatch(html, /class="intro-loader"/i);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
+});
+
+test("a V4 conecta artigos e páginas de conhecimento", async () => {
+  const knowledgeHtml = await (await render("/conhecimento/comunicacao")).text();
+  assert.match(knowledgeHtml, /O que sabemos \/ conceito/i);
+  assert.match(knowledgeHtml, /Como a No Ritmo trabalha esse conceito/i);
+  assert.match(knowledgeHtml, /href="\/artigos\/danca-e-comunicacao"/i);
+
+  const articleHtml = await (await render("/artigos/danca-e-comunicacao")).text();
+  assert.match(articleHtml, /Transparência editorial/i);
+  assert.match(articleHtml, /href="\/conhecimento\/comunicacao"/i);
+  assert.match(articleHtml, /Sobre a autoria/i);
 });

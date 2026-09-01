@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { articleTitle, editorialNotice, knowledgeBySlug, knowledgePages, knowledgeTitle } from "../../../content/editorial";
+import SiteFooter from "../../SiteFooter";
+import SiteHeader from "../../SiteHeader";
 
 export function generateStaticParams() { return knowledgePages.map(({ slug }) => ({ slug })); }
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const topic = knowledgeBySlug[params.slug]; return topic ? { title: `${topic.title} | Conhecimento No Ritmo`, description: topic.summary, alternates: { canonical: `/conhecimento/${topic.slug}` } } : { title: "Conhecimento | No Ritmo" }; }
@@ -8,7 +10,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function KnowledgePage({ params }: { params: { slug: string } }) {
   const topic = knowledgeBySlug[params.slug];
   if (!topic) return <main className="article-page"><div className="article-shell"><h1>Conteúdo em preparação</h1><Link href="/conhecimento">Voltar à biblioteca</Link></div></main>;
-  return <main className="article-page knowledge-page"><article className="article-shell">
+  return <main><SiteHeader /><div className="article-page knowledge-page"><article className="article-shell">
     <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Início</Link><span aria-hidden="true">/</span><Link href="/conhecimento">Conhecimento</Link><span aria-hidden="true">/</span><span>{topic.title}</span></nav>
     <p className="article-category">Página de referência</p><h1>{topic.title}</h1><p className="article-summary">{topic.summary}</p>
     <div className="article-meta"><span>{topic.author?.name ?? "Autoria em validação"}</span><span>Conteúdo inicial</span><span>Revisão pendente</span></div>
@@ -20,5 +22,5 @@ export default function KnowledgePage({ params }: { params: { slug: string } }) 
     {!!topic.relatedConcepts.length && <section className="related-content"><p>Amplie o mapa</p><h2>Conceitos relacionados</h2><div>{topic.relatedConcepts.map((slug) => <Link key={slug} href={`/conhecimento/${slug}`}>{knowledgeTitle(slug)} <span>→</span></Link>)}</div></section>}
     {!!topic.relatedArticles.length && <section className="related-content"><p>Na prática editorial</p><h2>Artigos relacionados</h2><div>{topic.relatedArticles.map((slug) => <Link key={slug} href={`/artigos/${slug}`}>{articleTitle(slug)} <span>→</span></Link>)}</div></section>}
     <Link className="article-back" href="/conhecimento">← Voltar à biblioteca</Link>
-  </article></main>;
+  </article></div><SiteFooter /></main>;
 }
