@@ -299,6 +299,7 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
   .mobile-menu nav { width:min(320px,calc(100vw - 32px)); max-height:calc(100vh - 110px); overflow-y:auto; }
   .v4-header { grid-template-columns:1fr auto; min-height:76px; }
   .v4-header .header-socials { display:none; }
+  .site-header .header-socials { display:none; }
 }
 @media(max-width:420px){
   .v4-header .brand-logo,.site-header .brand-logo { width:124px; }
