@@ -330,3 +330,10 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
   :focus-visible { outline:3px solid CanvasText; }
   .button,.header-knowledge-link,.category-list a { border:1px solid ButtonText; }
 }
+
+/* Cabeçalhos de seção em duas colunas: rótulo acima, título e resumo lado a lado. */
+.v4-section-heading,.home-team-heading { grid-template-columns:1.2fr .8fr; gap:18px 6vw; }
+.v4-section-heading>p,.home-team-heading>p { grid-column:1/-1; margin-bottom:8px; }
+.v4-section-heading>h2,.home-team-heading>h2 { grid-column:1; }
+.v4-section-heading>span,.home-team-heading>span { grid-column:2; margin-top:6px; }
+@media(max-width:680px){ .v4-section-heading,.home-team-heading { grid-template-columns:1fr; }.v4-section-heading>p,.v4-section-heading>h2,.v4-section-heading>span,.home-team-heading>p,.home-team-heading>h2,.home-team-heading>span { grid-column:1; }.v4-section-heading>span,.home-team-heading>span { margin-top:0; } }
