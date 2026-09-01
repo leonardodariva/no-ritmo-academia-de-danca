@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
 import { danceModalities } from "../../content/classes";
+
+export const metadata: Metadata = { title: "Modalidades de dança | No Ritmo Apucarana", description: "Conheça os ritmos apresentados pela No Ritmo e encontre uma experiência adequada ao seu momento.", alternates: { canonical: "/modalidades" } };
 
 const modalityNames = danceModalities.map((item) => item.name).join(", ");
 

@@ -4,13 +4,13 @@ import { articles, editorialNotice } from "../../content/editorial";
 import SiteFooter from "../SiteFooter";
 import SiteHeader from "../SiteHeader";
 
-export const metadata: Metadata = { title: "Artigos sobre dança | No Ritmo", description: "Publicações da No Ritmo sobre dança, movimento, comunicação, musicalidade e aprendizagem." };
+export const metadata: Metadata = { title: "Artigos sobre dança | No Ritmo", description: "Publicações da No Ritmo sobre dança, movimento, comunicação, musicalidade e aprendizagem.", alternates: { canonical: "/artigos" } };
 
 export default function ArtigosPage() {
   const categories = [...new Set(articles.map((article) => article.category))];
   return <main className="subpage editorial-index">
     <SiteHeader />
-    <section className="subpage-hero editorial-hero"><p>Publicações No Ritmo</p><h1>Ideias para compreender e viver a dança.</h1><div><span>Acervo editorial</span><p>Reflexões, guias e experiências conectados à biblioteca permanente de conhecimento.</p></div></section>
+    <section className="subpage-hero editorial-hero" id="main-content"><p>Publicações No Ritmo</p><h1>Ideias para compreender e viver a dança.</h1><div><span>Acervo editorial</span><p>Reflexões, guias e experiências conectados à biblioteca permanente de conhecimento.</p></div></section>
     <nav className="category-list" id="categorias" aria-label="Categorias dos artigos"><span>Categorias</span>{categories.map((category) => <Link key={category} href={`/artigos/categoria/${category.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replaceAll(" ", "-")}`}>{category}</Link>)}</nav>
     <section className="article-index" aria-labelledby="publicacoes-title">
       <div className="editorial-section-heading"><p className="section-label">Publicações</p><h2 id="publicacoes-title">Para começar a explorar</h2><p>{editorialNotice}</p></div>

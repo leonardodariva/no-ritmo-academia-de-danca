@@ -1,2 +1,4 @@
+import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
+export const metadata: Metadata = { title: "Eventos de dança | No Ritmo", description: "Agenda de encontros, workshops, apresentações e experiências da comunidade No Ritmo.", alternates: { canonical: "/eventos" } };
 export default function EventosPage(){return <SubpageShell kicker="Agenda No Ritmo" title="A dança também acontece fora da aula." intro="Esta área será atualizada com workshops, apresentações e encontros confirmados pela academia." sections={[{number:"01",title:"Próximos eventos",text:"Nenhum evento publicado no momento. A agenda será preenchida após confirmação oficial da equipe."},{number:"02",title:"Eventos anteriores",text:"Registros de experiências da comunidade poderão ser consultados aqui, com data, contexto e imagens autorizadas."},{number:"03",title:"Participar",text:"Cada atividade terá informações sobre inscrição, horários, local e formas de contato."}]}/>}

@@ -5,7 +5,7 @@ import SiteFooter from "../../SiteFooter";
 import SiteHeader from "../../SiteHeader";
 
 export function generateStaticParams() { return [{ slug: noRitmoAuthor.slug }]; }
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata { return params.slug === noRitmoAuthor.slug ? { title: `${noRitmoAuthor.name} | Autores No Ritmo`, description: noRitmoAuthor.bio } : { title: "Autor | No Ritmo" }; }
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata { return params.slug === noRitmoAuthor.slug ? { title: `${noRitmoAuthor.name} | Autores No Ritmo`, description: noRitmoAuthor.bio, alternates: { canonical: `/autores/${params.slug}` } } : { title: "Autor | No Ritmo" }; }
 
 export default function AuthorPage({ params }: { params: { slug: string } }) {
   if (params.slug !== noRitmoAuthor.slug) return <main><SiteHeader /><div className="article-page"><div className="article-shell"><h1>Perfil em preparação</h1><Link href="/autores">Voltar aos autores</Link></div></div><SiteFooter /></main>;

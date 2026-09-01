@@ -9,7 +9,7 @@ export default function SubpageShell({ kicker, title, intro, sections }: { kicke
   return (
     <main className="subpage">
       <SiteHeader />
-      <section className="subpage-hero">
+      <section className="subpage-hero" id="main-content">
         <p>{kicker}</p><h1>{title}</h1><div><span>No Ritmo • Apucarana</span><p>{intro}</p></div>
       </section>
       <nav className="subpage-breadcrumb" aria-label="Navegação estrutural"><Link href="/">Início</Link><span aria-hidden="true">/</span><span>{title}</span></nav>

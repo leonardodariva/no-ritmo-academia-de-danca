@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "No Ritmo Academia de Dança | Apucarana",
   description: "No Ritmo é uma academia de dança em Apucarana e uma plataforma de conhecimento sobre dança, movimento, comunicação e cultura.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-  alternates: { canonical: "/" },
   openGraph: { title: "No Ritmo Academia de Dança", description: "Dança, conhecimento, movimento e encontros em Apucarana.", type: "website", locale: "pt_BR" },
 };
 

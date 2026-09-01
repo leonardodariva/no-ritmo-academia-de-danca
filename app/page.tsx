@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { danceModalities } from "../content/classes";
@@ -5,6 +6,8 @@ import { articles, knowledgePages } from "../content/editorial";
 import { siteContact } from "../content/site";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const teachingThemes = [
   ["Movimento", "Organizar o corpo, experimentar possibilidades e construir repertório."],

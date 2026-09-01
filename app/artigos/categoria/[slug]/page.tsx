@@ -6,7 +6,7 @@ import SiteHeader from "../../../SiteHeader";
 
 const slugify = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replaceAll(" ", "-");
 export function generateStaticParams() { return [...new Set(articles.map((article) => slugify(article.category)))].map((slug) => ({ slug })); }
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const first = articles.find((article) => slugify(article.category) === params.slug); return { title: first ? `${first.category} | Artigos No Ritmo` : "Categoria | Artigos No Ritmo", description: first ? `Artigos da No Ritmo na categoria ${first.category}.` : "Categoria editorial da No Ritmo." }; }
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata { const first = articles.find((article) => slugify(article.category) === params.slug); return { title: first ? `${first.category} | Artigos No Ritmo` : "Categoria | Artigos No Ritmo", description: first ? `Artigos da No Ritmo na categoria ${first.category}.` : "Categoria editorial da No Ritmo.", alternates: { canonical: `/artigos/categoria/${params.slug}` } }; }
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {
   const filtered = articles.filter((article) => slugify(article.category) === params.slug);

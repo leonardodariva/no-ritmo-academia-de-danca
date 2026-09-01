@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
 import { classFormats } from "../../content/classes";
+
+export const metadata: Metadata = { title: "Aulas de dança em Apucarana | No Ritmo", description: "Conheça os formatos de aula da No Ritmo: turmas em grupo, aulas particulares e coreografias.", alternates: { canonical: "/aulas" } };
 
 export default function AulasPage() { return <SubpageShell kicker="Do seu jeito" title="Formatos de aula" intro="Escolha entre experiências em grupo, acompanhamento particular e projetos de coreografia para ocasiões especiais." sections={[
   ...classFormats.map((format, index) => ({
