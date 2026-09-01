@@ -1,9 +1,14 @@
-import SubpageShell from "../SubpageShell";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { knowledgePages } from "../../content/editorial";
 
-export default function ConhecimentoPage() { return <SubpageShell kicker="Biblioteca No Ritmo" title="Dança para entender, sentir e viver." intro="Conteúdos de referência sobre dança de salão, corpo, comunicação, musicalidade e aprendizagem. Uma biblioteca em construção, com autoria e revisão a serem confirmadas." sections={[
-  {number:"01",title:"Dança de salão",text:"Ritmos, relação entre parceiros e dança social como experiência de convivência e expressão."},
-  {number:"02",title:"Corpo e movimento",text:"Consciência corporal, equilíbrio, coordenação e presença como partes da experiência de dançar."},
-  {number:"03",title:"Comunicação e condução",text:"A parceria se constrói com atenção, clareza, respeito e escuta corporal — não apenas com sequências."},
-  {number:"04",title:"Musicalidade",text:"Escuta, tempo, dinâmica e interpretação ajudam a transformar movimentos em uma dança mais consciente."},
-  {number:"05",title:"Como a No Ritmo ensina",text:"Uma página para documentar a metodologia oficial da academia depois de validada pela equipe."},
-]} />; }
+export const metadata: Metadata = { title: "Conhecimento sobre dança | No Ritmo", description: "Biblioteca de referência da No Ritmo sobre dança de salão, movimento, percepção, comunicação e musicalidade." };
+
+export default function ConhecimentoPage() {
+  return <main className="subpage knowledge-index">
+    <header className="subpage-header editorial-simple-header"><Link href="/">No Ritmo</Link><nav aria-label="Navegação editorial"><Link href="/artigos">Artigos</Link><Link href="/autores">Autores</Link><Link href="/aulas">Aulas</Link></nav><Link className="subpage-back" href="/">← Início</Link></header>
+    <section className="subpage-hero editorial-hero"><p>Biblioteca No Ritmo</p><h1>Dança para entender, sentir e viver.</h1><div><span>Conhecimento permanente</span><p>Documentos de referência conectam conceitos, prática da dança e a experiência de ensino da No Ritmo.</p></div></section>
+    <section className="knowledge-map" aria-labelledby="knowledge-title"><div className="editorial-section-heading"><p className="section-label">Áreas de conhecimento</p><h2 id="knowledge-title">Uma biblioteca que cresce por relações.</h2><p>Comece por qualquer tema. Cada página oferece caminhos para conceitos e artigos relacionados.</p></div><div className="knowledge-grid">{knowledgePages.map((topic, index) => <Link href={`/conhecimento/${topic.slug}`} key={topic.slug}><span>{String(index + 1).padStart(2, "0")}</span><h3>{topic.title}</h3><p>{topic.summary}</p><strong>Consultar referência →</strong></Link>)}</div></section>
+    <section className="knowledge-crosslink"><p>Publicações editoriais</p><h2>Veja os conceitos em outros contextos.</h2><Link href="/artigos">Explorar artigos →</Link></section>
+  </main>;
+}

@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-const articles = [{slug:"comecar-a-dancar",category:"Começar",title:"Como começar a dançar depois de adulto",summary:"Um guia acolhedor para escolher formato, turma e ritmo de aprendizagem."},{slug:"danca-e-comunicacao",category:"Comunicação",title:"Dança de salão é comunicação",summary:"Condução, resposta, atenção e respeito como uma conversa em movimento."}];
-export default function ArtigosPage() { return <main className="subpage"><header className="subpage-header"><Link href="/">No Ritmo</Link><Link className="subpage-back" href="/">← Início</Link></header><section className="subpage-hero"><p>Conteúdo editorial</p><h1>Ideias para dançar melhor.</h1><div><span>No Ritmo • Apucarana</span><p>Publicações sobre dança, movimento, comunicação, musicalidade e experiências de aprendizagem.</p></div></section><section className="article-index"><p className="section-label">Publicações</p>{articles.map((article) => <article key={article.slug}><p>{article.category}</p><h2>{article.title}</h2><span>{article.summary}</span><Link href={`/artigos/${article.slug}`}>Ler artigo →</Link></article>)}</section></main>; }
+import { articles, editorialNotice } from "../../content/editorial";
+
+export const metadata: Metadata = { title: "Artigos sobre dança | No Ritmo", description: "Publicações da No Ritmo sobre dança, movimento, comunicação, musicalidade e aprendizagem." };
+
+export default function ArtigosPage() {
+  const categories = [...new Set(articles.map((article) => article.category))];
+  return <main className="subpage editorial-index">
+    <header className="subpage-header editorial-simple-header"><Link href="/">No Ritmo</Link><nav aria-label="Navegação editorial"><Link href="/conhecimento">Conhecimento</Link><Link href="/autores">Autores</Link><Link href="/aulas">Aulas</Link></nav><Link className="subpage-back" href="/">← Início</Link></header>
+    <section className="subpage-hero editorial-hero"><p>Publicações No Ritmo</p><h1>Ideias para compreender e viver a dança.</h1><div><span>Acervo editorial</span><p>Reflexões, guias e experiências conectados à biblioteca permanente de conhecimento.</p></div></section>
+    <nav className="category-list" id="categorias" aria-label="Categorias dos artigos"><span>Categorias</span>{categories.map((category) => <a key={category} href={`#${category.toLowerCase().replaceAll(" ", "-")}`}>{category}</a>)}</nav>
+    <section className="article-index" aria-labelledby="publicacoes-title">
+      <div className="editorial-section-heading"><p className="section-label">Publicações</p><h2 id="publicacoes-title">Para começar a explorar</h2><p>{editorialNotice}</p></div>
+      {articles.map((article) => <article id={article.category.toLowerCase().replaceAll(" ", "-")} key={article.slug}><p>{article.category}</p><div><h3>{article.title}</h3><small>{article.author.name} · {article.readingTime} min de leitura</small></div><span>{article.summary}</span><Link href={`/artigos/${article.slug}`} aria-label={`Ler ${article.title}`}>Ler artigo →</Link></article>)}
+    </section>
+    <section className="knowledge-crosslink"><p>Biblioteca permanente</p><h2>Prefere começar por um conceito?</h2><Link href="/conhecimento">Explorar Conhecimento →</Link></section>
+  </main>;
+}
