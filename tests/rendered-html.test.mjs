@@ -36,7 +36,7 @@ test("renderiza a página inicial da No Ritmo", async () => {
 });
 
 test("todas as rotas públicas principais respondem sem erro", async () => {
-  const routes = ["/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/coreografias", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/conhecimento/danca-de-salao", "/artigos", "/artigos/comecar-a-dancar", "/eventos", "/autores"];
+  const routes = ["/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/coreografias", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/conhecimento/danca-de-salao", "/artigos", "/artigos/comecar-a-dancar", "/artigos/categoria/comunicacao", "/eventos", "/autores", "/autores/equipe-no-ritmo"];
   for (const route of routes) { const response = await render(route); assert.equal(response.status, 200, `${route} deveria responder 200`); }
 });
 
