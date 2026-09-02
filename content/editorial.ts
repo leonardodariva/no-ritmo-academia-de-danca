@@ -112,6 +112,24 @@ export const articles: Article[] = [
     seoTitle: "Comunicação na dança de salão | No Ritmo",
     seoDescription: "Uma introdução à condução, resposta e atenção como comunicação na dança de salão.",
   },
+  {
+    slug: "danca-e-presenca",
+    title: "Dança e presença: um convite à escuta",
+    summary: "Perceber o próprio corpo e o espaço compartilhado pode transformar a experiência de aprender a dançar.",
+    body: [
+      "Presença é prestar atenção ao que acontece no corpo, na música e na relação com as outras pessoas.",
+      "Na dança, essa escuta ajuda a reconhecer apoios, pausas e possibilidades de movimento sem pressa.",
+    ],
+    category: "Prática",
+    tags: ["presença", "aprendizagem", "movimento"],
+    author: noRitmoAuthor,
+    readingTime: 3,
+    relatedArticles: ["comecar-a-dancar", "danca-e-comunicacao"],
+    relatedKnowledge: ["corpo-e-movimento", "percepcao"],
+    status: "draft",
+    seoTitle: "Dança e presença | No Ritmo",
+    seoDescription: "Um convite à escuta do corpo, da música e das relações na dança.",
+  },
 ];
 
 export const knowledgeBySlug = Object.fromEntries(knowledgePages.map((item) => [item.slug, item]));
