@@ -428,6 +428,13 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .v4-method-grid { border-radius:20px; overflow:hidden; }
 @media(max-width:680px){ .v4-statement,.v4-method,.home-classes,.home-modalities,.v4-knowledge,.v4-articles,.home-team,.home-testimonials,.home-events,.home-gallery,.home-faq,.home-practical { padding-block:78px; }.v4-section-heading>h2,.home-team-heading>h2,.statement-copy h2,.home-gallery .gallery-heading h2 { font-size:38px; letter-spacing:-1.2px; } }
 
+/* Na seção Sobre, o texto conduz a leitura à esquerda e a imagem fecha a composição à direita. */
+@media(min-width:681px){
+  .v4-statement { grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr); }
+  .statement-copy { grid-column:1!important; padding-left:0; padding-right:1vw; }
+  .statement-visual { grid-column:2!important; }
+}
+
 /* Heróis das subpáginas: título mais equilibrado e respiro maior sob o menu. */
 .subpage-hero { min-height:64vh; padding:15vh 8vw 9vh; }
 .subpage-hero { grid-template-columns:1fr 1fr; column-gap:6vw; align-content:center; }
