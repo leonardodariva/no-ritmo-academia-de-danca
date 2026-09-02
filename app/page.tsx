@@ -31,7 +31,7 @@ export default function Home() {
       <div className="v4-hero-copy">
         <p>Dança, conexão e conhecimento</p>
         <h1>A dança começa no movimento.<br /><em>E continua nas relações.</em></h1>
-        <span>A No Ritmo é uma academia de dança em Apucarana e um espaço para aprender, conviver e compreender a dança para além dos passos.</span>
+        <span>Fundada em 2010, em Apucarana, a No Ritmo já recebeu mais de 10 mil pessoas e acredita que dançar é aprender, conviver e desenvolver-se para além dos passos.</span>
         <div><Link className="button" href="/sobre">Conheça a No Ritmo</Link><Link className="text-link" href="/conhecimento">Explore nossos conteúdos →</Link></div>
       </div>
       <HeroCarousel />
@@ -40,11 +40,11 @@ export default function Home() {
     <section className="v4-statement" id="sobre">
       <p className="statement-eyebrow">Sobre a No Ritmo</p>
       <div className="statement-visual" role="img" aria-label="Imagem ilustrativa temporária de uma dança em movimento"><span>Imagem de demonstração</span></div>
-      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2><p>O site da No Ritmo reúne a experiência da escola, informações para quem deseja participar e uma biblioteca pública sobre dança, movimento e cultura.</p><div className="statement-highlights"><div><span aria-hidden="true">◌</span><strong>Aprendizado vivo</strong><small>Corpo, ritmo e presença em prática.</small></div><div><span aria-hidden="true">♡</span><strong>Conexão real</strong><small>Encontro, escuta e convivência.</small></div></div><Link className="statement-button" href="/sobre">Conheça nossa visão</Link></div>
+      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Dançar também é perceber, comunicar, escutar e encontrar outras pessoas.</h2><p>Fundada em 2010, em Apucarana, a No Ritmo já recebeu mais de 10 mil pessoas e entende a dança de salão como uma experiência de aprendizagem, desenvolvimento humano e convivência.</p><div className="statement-highlights"><div><span aria-hidden="true">◌</span><strong>Aprendizado vivo</strong><small>Corpo, ritmo e presença em prática.</small></div><div><span aria-hidden="true">♡</span><strong>Conexão real</strong><small>Encontro, escuta e convivência.</small></div></div><Link className="statement-button" href="/sobre">Conheça nossa visão</Link></div>
     </section>
 
     <section className="v4-method" id="forma-ensinar">
-      <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Esta estrutura será refinada com a equipe antes de ser apresentada como metodologia oficial. Lorem ipsum dolor sit amet, consectetur adipiscing elit, para visualizarmos melhor o equilíbrio entre título e conteúdo.</span></div>
+      <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Na No Ritmo, técnica, percepção, comunicação e autonomia se encontram para que cada pessoa aprenda no próprio ritmo e continue aprendendo.</span></div>
       <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => { const Icon = teachingIcons[index]; return <article key={title}><span aria-hidden="true"><Icon /></span><h3>{title}</h3><p>{description}</p></article>; })}</div>
       <Link className="method-button" href="/sobre#metodologia">Entenda a proposta pedagógica</Link>
     </section>
