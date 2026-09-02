@@ -17,9 +17,11 @@ export default function SiteHeader({ floating = false }: { floating?: boolean })
 
   useEffect(() => {
     const closeOnOutsideClick = (event: PointerEvent) => {
-      if (headerRef.current?.contains(event.target as Node)) return;
+      const target = event.target as Node;
+      const openDetails = Array.from(headerRef.current?.querySelectorAll("details[open]") ?? []);
+      if (openDetails.some((menu) => menu.contains(target))) return;
       setOpenMenu(null);
-      headerRef.current?.querySelectorAll("details[open]").forEach((menu) => menu.removeAttribute("open"));
+      openDetails.forEach((menu) => menu.removeAttribute("open"));
     };
     document.addEventListener("pointerdown", closeOnOutsideClick);
     return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
