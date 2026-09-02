@@ -7,6 +7,7 @@ import { siteContact, weeklySchedule } from "../content/site";
 import { frequentlyAskedQuestions } from "../content/faq";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
+import HeroCarousel from "./HeroCarousel";
 import TestimonialRotator from "./TestimonialRotator";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -34,11 +35,7 @@ export default function Home() {
         <span>A No Ritmo é uma academia de dança em Apucarana e um espaço para aprender, conviver e compreender a dança para além dos passos.</span>
         <div><Link className="button" href="/sobre">Conheça a No Ritmo</Link><Link className="text-link" href="/conhecimento">Explore nossos conteúdos →</Link></div>
       </div>
-      <div className="v4-hero-index" aria-label="Caminhos principais">
-        <Link href="/sobre"><span>01</span><strong>Conhecer</strong><small>História, pessoas e visão</small></Link>
-        <Link href="/conhecimento"><span>02</span><strong>Aprender</strong><small>Conceitos e publicações</small></Link>
-        <Link href="/aulas"><span>03</span><strong>Participar</strong><small>Aulas, eventos e contato</small></Link>
-      </div>
+      <HeroCarousel />
     </section>
 
     <section className="v4-statement" id="sobre">

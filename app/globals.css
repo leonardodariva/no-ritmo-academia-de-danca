@@ -473,3 +473,33 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .desktop-nav .nav-menu-links a>.nav-item-copy { grid-column:2; display:flex; flex-direction:column; gap:3px; min-width:0; }.desktop-nav .nav-menu-links a>.nav-item-copy strong { font-size:13px; font-weight:700; line-height:1.2; }.desktop-nav .nav-menu-links a>.nav-item-copy small { margin:0; color:#697184; font-size:11px; font-weight:400; line-height:1.3; }.desktop-nav .nav-menu-links a:hover>.nav-item-copy small,.desktop-nav .nav-menu-links a:focus-visible>.nav-item-copy small { color:#4667a9; }
 .desktop-nav .nav-menu-links a::before { width:48px; height:48px; border-radius:12px; color:#fff; background:#17479e; box-shadow:none; }
 .desktop-nav .nav-menu-links a:hover,.desktop-nav .nav-menu-links a:focus-visible { border-color:#c2d4f5; background:#dbe7ff; }.desktop-nav .nav-menu-links a:hover::before,.desktop-nav .nav-menu-links a:focus-visible::before { color:#fff; background:#1769b5; box-shadow:none; }
+
+/* Hero com mensagem compacta à esquerda e carrossel visual à direita. */
+.v4-hero { grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr); gap:5vw; }
+.v4-hero-copy { max-width:650px; }
+.v4-hero-copy>p { margin-bottom:16px; }
+.v4-hero h1 { max-width:760px; font-size:clamp(48px,5.2vw,84px); line-height:.92; letter-spacing:-4px; }
+.v4-hero-copy>span { max-width:520px; margin:26px 0 24px; font-size:15px; line-height:1.6; }
+.hero-carousel { width:100%; max-width:620px; justify-self:end; align-self:center; display:grid; gap:16px; }
+.hero-carousel-card { min-height:440px; position:relative; overflow:hidden; display:flex; align-items:flex-end; border:1px solid rgba(255,255,255,.28); border-radius:24px; color:#fff; background:#111343; box-shadow:0 24px 55px rgba(5,9,35,.28); isolation:isolate; transition:transform .35s ease,box-shadow .35s ease; }
+.hero-carousel-card:hover,.hero-carousel-card:focus-visible { transform:translateY(-4px); box-shadow:0 30px 65px rgba(5,9,35,.36); }
+.hero-carousel-media,.hero-carousel-shade { position:absolute; inset:0; }
+.hero-carousel-media { z-index:-2; background-position:center; background-size:cover; transition:opacity .35s ease,transform .7s ease; }
+.hero-carousel-media-1 { background-image:url('/images/demo/danca-hero.jpg'); }
+.hero-carousel-media-2 { background-image:url('/images/demo/aula-em-grupo.jpg'); }
+.hero-carousel-media-3 { background-image:url('/images/demo/movimento-detalhe.jpg'); }
+.hero-carousel-media-4 { background-image:url('/images/demo/danca-hero.jpg'); background-position:72% center; }
+.hero-carousel-card:hover .hero-carousel-media,.hero-carousel-card:focus-visible .hero-carousel-media { transform:scale(1.04); }
+.hero-carousel-shade { z-index:-1; background:linear-gradient(180deg,rgba(10,13,45,.06) 22%,rgba(10,13,45,.9) 100%); }
+.hero-carousel-caption { width:min(100%,430px); padding:28px; display:grid; gap:7px; }
+.hero-carousel-caption span { color:#c7d5ff; text-transform:uppercase; letter-spacing:2px; font-size:9px; }
+.hero-carousel-caption strong { font-size:30px; line-height:1; }
+.hero-carousel-caption small { color:#e6ebff; font-size:13px; line-height:1.5; }
+.hero-carousel-controls { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.hero-carousel-controls>button { width:38px; height:38px; display:grid; place-items:center; padding:0; border:1px solid rgba(255,255,255,.45); border-radius:50%; color:#fff; background:rgba(255,255,255,.1); cursor:pointer; transition:background .2s,transform .2s; }
+.hero-carousel-controls>button:hover,.hero-carousel-controls>button:focus-visible { background:rgba(255,255,255,.25); transform:scale(1.05); }
+.hero-carousel-dots { display:flex; align-items:center; justify-content:center; gap:8px; }
+.hero-carousel-dots button { width:28px; height:4px; padding:0; border:0; border-radius:99px; background:rgba(255,255,255,.38); cursor:pointer; transition:background .2s,width .2s; }
+.hero-carousel-dots button:hover,.hero-carousel-dots button:focus-visible,.hero-carousel-dots button.is-active { width:42px; background:#fff; }
+@media(max-width:980px){ .v4-hero { grid-template-columns:1fr; }.hero-carousel { max-width:680px; justify-self:stretch; margin:0 auto; }.v4-hero-copy { max-width:760px; } }
+@media(max-width:680px){ .hero-carousel-card { min-height:320px; border-radius:20px; }.hero-carousel-caption { padding:22px; }.hero-carousel-caption strong { font-size:26px; }.hero-carousel-controls { max-width:680px; } }
