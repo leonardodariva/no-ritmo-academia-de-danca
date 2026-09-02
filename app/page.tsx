@@ -28,7 +28,6 @@ export default function Home() {
     <SiteHeader floating />
 
     <section className="v4-hero" id="conteudo">
-      <div className="home-hero-photo" aria-hidden="true" />
       <div className="v4-hero-copy">
         <p>Dança, conexão e conhecimento</p>
         <h1>A dança começa no movimento.<br /><em>E continua nas relações.</em></h1>
