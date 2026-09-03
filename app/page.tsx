@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 import { danceModalities } from "../content/classes";
-import { articles, knowledgePages } from "../content/editorial";
 import { siteContact, weeklySchedule } from "../content/site";
 import { frequentlyAskedQuestions } from "../content/faq";
 import SiteFooter from "./SiteFooter";
@@ -36,66 +35,53 @@ export default function Home() {
     </section>
 
 <section className="home-classes home-services" id="produtos">
-      <div className="v4-section-heading light"><p>Serviços No Ritmo</p><h2>Nossos serviços</h2><span>Encontre a experiência de dança que combina com seu momento.</span></div>
+      <div className="v4-section-heading light"><p>Serviços No Ritmo</p><h2>Nossos serviços</h2></div>
       <div className="home-services-grid">
         <article>
-          <img src="/images/demo/movimento-detalhe.jpg" alt="Imagem ilustrativa de dança em dupla" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-orientada.png" alt="Professor orientando uma aula particular na Academia No Ritmo" loading="lazy" />
           <div><h3>Aulas particulares</h3><p className="private-lessons-summary">Se o capital tempo for o seu maior ativo, as aulas particulares são a sua melhor opção.</p><Link href="/aulas-particulares" aria-label="Saiba mais sobre aulas particulares">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <img src="/images/demo/aula-em-grupo.jpg" alt="Imagem ilustrativa de uma aula de dança em grupo" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-dinamica.png" alt="Alunos em uma aula de dança em grupo na Academia No Ritmo" loading="lazy" />
           <div><h3>Aulas em grupo</h3><p className="group-lessons-summary">Aprenda a dançar, pratique e conheça pessoas. Você não precisa ter um par.</p><Link href="/aulas" aria-label="Saiba mais sobre aulas em grupo">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <img src="/images/demo/danca-hero.jpg" alt="Imagem ilustrativa de dança para uma coreografia de casamento" loading="lazy" />
-          <div><h3>Coreografias para casamento</h3><p>Uma dança que celebra a história do casal, com coreografia e ensaios personalizados.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para casamento">Saiba mais sobre o serviço</Link></div>
+          <img src="/images/demo/danca-hero-noritmo.png" alt="Imagem ilustrativa de dança para uma coreografia de casamento" loading="lazy" />
+          <div><h3>Coreografias para casamento</h3><p>Uma dança que celebra a história do casal, com coreografia e ensaios personalizados.</p><Link href="/coreografias/casamentos" aria-label="Saiba mais sobre coreografias para casamento">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <img src="/images/demo/movimento-detalhe.jpg" alt="Imagem ilustrativa de movimento para uma coreografia de debutante" loading="lazy" />
-          <div><h3>Coreografias para debutantes</h3><p>Celebre seus 15 anos com uma coreografia especial, feita para expressar sua personalidade.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para debutantes">Saiba mais sobre o serviço</Link></div>
+          <img src="/images/demo/movimento-detalhe-noritmo.png" alt="Imagem ilustrativa de movimento para uma coreografia de debutante" loading="lazy" />
+          <div><h3>Coreografias para debutantes</h3><p>Celebre seus 15 anos com uma coreografia especial, feita para expressar sua personalidade.</p><Link href="/coreografias/debutantes" aria-label="Saiba mais sobre coreografias para debutantes">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
       <div className="home-services-grid home-services-extra">
         <article>
-          <img src="/images/demo/danca-hero.jpg" alt="Imagem ilustrativa de dança para eventos" loading="lazy" />
-          <div><h3>Coreografias para eventos em geral</h3><p>Danças personalizadas para celebrar e surpreender em diferentes ocasiões.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para eventos em geral">Saiba mais sobre o serviço</Link></div>
+          <img src="/images/propostas/modelo-casal-proximo.png" alt="Casal dançando em preparação para um evento" loading="lazy" />
+          <div><h3>Coreografias para eventos em geral</h3><p>Projetos personalizados para escolas, empresas e eventos, de pequenos grupos a mais de mil participantes.</p><Link href="/coreografias/eventos" aria-label="Saiba mais sobre coreografias para eventos em geral">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <img src="/images/demo/aula-em-grupo.jpg" alt="Imagem ilustrativa de dança em equipe para gincanas" loading="lazy" />
-          <div><h3>Coreografias para gincanas</h3><p>Criatividade e trabalho em equipe em coreografias pensadas para sua gincana.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para gincanas">Saiba mais sobre o serviço</Link></div>
-        </article>
-        <article className="home-services-all">
-          <div><span>Serviços No Ritmo</span><h3>Encontre seu próximo passo.</h3><p>Conheça todas as formas de dançar com a gente.</p><Link href="/aulas">Conheça todos os nossos serviços</Link></div>
+          <img src="/images/propostas/modelo-aula-espelho.png" alt="Equipe ensaiando uma coreografia em grupo" loading="lazy" />
+          <div><h3>Coreografias para gincanas</h3><p>Uma apresentação pensada para o regulamento, o perfil da equipe e o tempo disponível.</p><Link href="/coreografias/gincanas" aria-label="Saiba mais sobre coreografias para gincanas">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
     </section>
 
     <section className="home-modalities" id="estilos">
-      <div className="v4-section-heading"><p>Estilos</p><h2>Ritmos diferentes, novas formas de entrar na dança.</h2><span>Conheça alguns dos estilos oferecidos pela No Ritmo e encontre o ritmo que combina com você.</span></div>
-      <div className="home-modality-grid">{danceModalities.slice(0, 5).map((item, index) => <Link href="/modalidades" key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.summary}</p><strong>Conhecer estilo →</strong></Link>)}<Link href="/modalidades" key="mais-estilos"><span>06</span><h3>Mais de 22 estilos de dança</h3><p>Um repertório amplo para experimentar diferentes ritmos e possibilidades.</p><strong>Conhecer estilos →</strong></Link></div>
+      <div className="v4-section-heading"><p>Estilos</p><h2>Estilos diferentes, novas formas de entrar na dança.</h2></div>
+      <div className="home-modality-grid">{danceModalities.filter((item) => ["forro", "zouk", "samba-de-gafieira", "tango", "sertanejo", "vaneira", "bachata"].includes(item.slug)).map((item) => <Link href={`/modalidades#${item.slug}`} key={item.name}><h3>{item.name}</h3><p>{item.summary}</p><strong>Conhecer estilo</strong></Link>)}<Link className="home-modality-all" href="/modalidades"><h3>Conheça todos os estilos</h3><p>Explore os 23 estilos trabalhados pela Academia No Ritmo.</p><strong className="home-modality-arrow" aria-hidden="true">→</strong></Link></div>
     </section>
-
-
-
-    <section className="v4-knowledge" id="conhecimento">
-      <div className="v4-section-heading light"><p>Biblioteca de conhecimento</p><h2>Conceitos para consultar, relacionar e aprofundar.</h2><span>Páginas permanentes conectam fundamentos, aplicações na dança e a experiência da No Ritmo.</span></div>
-      <div className="v4-knowledge-list">{knowledgePages.slice(0, 5).map((topic, index) => <Link key={topic.slug} href={`/conhecimento/${topic.slug}`}><span>{String(index + 1).padStart(2, "0")}</span><h3>{topic.title}</h3><p>{topic.summary}</p><strong>→</strong></Link>)}</div>
-      <Link className="section-action light" href="/conhecimento">Acessar toda a biblioteca →</Link>
-    </section>
-
-    <section className="v4-articles" id="artigos">
-      <div className="v4-section-heading"><p>Publicações recentes</p><h2>Ideias em movimento.</h2><span>Artigos ajudam a observar os conceitos em situações, perguntas e experiências específicas.</span></div>
-      <div className="v4-article-grid">{articles.map((article, index) => <Link key={article.slug} href={`/artigos/${article.slug}`}><p>{article.category}</p><div className={`article-thumb article-thumb-${index + 1}`} role="img" aria-label="Imagem ilustrativa temporária do artigo"><span>Imagem de demonstração</span></div><h3>{article.title}</h3><span>{article.summary}</span><small>{article.author.name} · {article.readingTime} minutos</small></Link>)}<Link className="v4-all-articles" href="/artigos"><p>Acervo editorial</p><h3>Explorar todos os artigos</h3><strong>Ver acervo →</strong></Link></div>
-    </section>
-
 
     <section className="home-team" id="equipe" aria-labelledby="home-team-title">
-      <div className="home-team-heading"><p>Quem faz a No Ritmo</p><h2 id="home-team-title">Pessoas que colocam a dança em movimento.</h2><span>Esta seção está preparada para receber os perfis reais da direção, dos professores e dos colaboradores.</span></div>
-      <div className="home-team-grid"><div className="home-team-feature"><small>Equipe No Ritmo</small><strong>Perfis em construção</strong><p>Nomes, fotografias, trajetórias e áreas de atuação serão publicados após validação com a equipe.</p><Link href="/professores">Conheça a equipe →</Link></div>{["Direção", "Professores", "Colaboradores"].map((role, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={role}><div className="home-team-card-inner"><div className="home-team-card-face home-team-card-front"><span>0{index + 1}</span><div><strong>{role}</strong><small>Perfil em atualização</small></div></div><div className="home-team-card-face home-team-card-back"><small>Em breve</small><strong>Conheça essa pessoa</strong><p>Breve resumo, área de atuação e uma frase do perfil serão adicionados após validação com a equipe.</p></div></div></div>)}</div>
+      <div className="home-team-heading"><p>Professores da Academia</p><h2 id="home-team-title">Ensino que transforma movimento em aprendizado.</h2></div>
+      <div className="home-team-grid">{[
+        { role: "Direção", image: "/images/propostas/modelo-casal-maduro.png" },
+        { role: "Professores", image: "/images/propostas/modelo-aula-orientada.png" },
+        { role: "Colaboradores", image: "/images/propostas/modelo-aula-espelho.png" },
+      ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image"><img src={profile.image} alt={`Imagem ilustrativa para ${profile.role.toLowerCase()} da No Ritmo`} loading="lazy" /><span>0{index + 1}</span></div><div className="home-team-card-content"><strong>{profile.role}</strong><small>Perfil em atualização</small><p>Breve resumo sobre o professor, sua trajetória, formação e áreas de atuação será adicionado após validação com a equipe.</p></div></div>)}</div>
     </section>
 
     <section className="home-testimonials" id="depoimentos" aria-labelledby="home-testimonials-title">
-      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title">Quem dança também conta.</h2><span>Histórias de alunos sobre acolhimento, aprendizagem e convivência na No Ritmo.</span></div></div><TestimonialRotator /></div>
+      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title">Quem dança também conta.</h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span></div></div><TestimonialRotator /></div>
     </section>
 
     <section className="home-events" id="eventos" aria-labelledby="home-events-title">
@@ -119,7 +105,7 @@ export default function Home() {
 
     <section className="home-faq" id="faq" aria-labelledby="home-faq-title">
       <div className="v4-section-heading"><p>Perguntas frequentes</p><h2 id="home-faq-title">Antes de começar, tire suas dúvidas.</h2><span>Respostas rápidas para quem está conhecendo a No Ritmo e quer encontrar o melhor caminho.</span></div>
-      <div className="home-faq-list">{frequentlyAskedQuestions.slice(0, 4).map((item, index) => <details key={item.question}><summary><span>0{index + 1}</span>{item.question}</summary><p>{item.answer}</p></details>)}</div>
+      <div className="home-faq-list">{frequentlyAskedQuestions.map((item, index) => <details key={item.question}><summary><span>0{index + 1}</span>{item.question}</summary><p>{item.answer}</p></details>)}</div>
       <Link className="section-action" href="/faq">Ver perguntas frequentes →</Link>
     </section>
 
