@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaCircleNotch, FaHeart, FaMusic, FaWaveSquare, FaGem, FaWhatsapp } from "react-icons/fa";
-import { classFormats, danceModalities } from "../content/classes";
+import { FaWhatsapp } from "react-icons/fa";
+
+import { danceModalities } from "../content/classes";
 import { articles, knowledgePages } from "../content/editorial";
 import { siteContact, weeklySchedule } from "../content/site";
 import { frequentlyAskedQuestions } from "../content/faq";
@@ -12,15 +13,6 @@ import TestimonialRotator from "./TestimonialRotator";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
-const teachingThemes = [
-  ["Movimento", "Organizar o corpo, experimentar possibilidades e construir repertório."],
-  ["Percepção", "Observar, escutar e sentir o que acontece durante a dança."],
-  ["Comunicação", "Construir uma dança compartilhada com atenção, clareza e respeito."],
-  ["Musicalidade", "Relacionar tempo, pausa, dinâmica e interpretação ao movimento."],
-  ["Conexão", "Encontrar presença, parceria e pertencimento em cada experiência."],
-];
-
-const teachingIcons = [FaCircleNotch, FaWaveSquare, FaGem, FaMusic, FaHeart];
 
 export default function Home() {
   return <main className="v4-home">
@@ -40,13 +32,42 @@ export default function Home() {
     <section className="v4-statement" id="sobre">
       <p className="statement-eyebrow">Sobre a No Ritmo</p>
       <div className="statement-visual" role="img" aria-label="Imagem ilustrativa temporária de uma dança em movimento"><span>Imagem de demonstração</span></div>
-      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Muito além de aprender a dançar</h2><div className="statement-body"><p>Desde&nbsp;2010, a No Ritmo Academia de Dança transforma a dança de salão em uma experiência de aprendizagem, conexão e desenvolvimento humano.</p><p>Ao longo dessa trajetória, mais de 10 mil pessoas já passaram pela No Ritmo, entre crianças, jovens, adultos e idosos, em aulas, projetos sociais, ações culturais e parcerias com instituições públicas e privadas.</p><p>Aqui, aprender a dançar vai além de memorizar passos. Trabalhamos técnica, consciência corporal, percepção, comunicação, escuta, autonomia e convivência — respeitando o ritmo e o processo de aprendizagem de cada pessoa.</p><p className="statement-quote">Acreditamos que dançar é aprender a perceber a si mesmo, compreender o outro e se comunicar através do movimento.</p><p>Por isso, nossa responsabilidade não termina quando ensinamos um passo. Ela termina quando existe aprendizagem.</p><p className="statement-closing">No Ritmo. Dança de salão, aprendizagem e desenvolvimento humano desde&nbsp;2010.</p></div><div className="statement-highlights"><div><span aria-hidden="true">◌</span><strong>Aprendizado vivo</strong><small>Corpo, ritmo e presença em prática.</small></div><div><span aria-hidden="true">♡</span><strong>Conexão real</strong><small>Encontro, escuta e convivência.</small></div></div><Link className="statement-button" href="/sobre">Conheça nossa visão</Link></div>
+      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Muito além de aprender a dançar</h2><div className="statement-body"><p>Desde&nbsp;2010, a No Ritmo Academia de Dança conecta pessoas por meio da dança de salão. Em Apucarana, mais de 10 mil pessoas já fizeram parte dessa história.</p><p>Nosso ensino integra técnica, consciência corporal, comunicação e convivência, respeitando o ritmo de cada pessoa e desenvolvendo autonomia para aprender e dançar.</p><p>Acreditamos que dançar é perceber a si mesmo, compreender o outro e aprender juntos.</p></div><Link className="statement-button" href="/sobre">Saiba mais sobre a No Ritmo</Link></div>
     </section>
 
-    <section className="v4-method" id="forma-ensinar">
-      <div className="v4-section-heading"><p>Nossa forma de ensinar</p><h2>Temas que orientam a experiência de aprendizagem.</h2><span>Na No Ritmo, técnica, percepção, comunicação e autonomia se encontram para que cada pessoa aprenda no próprio ritmo e continue aprendendo.</span></div>
-      <div className="v4-method-grid">{teachingThemes.map(([title, description], index) => { const Icon = teachingIcons[index]; return <article key={title}><span aria-hidden="true"><Icon /></span><h3>{title}</h3><p>{description}</p></article>; })}</div>
-      <Link className="method-button" href="/sobre#metodologia">Entenda a proposta pedagógica</Link>
+<section className="home-classes home-services" id="produtos">
+      <div className="v4-section-heading light"><p>Serviços No Ritmo</p><h2>Nossos serviços</h2><span>Encontre a experiência de dança que combina com seu momento.</span></div>
+      <div className="home-services-grid">
+        <article>
+          <img src="/images/demo/movimento-detalhe.jpg" alt="Imagem ilustrativa de dança em dupla" loading="lazy" />
+          <div><h3>Aulas particulares</h3><p>Aulas no seu ritmo, com atenção aos seus objetivos e acompanhamento personalizado.</p><Link href="/aulas-particulares" aria-label="Saiba mais sobre aulas particulares">Saiba mais sobre o serviço</Link></div>
+        </article>
+        <article>
+          <img src="/images/demo/aula-em-grupo.jpg" alt="Imagem ilustrativa de uma aula de dança em grupo" loading="lazy" />
+          <div><h3>Aulas em turmas</h3><p>Aprenda em grupo, conheça pessoas e desenvolva técnica e confiança para dançar.</p><Link href="/aulas" aria-label="Saiba mais sobre aulas em turmas">Saiba mais sobre o serviço</Link></div>
+        </article>
+        <article>
+          <img src="/images/demo/danca-hero.jpg" alt="Imagem ilustrativa de dança para uma coreografia de casamento" loading="lazy" />
+          <div><h3>Coreografias para casamento</h3><p>Uma dança que celebra a história do casal, com coreografia e ensaios personalizados.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para casamento">Saiba mais sobre o serviço</Link></div>
+        </article>
+        <article>
+          <img src="/images/demo/movimento-detalhe.jpg" alt="Imagem ilustrativa de movimento para uma coreografia de debutante" loading="lazy" />
+          <div><h3>Coreografias para debutantes</h3><p>Celebre seus 15 anos com uma coreografia especial, feita para expressar sua personalidade.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para debutantes">Saiba mais sobre o serviço</Link></div>
+        </article>
+      </div>
+      <div className="home-services-grid home-services-extra">
+        <article>
+          <img src="/images/demo/danca-hero.jpg" alt="Imagem ilustrativa de dança para eventos" loading="lazy" />
+          <div><h3>Coreografias para eventos em geral</h3><p>Danças personalizadas para celebrar e surpreender em diferentes ocasiões.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para eventos em geral">Saiba mais sobre o serviço</Link></div>
+        </article>
+        <article>
+          <img src="/images/demo/aula-em-grupo.jpg" alt="Imagem ilustrativa de dança em equipe para gincanas" loading="lazy" />
+          <div><h3>Coreografias para gincanas</h3><p>Criatividade e trabalho em equipe em coreografias pensadas para sua gincana.</p><Link href="/coreografias" aria-label="Saiba mais sobre coreografias para gincanas">Saiba mais sobre o serviço</Link></div>
+        </article>
+        <article className="home-services-all">
+          <div><span>Serviços No Ritmo</span><h3>Encontre seu próximo passo.</h3><p>Conheça todas as formas de dançar com a gente.</p><Link href="/aulas">Conheça todos os nossos serviços</Link></div>
+        </article>
+      </div>
     </section>
 
     <section className="home-modalities" id="estilos">
@@ -54,11 +75,7 @@ export default function Home() {
       <div className="home-modality-grid">{danceModalities.slice(0, 5).map((item, index) => <Link href="/modalidades" key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.summary}</p><strong>Conhecer estilo →</strong></Link>)}<Link href="/modalidades" key="mais-estilos"><span>06</span><h3>Mais de 22 estilos de dança</h3><p>Um repertório amplo para experimentar diferentes ritmos e possibilidades.</p><strong>Conhecer estilos →</strong></Link></div>
     </section>
 
-    <section className="home-classes" id="produtos">
-      <div className="v4-section-heading light"><p>Produtos No Ritmo</p><h2>Uma experiência para cada objetivo.</h2><span>Conheça as experiências que a No Ritmo oferece e consulte disponibilidade, valores e horários diretamente com a equipe.</span></div>
-      <div className="home-class-grid">{classFormats.map((item, index) => <article key={item.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.name}</h3><p>{item.detail}</p></article>)}</div>
-      <div className="home-class-actions"><Link href="/aulas">Entenda como funcionam →</Link><Link href="/horarios">Consultar horários →</Link></div>
-    </section>
+
 
     <section className="v4-knowledge" id="conhecimento">
       <div className="v4-section-heading light"><p>Biblioteca de conhecimento</p><h2>Conceitos para consultar, relacionar e aprofundar.</h2><span>Páginas permanentes conectam fundamentos, aplicações na dança e a experiência da No Ritmo.</span></div>

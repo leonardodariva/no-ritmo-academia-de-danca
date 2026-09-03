@@ -5,8 +5,7 @@ export const primaryNavigation = [
     children: [
       { label: "Início", href: "/#conteudo" },
       { label: "Sobre a No Ritmo", href: "/#sobre" },
-      { label: "Nossa forma de ensinar", href: "/#forma-ensinar" },
-      { label: "Produtos No Ritmo", href: "/#produtos" },
+      { label: "Serviços No Ritmo", href: "/#produtos" },
       { label: "Estilos", href: "/#estilos" },
       { label: "Biblioteca de conhecimento", href: "/#conhecimento" },
       { label: "Artigos recentes", href: "/#artigos" },
@@ -22,6 +21,7 @@ export const primaryNavigation = [
     label: "A No Ritmo",
     href: "/sobre",
     children: [
+      { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
       { label: "Professores e equipe", href: "/professores" },
       { label: "Autores e colaboradores", href: "/autores" },
       { label: "Projetos e comunidade", href: "/projetos" },
@@ -55,7 +55,7 @@ export const primaryNavigation = [
     label: "Aulas",
     href: "/aulas",
     children: [
-      { label: "Produtos e formatos", href: "/aulas" },
+      { label: "Serviços e formatos", href: "/aulas" },
       { label: "Modalidades", href: "/modalidades" },
       { label: "Turmas e horários", href: "/horarios" },
       { label: "Aulas particulares", href: "/aulas-particulares" },

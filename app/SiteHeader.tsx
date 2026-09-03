@@ -8,7 +8,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { primaryNavigation } from "../content/navigation";
 
 const navDescriptions: Record<string, string> = {
-  "Início": "Voltar ao começo da Home.", "Sobre a No Ritmo": "Conheça a escola e sua visão.", "Nossa forma de ensinar": "Princípios que orientam a aprendizagem.", "Produtos No Ritmo": "Experiências para cada objetivo.", "Estilos": "Ritmos para descobrir e praticar.", "Biblioteca de conhecimento": "Conceitos para consultar e aprofundar.", "Artigos recentes": "Ideias, histórias e práticas em movimento.", "Professores e equipe": "Pessoas que fazem a No Ritmo.", "Depoimentos": "Experiências de quem dança com a gente.", "Eventos e projetos": "Encontros e ações da comunidade.", "Galeria": "Aulas, encontros e momentos especiais.", "Perguntas frequentes": "Respostas para começar com segurança.", "Informações práticas": "Horários, contato e localização.",
+  "Início": "Voltar ao começo da Home.", "Sobre a No Ritmo": "Conheça a escola e sua visão.", "Missão, Visão e Valores": "Princípios que orientam nossa escola.", "Serviços No Ritmo": "Experiências para cada objetivo.", "Estilos": "Ritmos para descobrir e praticar.", "Biblioteca de conhecimento": "Conceitos para consultar e aprofundar.", "Artigos recentes": "Ideias, histórias e práticas em movimento.", "Professores e equipe": "Pessoas que fazem a No Ritmo.", "Depoimentos": "Experiências de quem dança com a gente.", "Eventos e projetos": "Encontros e ações da comunidade.", "Galeria": "Aulas, encontros e momentos especiais.", "Perguntas frequentes": "Respostas para começar com segurança.", "Informações práticas": "Horários, contato e localização.",
 };
 
 export default function SiteHeader({ floating = false }: { floating?: boolean }) {
