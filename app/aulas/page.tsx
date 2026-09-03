@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
-export default function AulasPage() { return <SubpageShell kicker="Do seu jeito" title="Formatos de aula" intro="Aqui explicaremos como funcionam as experiências disponíveis para diferentes objetivos e momentos." sections={[
-  {number:"01",title:"Aulas em grupo",text:"Aprendizado coletivo, socialização, prática guiada e evolução em uma turma com objetivos semelhantes."},
-  {number:"02",title:"Aulas particulares",text:"Atendimento personalizado para uma pessoa ou casal, com ritmo e horário combinados."},
-  {number:"03",title:"Noivos e coreografias",text:"Preparação de danças para casamento, bodas, debutantes e outras celebrações especiais."},
-  {number:"04",title:"Como escolher",text:"A equipe orienta cada pessoa conforme objetivo, experiência, disponibilidade e formato mais adequado. Valores e vagas são confirmados diretamente no atendimento."},
+import { classFormats } from "../../content/classes";
+
+export const metadata: Metadata = { title: "Aulas de dança em Apucarana | No Ritmo", description: "Conheça os formatos de aula da No Ritmo: turmas em grupo, aulas particulares e coreografias.", alternates: { canonical: "/aulas" } };
+
+export default function AulasPage() { return <SubpageShell kicker="Do seu jeito" title="Formatos de aula" intro="Escolha entre experiências em grupo, acompanhamento particular e projetos de coreografia para ocasiões especiais." sections={[
+  ...classFormats.map((format, index) => ({
+    number: String(index + 1).padStart(2, "0"),
+    title: format.name,
+    text: format.detail,
+  })),
+  {number:"04",title:"Como começar",text:"Conte à equipe seu objetivo, experiência e disponibilidade. Vagas, horários e investimento são confirmados diretamente no atendimento."},
 ]} />; }
