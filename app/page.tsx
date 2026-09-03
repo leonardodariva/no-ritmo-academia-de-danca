@@ -40,11 +40,11 @@ export default function Home() {
       <div className="home-services-grid">
         <article>
           <img src="/images/demo/movimento-detalhe.jpg" alt="Imagem ilustrativa de dança em dupla" loading="lazy" />
-          <div><h3>Aulas particulares</h3><p>Aulas no seu ritmo, com atenção aos seus objetivos e acompanhamento personalizado.</p><Link href="/aulas-particulares" aria-label="Saiba mais sobre aulas particulares">Saiba mais sobre o serviço</Link></div>
+          <div><h3>Aulas particulares</h3><p className="private-lessons-summary">Se o capital tempo for o seu maior ativo, as aulas particulares são a sua melhor opção.</p><Link href="/aulas-particulares" aria-label="Saiba mais sobre aulas particulares">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <img src="/images/demo/aula-em-grupo.jpg" alt="Imagem ilustrativa de uma aula de dança em grupo" loading="lazy" />
-          <div><h3>Aulas em turmas</h3><p>Aprenda em grupo, conheça pessoas e desenvolva técnica e confiança para dançar.</p><Link href="/aulas" aria-label="Saiba mais sobre aulas em turmas">Saiba mais sobre o serviço</Link></div>
+          <div><h3>Aulas em grupo</h3><p className="group-lessons-summary">Aprenda a dançar, pratique e conheça pessoas. Você não precisa ter um par.</p><Link href="/aulas" aria-label="Saiba mais sobre aulas em grupo">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <img src="/images/demo/danca-hero.jpg" alt="Imagem ilustrativa de dança para uma coreografia de casamento" loading="lazy" />

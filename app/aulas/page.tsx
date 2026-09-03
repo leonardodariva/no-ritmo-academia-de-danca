@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
-import { classFormats } from "../../content/classes";
+import { groupLessonSections } from "../../content/group-lessons";
 
-export const metadata: Metadata = { title: "Aulas de dança em Apucarana | No Ritmo", description: "Conheça os formatos de aula da No Ritmo: turmas em grupo, aulas particulares e coreografias.", alternates: { canonical: "/aulas" } };
+const title = "Aulas em Grupo | No Ritmo Academia de Dança";
+const description = "Aprenda dança de salão em grupo na No Ritmo, em Apucarana. Turmas para diferentes níveis, mais de 20 horas semanais de atividades e oportunidades para praticar e conhecer pessoas.";
 
-export default function AulasPage() { return <SubpageShell kicker="Do seu jeito" title="Formatos de aula" intro="Escolha entre experiências em grupo, acompanhamento particular e projetos de coreografia para ocasiões especiais." sections={[
-  ...classFormats.map((format, index) => ({
-    number: String(index + 1).padStart(2, "0"),
-    title: format.name,
-    text: format.detail,
-  })),
-  {number:"04",title:"Como começar",text:"Conte à equipe seu objetivo, experiência e disponibilidade. Vagas, horários e investimento são confirmados diretamente no atendimento."},
-]} />; }
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: "/aulas" },
+  openGraph: { title, description, url: "/aulas" },
+};
+
+export default function AulasPage() {
+  return (
+    <SubpageShell
+      wideCopy
+      compactHero
+      kicker="Aprenda, pratique, conecte-se."
+      title="Aulas em Grupo"
+      intro="Aprenda, pratique, conecte-se."
+      sections={groupLessonSections}
+      ctaIntro="Entre no Ritmo."
+      ctaTitle="Conheça nossas turmas e encontre a melhor opção para começar a dançar."
+    />
+  );
+}
