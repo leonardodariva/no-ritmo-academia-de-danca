@@ -81,7 +81,7 @@ export default function Home() {
     </section>
 
     <section className="home-testimonials" id="depoimentos" aria-labelledby="home-testimonials-title">
-      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title">Quem dança também conta.</h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span></div></div><TestimonialRotator /></div>
+      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title"><span className="testimonial-title-line">Quem dança também</span><span className="testimonial-title-line"><span className="testimonial-title-quote">“</span>conta<span className="testimonial-title-quote">”</span>.</span></h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span></div></div><TestimonialRotator /></div>
     </section>
 
     <section className="home-events" id="eventos" aria-labelledby="home-events-title">
