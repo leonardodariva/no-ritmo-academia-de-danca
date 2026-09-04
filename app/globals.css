@@ -422,6 +422,9 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .testimonial-title-line { display:block; white-space:nowrap; }
 .testimonial-title-quote { color:var(--red); }
 .home-testimonial-copy .v4-section-heading>span { display:block; color:#5d6170; line-height:1.7; }
+.google-review-button { display:inline-flex; align-items:center; gap:10px; margin-top:26px; padding:13px 18px; border-radius:999px; color:#fff; background:var(--red); font-size:12px; font-weight:700; line-height:1.2; transition:transform .2s,background .2s,box-shadow .2s; }
+.google-review-button:hover,.google-review-button:focus-visible { color:#fff; background:#b81921; transform:translateY(-2px); box-shadow:0 10px 24px rgba(213,34,42,.22); }
+.google-review-button span { font-size:15px; line-height:1; }
 .home-testimonial-rotator { position:relative; width:100%; max-width:840px; min-height:580px; justify-self:end; overflow:hidden; border-radius:22px; }
 .home-testimonial-rotator article { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:92px 68px 88px; color:#fff; background:linear-gradient(135deg,#416fc7,var(--blue) 55%,var(--blue-violet)); animation:testimonialSwap .28s ease both; }
 .home-testimonial-rotator article>span { position:absolute; top:40px; left:68px; display:block; color:#ff7880; font:600 52px/.8 "Playfair Display"; }.home-testimonial-rotator article p { max-width:720px; margin:0; font-size:18px; line-height:1.55; }.home-testimonial-rotator article small { position:absolute; left:68px; bottom:42px; display:block; padding-right:120px; text-transform:uppercase; letter-spacing:1.8px; color:#c7d5ff; font-size:10px; line-height:1.4; }
