@@ -419,7 +419,7 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .home-testimonial-copy .v4-section-heading { display:block; width:100%; }
 .home-testimonial-copy .v4-section-heading>p { margin:0 0 22px; }
 .home-testimonial-copy .v4-section-heading>h2 { margin:0 0 24px; }
-.testimonial-title-line { display:block; }
+.testimonial-title-line { display:block; white-space:nowrap; }
 .testimonial-title-quote { color:var(--red); }
 .home-testimonial-copy .v4-section-heading>span { display:block; color:#5d6170; line-height:1.7; }
 .home-testimonial-rotator { position:relative; width:100%; max-width:840px; min-height:580px; justify-self:end; overflow:hidden; border-radius:22px; }
