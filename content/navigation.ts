@@ -10,6 +10,7 @@ export const primaryNavigation = [
       { label: "Sobre a No Ritmo", href: "/sobre" },
       { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
       { label: "Professores e equipe", href: "/professores" },
+      { label: "Formação CFP e CFA", href: "/formacao" },
       { label: "Autores e colaboradores", href: "/autores" },
     ],
   },
