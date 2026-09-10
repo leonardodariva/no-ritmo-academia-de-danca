@@ -97,6 +97,7 @@ export default function GincanasPage() {
     compactHero
     kicker="Organização e trabalho em equipe"
     title="Coreografias para gincanas escolares"
+    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
     intro="Uma apresentação pensada para o regulamento, o perfil da equipe e o tempo disponível."
     sections={schoolCompetitionSections}
     ctaIntro="Conheça o desafio conosco"

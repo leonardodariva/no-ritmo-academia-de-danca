@@ -19,6 +19,7 @@ export default function AulasParticularesPage() {
       compactHero
       kicker="No seu ritmo"
       title="Aulas Particulares"
+      breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
       intro="Se o capital tempo for o seu maior ativo, as aulas particulares são a sua melhor opção."
       sections={privateLessonSections}
       ctaIntro="Entre no Ritmo."

@@ -71,10 +71,10 @@ export default function CoreografiasPage() {
     compactHero
     kicker="Um momento para recordar"
     title="Coreografia para casamentos"
+    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
     intro="Prepare a dança dos noivos com calma, segurança e tempo a favor de vocês."
     sections={weddingSections}
     ctaIntro="Comecem a viver esse momento"
     ctaTitle="Falem com nossa equipe e preparem a dança do casamento com tranquilidade."
   />;
 }
-

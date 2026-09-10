@@ -19,6 +19,7 @@ export default function AulasPage() {
       compactHero
       kicker="Aprenda, pratique, conecte-se."
       title="Aulas em Grupo"
+      breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
       intro="Aprenda, pratique, conecte-se."
       sections={groupLessonSections}
       ctaIntro="Entre no Ritmo."
