@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaGoogle, FaWhatsapp } from "react-icons/fa";
+import { AtSign, MapPin, Phone } from "lucide-react";
 
 import { danceModalities } from "../content/classes";
 import { siteContact, weeklySchedule } from "../content/site";
@@ -114,10 +115,10 @@ export default function Home() {
     </section>
 
     <section className="home-practical" id="pratico">
-      <div className="v4-section-heading"><p>Contato</p><h2>Fale com a No Ritmo.</h2><span>Consulte horários, turmas e disponibilidade diretamente com a nossa equipe.</span></div>
+      <div className="v4-section-heading"><p>Contato</p><h2>Fale com a No Ritmo.</h2><Link className="button" href="/contato">Ver todas as informações</Link></div>
       <div className="home-practical-grid">
-        <div className="home-schedule"><h3>Turmas e horários</h3>{weeklySchedule.filter((day) => day.sessions.length).slice(0, 4).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => `${session.level}: ${session.time}`).join(" · ")}</span></div>)}</div>
-        <div className="home-contact-card"><p>Contato</p><h3>{siteContact.city} — {siteContact.state}</h3><a href={siteContact.phoneHref}>{siteContact.phoneDisplay}</a><a href={siteContact.emailHref}>{siteContact.email}</a><a className="home-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer">Abrir localização no mapa →</a><Link href="/contato">Ver todas as informações →</Link></div>
+        <div className="home-schedule"><h3>Turmas e horários</h3>{weeklySchedule.filter((day) => day.sessions.length).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => <span key={`${day.day}-${session.level}`}><b>{session.level}</b>: {session.time}</span>)}</span></div>)}</div>
+        <div className="home-contact-card"><p>Meios de contato</p><div className="home-contact-map"><iframe title="Mapa da No Ritmo em Apucarana" src="https://www.google.com/maps?q=No+Ritmo+Academia+de+Dança+Apucarana+PR&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><a className="home-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer"><MapPin size={18} aria-hidden="true" />Abrir localização no mapa</a><div className="home-contact-details"><a className="contact-with-icon" href={siteContact.phoneHref}><Phone size={18} aria-hidden="true" />{siteContact.phoneDisplay}</a><a className="contact-with-icon" href={siteContact.emailHref}><AtSign size={18} aria-hidden="true" />{siteContact.email}</a></div></div>
       </div>
     </section>
 
