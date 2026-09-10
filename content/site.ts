@@ -36,10 +36,10 @@ export const contactChannels: ContactChannel[] = [
 ];
 
 export const weeklySchedule: ScheduleDay[] = [
-  { day: "Segunda-feira", sessions: [{ level: "Turma iniciante", time: "7h — 8h30" }, { level: "Turma de iniciados", time: "8h30 — 10h" }] },
-  { day: "Terça-feira", sessions: [{ level: "Turma iniciante", time: "7h30 — 9h" }] },
-  { day: "Quarta-feira", sessions: [{ level: "Turma iniciante", time: "8h — 9h30" }] },
-  { day: "Quinta-feira", sessions: [{ level: "Turma nível 2", time: "8h — 10h" }] },
+  { day: "Segunda-feira", sessions: [{ level: "Nível iniciante 1", time: "19h — 20h30" }, { level: "Nível iniciados 1", time: "20h30 — 22h" }] },
+  { day: "Terça-feira", sessions: [{ level: "Nível iniciante 1", time: "19h30 — 21h" }] },
+  { day: "Quarta-feira", sessions: [{ level: "Nível iniciante 1", time: "20h — 21h30" }] },
+  { day: "Quinta-feira", sessions: [{ level: "Nível 2", time: "20h — 21h30" }] },
   { day: "Sexta-feira", sessions: [] },
   { day: "Sábado", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h" }, { level: "Turma de iniciados", time: "15h — 16h30" }] },
 ];
