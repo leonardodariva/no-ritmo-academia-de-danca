@@ -4,7 +4,7 @@ import { danceStyles } from "../../content/dance-styles";
 import StyleVideoButton from "../StyleVideoButton";
 
 const title = "Estilos de dança | No Ritmo Academia de Dança";
-const description = "Conheça os 23 estilos de dança trabalhados pela Academia No Ritmo em Apucarana, suas origens, características e possibilidades.";
+const description = "Conheça os 22 estilos de dança trabalhados pela Academia No Ritmo em Apucarana, suas origens, características e possibilidades.";
 
 export const metadata: Metadata = {
   title,
@@ -19,7 +19,7 @@ export default function ModalidadesPage() {
     compactHero
     kicker="Encontre seu estilo"
     title="Estilos de dança"
-    intro="Um repertório com 23 estilos para conhecer diferentes culturas, musicalidades e formas de dançar."
+    intro="Um repertório com 22 estilos para conhecer diferentes culturas, musicalidades e formas de dançar."
     sections={danceStyles.map((style, index) => ({
       number: String(index + 1).padStart(2, "0"),
       title: style.name,
