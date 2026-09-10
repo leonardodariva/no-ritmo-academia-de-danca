@@ -87,6 +87,7 @@ export default function DebutantesPage() {
     compactHero
     kicker="Uma celebração única"
     title="Coreografias para debutantes"
+    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
     intro="Uma noite de 15 anos merece uma coreografia preparada sem pressa."
     sections={debutanteSections}
     ctaIntro="Prepare esse momento"

@@ -6,9 +6,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const slides = [
   { title: "Conhecer", description: "História, pessoas e visão da No Ritmo.", image: "hero-carousel-media-1", href: "/sobre" },
-  { title: "Aprender", description: "Conceitos e publicações para aprofundar a dança.", image: "hero-carousel-media-2", href: "/conhecimento" },
+  { title: "Aprender", description: "Aulas e estilos para descobrir a dança.", image: "hero-carousel-media-2", href: "/modalidades" },
   { title: "Participar", description: "Aulas, estilos e experiências para cada objetivo.", image: "hero-carousel-media-3", href: "/aulas" },
-  { title: "Conviver", description: "Encontros, eventos e projetos em comunidade.", image: "hero-carousel-media-4", href: "/eventos" },
+  { title: "Conviver", description: "Encontros e projetos em comunidade.", image: "hero-carousel-media-4", href: "/projetos" },
 ] as const;
 
 export default function HeroCarousel() {
