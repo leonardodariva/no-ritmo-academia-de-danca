@@ -10,6 +10,6 @@ export default function ContatoPage() { return <SubpageShell kicker="Fale com a 
     title: channel.label,
     text: channel.value,
   })),
-  {number:"03",title:"Onde estamos",content:<><div className="contact-map-preview" role="img" aria-label={`Mapa de localização da No Ritmo em ${siteContact.city}`} /><p>{siteContact.city} — {siteContact.state}. O endereço completo deve ser confirmado diretamente com a equipe antes da visita.</p></>},
+  {number:"03",title:"Onde estamos",content:<><div className="contact-map-preview"><iframe title={`Mapa da No Ritmo em ${siteContact.city}`} src="https://www.google.com/maps?q=No+Ritmo+Academia+de+Dança+Apucarana+PR&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><p>{siteContact.city} — {siteContact.state}. O endereço completo deve ser confirmado diretamente com a equipe antes da visita.</p></>},
   {number:"04",title:"Como podemos ajudar",text:"Envie uma mensagem contando se procura uma turma, aula particular, aula experimental ou coreografia. A equipe orientará o próximo passo."},
 ]} />; }
