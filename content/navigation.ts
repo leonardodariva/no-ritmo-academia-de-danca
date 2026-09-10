@@ -11,18 +11,6 @@ export const primaryNavigation = [
       { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
       { label: "Professores e equipe", href: "/professores" },
       { label: "Formação CFP e CFA", href: "/formacao" },
-      { label: "Autores e colaboradores", href: "/autores" },
-    ],
-  },
-  {
-    label: "Artigos",
-    href: "/artigos",
-    children: [
-      { label: "Todos os artigos", href: "/artigos" },
-      { label: "Primeiros passos", href: "/artigos/categoria/primeiros-passos" },
-      { label: "Comunicação", href: "/artigos/categoria/comunicacao" },
-      { label: "Como começar a dançar", href: "/artigos/comecar-a-dancar" },
-      { label: "Dança de salão é comunicação", href: "/artigos/danca-e-comunicacao" },
     ],
   },
   {
@@ -49,17 +37,12 @@ export const primaryNavigation = [
 
 export const footerNavigation = {
   conhecer: primaryNavigation[1].children,
-  aprender: [
-    { label: "Conhecimento", href: "/conhecimento" },
-    { label: "Artigos", href: "/artigos" },
-    { label: "Dança de salão", href: "/conhecimento/danca-de-salao" },
-    { label: "Comunicação", href: "/conhecimento/comunicacao" },
-  ],
+  aprender: [],
   participar: [
     { label: "Aulas", href: "/aulas" },
     { label: "Modalidades", href: "/modalidades" },
     { label: "Horários", href: "/horarios" },
-    { label: "Eventos", href: "/eventos" },
+    { label: "Eventos e projetos", href: "/projetos" },
     { label: "Contato", href: "/contato" },
   ],
 } as const;

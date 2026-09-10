@@ -105,6 +105,7 @@ export default function EventosPage() {
     compactHero
     kicker="De pequenos grupos a grandes projetos"
     title="Coreografias para eventos"
+    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
     intro="Projetos personalizados para escolas, empresas e eventos, de pequenos grupos a mais de mil participantes."
     sections={eventSections}
     ctaIntro="Cada projeto começa com uma conversa"

@@ -10,15 +10,16 @@ export const metadata: Metadata = {
 export default function FormacaoPage() {
   return <SubpageShell
     wideCopy
-    kicker="Formação No Ritmo"
-    title="Quem ensina também continua aprendendo."
-    intro="O CFP e o CFA organizam caminhos de formação para pessoas que desejam participar do ensino da dança com responsabilidade, prática e atenção às relações que acontecem em sala."
+    compactHero
+    kicker="Cursos No Ritmo"
+    title="Formação para ensinar e apoiar a dança."
+    intro="A Academia No Ritmo oferece dois caminhos de formação: o CFP prepara professores para conduzir aulas; o CFA prepara assistentes para apoiar a equipe e os alunos em sala."
     sections={[
       {
         number: "01",
         title: "CFP — Curso de Formação de Professores",
         paragraphs: [
-          "O CFP é voltado a quem deseja desenvolver as competências necessárias para ensinar dança de salão e conduzir experiências de aprendizagem.",
+          "O CFP — Curso de Formação de Professores — é voltado a quem deseja se preparar para ensinar dança de salão e conduzir experiências de aprendizagem na Academia No Ritmo.",
           "A formação reúne repertório técnico, organização do movimento, musicalidade, comunicação, leitura de sala, planejamento e reflexão sobre como cada pessoa aprende.",
           "Mais do que preparar alguém para demonstrar passos, o CFP busca formar professores capazes de observar, explicar, adaptar e acompanhar o desenvolvimento dos alunos com segurança e autonomia.",
         ],
@@ -28,7 +29,7 @@ export default function FormacaoPage() {
         number: "02",
         title: "CFA — Curso de Formação de Assistentes",
         paragraphs: [
-          "O CFA é um caminho de iniciação para quem deseja apoiar aulas, acompanhar alunos e começar a desenvolver experiência prática em sala.",
+          "O CFA — Curso de Formação de Assistentes — é o caminho para quem deseja apoiar aulas, acompanhar alunos e desenvolver experiência prática junto à equipe em sala.",
           "A pessoa assistente aprende a observar a turma, acolher dúvidas, colaborar com os professores e contribuir para um ambiente de prática respeitoso e organizado.",
           "A atuação acontece com orientação da equipe, respeitando o momento de aprendizagem e as responsabilidades definidas para cada etapa da formação.",
         ],
