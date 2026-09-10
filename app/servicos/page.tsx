@@ -12,7 +12,7 @@ const services = [
   ["04", "Coreografias para debutantes", "Uma coreografia preparada para celebrar seus 15 anos sem pressa.", "/coreografias/debutantes"],
   ["05", "Coreografias para eventos", "Projetos personalizados para escolas, empresas e grandes eventos.", "/coreografias/eventos"],
   ["06", "Coreografias para gincanas", "Uma apresentação pensada para a equipe, o regulamento e o tempo disponível.", "/coreografias/gincanas"],
-  ["07", "CFB — Curso de Formação de Professores", "Formação para ensinar dança com técnica, consciência e segurança.", "/professores"],
+  ["07", "CFP — Curso de Formação Profissional em Dança de Salão", "Conhecimento para dançar. Método para ensinar. Autonomia para continuar aprendendo.", "/formacao#cfp"],
   ["08", "CFP e CFA — Formação No Ritmo", "Caminhos de formação para ensinar, apoiar aulas e desenvolver experiência prática.", "/formacao"],
 ] as const;
 

@@ -73,14 +73,14 @@ export default function Home() {
           <div><h3>Coreografias para gincanas</h3><p>Uma apresentação pensada para o regulamento, o perfil da equipe e o tempo disponível.</p><Link href="/coreografias/gincanas" aria-label="Saiba mais sobre coreografias para gincanas">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <Link className="service-card-hitarea" href="/professores" aria-label="Abrir serviço CFB" />
+          <Link className="service-card-hitarea" href="/formacao#cfp" aria-label="Abrir serviço CFP" />
           <img src="/images/propostas/modelo-aula-orientada.png" alt="Formação de professores de dança" loading="lazy" />
-          <div><h3>CFB — Curso de Formação de Professores</h3><p>Formação completa para quem deseja ensinar dança com técnica, consciência e segurança.</p><Link href="/professores" aria-label="Saiba mais sobre o CFB">Saiba mais sobre o serviço</Link></div>
+          <div><h3>CFP — Curso de Formação Profissional em Dança de Salão</h3><p>Conhecimento para dançar. Método para ensinar. Autonomia para continuar aprendendo.</p><Link href="/formacao#cfp" aria-label="Saiba mais sobre o CFP">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/formacao#cfa" aria-label="Abrir serviço CFA" />
           <img src="/images/propostas/modelo-aula-espelho.png" alt="Formação de assistentes de dança" loading="lazy" />
-          <div><h3>CFA — Curso de Formação de Assistente</h3><p>Prepare-se para apoiar aulas, acompanhar alunos e desenvolver experiência prática em sala.</p><Link href="/formacao#cfa" aria-label="Saiba mais sobre o CFA">Saiba mais sobre o serviço</Link></div>
+          <div><h3>CFA — Curso de Formação de Assistentes</h3><p>Muito além de aprender a dançar: compreenda como as pessoas aprendem e prepare-se para apoiar o professor e acolher os alunos.</p><Link href="/formacao#cfa" aria-label="Saiba mais sobre o CFA">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
     </section>
