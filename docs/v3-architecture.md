@@ -1,6 +1,4 @@
-# No Ritmo V3 — arquitetura legada
-
-> Este documento registra a arquitetura anterior. A referência atual é [`v4-architecture.md`](./v4-architecture.md).
+# No Ritmo V3 — arquitetura
 
 ## Rotas públicas
 
@@ -12,11 +10,7 @@
 | `/aulas` | Formatos de aula |
 | `/modalidades` | Ritmos e níveis |
 | `/aulas-particulares` | Produto de aulas individuais ou em casal |
-| `/servicos` | Diretório de serviços |
-| `/coreografias/casamentos` | Projetos para casamentos |
-| `/coreografias/debutantes` | Projetos para debutantes |
-| `/coreografias/eventos` | Projetos para eventos |
-| `/coreografias/gincanas` | Projetos para gincanas |
+| `/coreografias` | Projetos para casamentos, debutantes e eventos |
 | `/horarios` | Grade de turmas |
 | `/conhecimento` | Biblioteca permanente de conceitos |
 | `/conhecimento/[slug]` | Página de referência individual |

@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://no-ritmo-academia-de-danca.sites.openai.com"),
   title: "No Ritmo Academia de Dança | Apucarana",
-  description: "No Ritmo é uma academia de dança em Apucarana, com aulas, estilos, projetos e experiências para todos os ritmos.",
+  description: "No Ritmo é uma academia de dança em Apucarana e uma plataforma de conhecimento sobre dança, movimento, comunicação e cultura.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: { title: "No Ritmo Academia de Dança", description: "Dança, conhecimento, movimento e encontros em Apucarana.", type: "website", locale: "pt_BR" },
 };

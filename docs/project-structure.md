@@ -23,11 +23,7 @@ Site institucional da No Ritmo, construído com React 19, Next/Vinext e Vite, co
 | `/aulas` | Como funcionam as aulas |
 | `/aulas-particulares` | Aulas individuais ou em casal |
 | `/horarios` | Tabela de horários |
-| `/servicos` | Diretório de serviços da No Ritmo |
-| `/coreografias/casamentos` | Coreografias para casamentos |
-| `/coreografias/debutantes` | Coreografias para debutantes |
-| `/coreografias/eventos` | Coreografias para eventos |
-| `/coreografias/gincanas` | Coreografias para gincanas |
+| `/coreografias` | Coreografias para eventos |
 | `/conhecimento` | Índice de conteúdos |
 | `/conhecimento/[slug]` | Página de cada tema |
 | `/artigos` | Biblioteca editorial |
@@ -42,7 +38,7 @@ Site institucional da No Ritmo, construído com React 19, Next/Vinext e Vite, co
 
 - `app/page.tsx`: composição da Home.
 - `app/SubpageShell.tsx`: estrutura compartilhada das páginas internas.
-- `app/DanceStyles.tsx`: cards de formatos de aula usados na Home.
+- `app/DanceStyles.tsx`: cards de modalidades e conteúdo explorável.
 - `app/Testimonials.tsx`: depoimentos demonstrativos.
 - `app/DetailsAutoClose.tsx`: fecha um submenu quando outro é aberto.
 - `app/ScrollReveal.tsx`: entradas sutis durante a rolagem.
@@ -50,7 +46,7 @@ Site institucional da No Ritmo, construído com React 19, Next/Vinext e Vite, co
 
 ## Conteúdo e identidade
 
-- `content/`: conteúdo tipado de aulas, estilos, equipe, FAQ, artigos e conhecimento.
+- `content/types.ts` e `content/demo.ts`: tipos e conteúdo fictício para prototipação.
 - `app/globals.css`: tokens de cor, tipografia, layout responsivo, cards, botões e animações.
 - Paleta: azul `#17479e`, azul profundo `#2d3393`, vermelho e preto.
 - Logos: `public/logo-fundo-claro.png` e `public/logo-fundo-escuro.png`.
@@ -65,4 +61,4 @@ Site institucional da No Ritmo, construído com React 19, Next/Vinext e Vite, co
 
 ## Próxima etapa
 
-Revisar os conteúdos marcados como demonstrativos, confirmar informações institucionais, testar desktop/mobile e publicar a versão de produção.
+Substituir os placeholders por história, professores, fotos, depoimentos, endereço, redes sociais e regras oficiais da No Ritmo. Depois, revisar desktop/mobile e publicar a versão de produção.

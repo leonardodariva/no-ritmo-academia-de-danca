@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
 import { danceStyles } from "../../content/dance-styles";
-import StyleVideoButton from "../StyleVideoButton";
 
 const title = "Estilos de dança | No Ritmo Academia de Dança";
 const description = "Conheça os 23 estilos de dança trabalhados pela Academia No Ritmo em Apucarana, suas origens, características e possibilidades.";
@@ -24,7 +23,6 @@ export default function ModalidadesPage() {
       number: String(index + 1).padStart(2, "0"),
       title: style.name,
       paragraphs: style.paragraphs,
-      titleAddon: <StyleVideoButton styleName={style.name} />,
       id: style.slug,
     }))}
     ctaIntro="Entre no Ritmo"

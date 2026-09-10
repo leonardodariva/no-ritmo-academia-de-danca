@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaGoogle, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { danceModalities } from "../content/classes";
 import { siteContact, weeklySchedule } from "../content/site";
@@ -9,8 +9,6 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import HeroCarousel from "./HeroCarousel";
 import TestimonialRotator from "./TestimonialRotator";
-import { galleryAlbums } from "../content/gallery";
-import ProjectCards from "./projetos/ProjectCards";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -25,7 +23,7 @@ export default function Home() {
         <p>Dança, conexão e conhecimento</p>
         <h1>A dança começa no movimento.<br /><em>E continua nas relações.</em></h1>
         <span>Fundada em 2010, em Apucarana, a No Ritmo já recebeu mais de 10 mil pessoas e acredita que dançar é aprender, conviver e desenvolver-se para além dos passos.</span>
-        <div><Link className="button" href="#produtos">Conheça nossos serviços</Link><Link className="text-link" href="#sobre">Clique para conhecer a No Ritmo</Link></div>
+        <div><Link className="button" href="/servicos">Conheça nossos serviços</Link><Link className="text-link" href="/sobre">Clique para conhecer a No Ritmo</Link></div>
       </div>
       <HeroCarousel />
     </section>
@@ -77,9 +75,9 @@ export default function Home() {
           <div><h3>CFB — Curso de Formação de Professores</h3><p>Formação completa para quem deseja ensinar dança com técnica, consciência e segurança.</p><Link href="/professores" aria-label="Saiba mais sobre o CFB">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
-          <Link className="service-card-hitarea" href="/formacao#cfa" aria-label="Abrir serviço CFA" />
+          <Link className="service-card-hitarea" href="/professores" aria-label="Abrir serviço CFA" />
           <img src="/images/propostas/modelo-aula-espelho.png" alt="Formação de assistentes de dança" loading="lazy" />
-          <div><h3>CFA — Curso de Formação de Assistente</h3><p>Prepare-se para apoiar aulas, acompanhar alunos e desenvolver experiência prática em sala.</p><Link href="/formacao#cfa" aria-label="Saiba mais sobre o CFA">Saiba mais sobre o serviço</Link></div>
+          <div><h3>CFA — Curso de Formação de Assistente</h3><p>Prepare-se para apoiar aulas, acompanhar alunos e desenvolver experiência prática em sala.</p><Link href="/professores" aria-label="Saiba mais sobre o CFA">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
     </section>
@@ -95,22 +93,22 @@ export default function Home() {
         { role: "Luciano", image: "/images/propostas/modelo-casal-maduro.png" },
         { role: "Leonardo", image: "/images/propostas/modelo-aula-orientada.png" },
         { role: "Lilian", image: "/images/propostas/modelo-aula-espelho.png" },
-        { role: "Paulo Menossi", image: "/images/propostas/paulo-menossi-aula.png", subtitle: "Formado pelo CFP da No Ritmo", bio: "Aluno da No Ritmo há três anos, Paulo decidiu aprofundar sua trajetória na dança e se preparar para ensinar. Concluiu o Curso de Formação de Professores (CFP) da academia com muito estudo, dedicação e empenho em cada etapa, incluindo o estágio e a prática de aulas assistidas." },
-      ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image"><img src={profile.image} alt={`Imagem ilustrativa para ${profile.role.toLowerCase()} da No Ritmo`} loading="lazy" /><span>0{index + 1}</span></div><div className="home-team-card-content"><strong>{profile.role}</strong><small>{profile.subtitle ?? "Perfil em atualização"}</small><p>{profile.bio ?? "Breve resumo sobre o professor, sua trajetória, formação e áreas de atuação será adicionado após validação com a equipe."}</p></div></div>)}</div>
+        { role: "Paulo Menossi", image: "/images/propostas/modelo-casal-proximo.png" },
+      ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image"><img src={profile.image} alt={`Imagem ilustrativa para ${profile.role.toLowerCase()} da No Ritmo`} loading="lazy" /><span>0{index + 1}</span></div><div className="home-team-card-content"><strong>{profile.role}</strong><small>Perfil em atualização</small><p>Breve resumo sobre o professor, sua trajetória, formação e áreas de atuação será adicionado após validação com a equipe.</p></div></div>)}</div>
     </section>
 
     <section className="home-testimonials" id="depoimentos" aria-labelledby="home-testimonials-title">
-      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title"><span className="testimonial-title-line">Quem dança</span><span className="testimonial-title-line">também <span className="testimonial-title-quote">“conta”</span></span></h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span><a className="google-review-button" href="https://www.google.com/maps?cid=11367344094392465475" target="_blank" rel="noopener noreferrer"><FaGoogle aria-hidden="true" />Deixe sua avaliação no Google</a></div></div><TestimonialRotator /></div>
+      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title"><span className="testimonial-title-line">Quem dança</span><span className="testimonial-title-line">também <span className="testimonial-title-quote">“conta”</span></span></h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span><a className="google-review-button" href="https://www.google.com/maps?cid=11367344094392465475" target="_blank" rel="noopener noreferrer">Deixe sua avaliação no Google <span aria-hidden="true">↗</span></a></div></div><TestimonialRotator /></div>
     </section>
 
     <section className="home-events" id="eventos" aria-labelledby="home-events-title">
-      <div className="v4-section-heading"><p>Eventos e projetos</p><h2 id="home-events-title">A dança continua fora da sala.</h2><Link className="section-action" href="/projetos">Acessar todos os projetos</Link></div>
-      <ProjectCards />
+      <div className="v4-section-heading"><p>Eventos e projetos</p><h2 id="home-events-title">A dança continua fora da sala.</h2><Link className="section-action" href="/projetos">Acessar todos os projetos →</Link></div>
+      <div className="home-project-grid"><Link href="/eventos"><p>Projeto 1</p><div className="project-thumb project-thumb-1" role="img" aria-label="Imagem ilustrativa temporária do projeto 1"><span>Imagem de demonstração</span></div><h3>Agenda No Ritmo</h3><span>Encontros e experiências abertas para dançar junto.</span><small>Conhecer projeto →</small></Link><Link href="/projetos"><p>Projeto 2</p><div className="project-thumb project-thumb-2" role="img" aria-label="Imagem ilustrativa temporária do projeto 2"><span>Imagem de demonstração</span></div><h3>Projetos e comunidade</h3><span>Parcerias e ações que levam a dança para novos espaços.</span><small>Acessar projeto →</small></Link><Link href="/projetos"><p>Projeto 3</p><div className="project-thumb project-thumb-3" role="img" aria-label="Imagem ilustrativa temporária do projeto 3"><span>Imagem de demonstração</span></div><h3>Próximos encontros</h3><span>Novas experiências da academia em construção.</span><small>Ver detalhes →</small></Link></div>
     </section>
 
     <section className="gallery home-gallery" id="galeria" aria-labelledby="home-gallery-title">
-      <div className="gallery-heading-row"><div className="gallery-heading"><p>Galeria</p><h2 id="home-gallery-title">Momentos em movimento.</h2><p>Entre no clima da No Ritmo: sorrisos, novos passos e encontros que dão vontade de viver tudo de novo.</p></div><Link className="button gallery-all-button" href="/galeria">Ver todos os álbuns</Link></div>
-      <div className="gallery-grid">{galleryAlbums.slice(0, 3).map((album, index) => <Link className={"gallery-item home-album" + (index === 0 ? " gallery-large" : "")} href={"/galeria/" + album.slug} key={album.slug}><img src={album.photos[0].src} alt={album.photos[0].alt} loading="lazy" /><div className="home-album-copy"><small>{album.category} · {album.photos.length} fotos · Demonstração</small><h3>{album.title}</h3><span>Ver álbum</span></div></Link>)}</div>
+      <div className="gallery-heading"><p>Galeria</p><h2 id="home-gallery-title">Momentos em movimento.</h2><p>Um registro visual das aulas, encontros e experiências da No Ritmo.</p></div>
+      <div className="gallery-grid"><Link className="gallery-item gallery-large" href="/galeria"><span>Aulas e encontros</span></Link><Link className="gallery-item" href="/galeria"><span>Prática</span></Link><Link className="gallery-item" href="/galeria"><span>Comunidade</span></Link></div>
     </section>
 
     <section className="home-practical" id="pratico">
@@ -122,8 +120,9 @@ export default function Home() {
     </section>
 
     <section className="home-faq" id="faq" aria-labelledby="home-faq-title">
-      <div className="v4-section-heading faq-heading"><p>Perguntas frequentes</p><div className="faq-heading-row"><div><h2 id="home-faq-title">Antes de começar, tire suas dúvidas.</h2></div><Link className="button faq-all-button" href="/faq">Ver perguntas frequentes</Link></div></div>
+      <div className="v4-section-heading"><p>Perguntas frequentes</p><h2 id="home-faq-title">Antes de começar, tire suas dúvidas.</h2><span>Respostas rápidas para quem está conhecendo a No Ritmo e quer encontrar o melhor caminho.</span></div>
       <div className="home-faq-list">{frequentlyAskedQuestions.map((item, index) => <details key={item.question}><summary><span>0{index + 1}</span>{item.question}</summary><p>{item.answer}</p></details>)}</div>
+      <Link className="section-action" href="/faq">Ver perguntas frequentes →</Link>
     </section>
 
     <SiteFooter />

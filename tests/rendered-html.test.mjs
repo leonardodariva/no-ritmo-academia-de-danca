@@ -36,7 +36,7 @@ test("renderiza a página inicial da No Ritmo", async () => {
 });
 
 test("todas as rotas públicas principais respondem sem erro", async () => {
-  const routes = ["/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/servicos", "/formacao", "/coreografias/casamentos", "/coreografias/debutantes", "/coreografias/eventos", "/coreografias/gincanas", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/conhecimento/danca-de-salao", "/artigos", "/artigos/comecar-a-dancar", "/artigos/categoria/comunicacao", "/eventos", "/autores", "/autores/equipe-no-ritmo"];
+  const routes = ["/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/coreografias", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/conhecimento/danca-de-salao", "/artigos", "/artigos/comecar-a-dancar", "/artigos/categoria/comunicacao", "/eventos", "/autores", "/autores/equipe-no-ritmo"];
   for (const route of routes) { const response = await render(route); assert.equal(response.status, 200, `${route} deveria responder 200`); }
 });
 
@@ -53,11 +53,11 @@ test("contato e horários exibem os dados centralizados", async () => {
 
 test("modalidades e aulas apresentam conteúdo útil sem texto de preparação", async () => {
   const modalitiesHtml = await (await render("/modalidades")).text();
-  assert.match(modalitiesHtml, /Samba de Gafieira/i);
+  assert.match(modalitiesHtml, /Samba de gafieira/);
+  assert.match(modalitiesHtml, /Para quem está começando/);
   assert.doesNotMatch(modalitiesHtml, /será atualizada|terá uma explicação/i);
 
   const classesHtml = await (await render("/aulas")).text();
-  assert.match(classesHtml, /quem está começando/i);
   assert.match(classesHtml, /Aulas em grupo/);
   assert.match(classesHtml, /Coreografias para eventos/);
   assert.doesNotMatch(classesHtml, /Aqui explicaremos/i);
@@ -70,8 +70,8 @@ test("sobre e FAQ usam conteúdo consolidado sem placeholders", async () => {
   assert.doesNotMatch(aboutHtml, /Lorem ipsum|será ampliada|A página contará/i);
 
   const faqHtml = await (await render("/faq")).text();
-  assert.match(faqHtml, /O que é dança de salão\?/);
-  assert.match(faqHtml, /dança de salão é tudo o que se dança a dois/i);
+  assert.match(faqHtml, /Como funciona a aula experimental/);
+  assert.match(faqHtml, /A aula experimental deve ser agendada pelo WhatsApp/);
 });
 
 test("home apresenta os três caminhos e a rede editorial da V4", async () => {
@@ -80,7 +80,7 @@ test("home apresenta os três caminhos e a rede editorial da V4", async () => {
   assert.match(html, /Conhecer/);
   assert.match(html, /Aprender/);
   assert.match(html, /Participar/);
-  assert.match(html, /Conheça todos os estilos/);
+  assert.match(html, /Biblioteca de conhecimento/);
   assert.match(html, /instagram\.com\/noritmoacademiadedanca/i);
   assert.match(html, /facebook\.com\/NoRitmoAcademiadeDanca/i);
   assert.doesNotMatch(html, /Desde 2010|15\+.*anos de história/i);
@@ -104,12 +104,4 @@ test("a V4 conecta artigos e páginas de conhecimento", async () => {
   assert.match(articleHtml, /Transparência editorial/i);
   assert.match(articleHtml, /href="\/conhecimento\/comunicacao"/i);
   assert.match(articleHtml, /Sobre a autoria/i);
-});
-
-test("a formação apresenta CFP e CFA com responsabilidades claras", async () => {
-  const html = await (await render("/formacao")).text();
-  assert.match(html, /CFP — Curso de Formação de Professores/);
-  assert.match(html, /CFA — Curso de Formação de Assistentes/);
-  assert.match(html, /apoiar aulas, acompanhar alunos/i);
-  assert.doesNotMatch(html, /duração garantida|certificação reconhecida/i);
 });

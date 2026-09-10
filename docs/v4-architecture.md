@@ -16,15 +16,10 @@ A V4 organiza o site em três intenções claras: **conhecer**, **aprender** e *
 - `/autores`: autoria, revisão e conteúdos publicados.
 - `/aulas`: formatos, funcionamento e orientação para iniciantes.
 - `/modalidades`: ritmos e experiências confirmadas.
-- `/servicos`: diretório de serviços da academia.
-- `/formacao`: apresentação dos programas CFP e CFA.
-- `/coreografias/casamentos`, `/coreografias/debutantes`, `/coreografias/eventos`, `/coreografias/gincanas`: páginas específicas de coreografias.
 - `/horarios`: grade sujeita a confirmação.
 - `/eventos`: próximos eventos e memória da comunidade.
-- `/projetos`: projetos e ações da comunidade.
 - `/galeria`: registros autorizados.
 - `/contato`: canais, localização e orientações.
-- `/area-do-aluno`: acesso à área reservada do aluno.
 
 Páginas específicas de serviços continuam acessíveis, mas ficam subordinadas à área **Participar** para evitar um menu principal excessivo.
 
