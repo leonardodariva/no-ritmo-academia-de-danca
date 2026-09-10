@@ -298,6 +298,7 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .style-video-placeholder p { margin:0; font-size:20px; font-weight:700; }.style-video-placeholder small { color:#ced8f5; }
 .style-video-player { display:block; width:100%; max-height:70dvh; aspect-ratio:16/9; object-fit:contain; border-radius:14px; background:#08080c; }
 .project-directory .album-directory-controls { justify-content:flex-end; margin-top:-70px; margin-bottom:34px; }
+.contact-map-preview { width:100%; min-height:150px; margin-bottom:16px; border-radius:14px; background:linear-gradient(rgba(20,71,158,.12),rgba(20,71,158,.12)),url('/images/demo/mapa-apucarana.png') center/cover,#dfe5ef; border:1px solid #d7dce6; }
 @media (max-width: 700px) { .project-directory .album-directory-controls { margin-top:0; justify-content:stretch; } }
 .home-modality-grid h3 { margin:0 0 12px; font-size:23px; font-weight:800; line-height:1.05; }.home-modality-grid p { min-height:0; margin:0; color:#5d6170; font-size:13px; line-height:1.5; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; }.home-modality-grid a:hover p,.home-modality-grid a:focus-visible p { color:#dce5ff; }.home-modality-grid strong { width:100%; margin-top:auto; padding-top:18px; font-size:11px; }
 .home-modality-grid .home-modality-all { color:#fff; background-color:#17479e!important; background-image:none!important; border-color:#17479e; transition:transform .2s,color .2s,box-shadow .2s,border-color .2s; }

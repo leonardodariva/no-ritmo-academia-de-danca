@@ -114,9 +114,9 @@ export default function Home() {
     </section>
 
     <section className="home-practical" id="pratico">
-      <div className="v4-section-heading"><p>Informações práticas</p><h2>Planeje seu próximo passo.</h2><span>Os horários abaixo refletem a estrutura atual do site. Confirme vagas e alterações antes de visitar a academia.</span></div>
+      <div className="v4-section-heading"><p>Contato</p><h2>Fale com a No Ritmo.</h2><span>Consulte horários, turmas e disponibilidade diretamente com a nossa equipe.</span></div>
       <div className="home-practical-grid">
-        <div className="home-schedule"><h3>Turmas e horários</h3>{weeklySchedule.filter((day) => day.sessions.length).slice(0, 4).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => `${session.level}: ${session.time}`).join(" · ")}</span></div>)}<Link href="/horarios">Ver grade completa →</Link></div>
+        <div className="home-schedule"><h3>Turmas e horários</h3>{weeklySchedule.filter((day) => day.sessions.length).slice(0, 4).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => `${session.level}: ${session.time}`).join(" · ")}</span></div>)}</div>
         <div className="home-contact-card"><p>Contato</p><h3>{siteContact.city} — {siteContact.state}</h3><a href={siteContact.phoneHref}>{siteContact.phoneDisplay}</a><a href={siteContact.emailHref}>{siteContact.email}</a><a className="home-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer">Abrir localização no mapa →</a><Link href="/contato">Ver todas as informações →</Link></div>
       </div>
     </section>
