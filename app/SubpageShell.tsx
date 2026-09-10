@@ -24,7 +24,7 @@ export default function SubpageShell({ kicker, title, intro, sections, wideCopy 
     <main className="subpage">
       <SiteHeader />
       <section className={compactHero ? "subpage-hero subpage-hero-photo" : "subpage-hero"} id="main-content">
-        {!compactHero && <p>{kicker}</p>}<h1>{title}</h1>{!hideHeroSummary && <div><span>No Ritmo • Apucarana</span><p>{intro}</p></div>}
+        <p>{kicker}</p><h1>{title}</h1>{!hideHeroSummary && <div><span>No Ritmo • Apucarana</span><p>{intro}</p></div>}
       </section>
       <nav className="subpage-breadcrumb" aria-label="Navegação estrutural"><Link className="breadcrumb-home-link" href="/" aria-label="Voltar para a página inicial"><House className="breadcrumb-home-icon" size={16} strokeWidth={2} aria-hidden="true" /><span>Página inicial</span></Link>{breadcrumbParent && <><span aria-hidden="true">/</span><Link href={breadcrumbParent.href}>{breadcrumbParent.label}</Link></>}<span aria-hidden="true">/</span><strong aria-current="page">{title}</strong></nav>
       <section className={wideCopy ? "subpage-sections subpage-sections-wide" : "subpage-sections"}>

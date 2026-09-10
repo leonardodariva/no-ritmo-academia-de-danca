@@ -299,6 +299,8 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .style-video-player { display:block; width:100%; max-height:70dvh; aspect-ratio:16/9; object-fit:contain; border-radius:14px; background:#08080c; }
 .project-directory .album-directory-controls { justify-content:flex-end; margin-top:-70px; margin-bottom:34px; }
 .contact-map-preview { width:100%; height:220px; margin-bottom:16px; overflow:hidden; border-radius:14px; background:#dfe5ef; border:1px solid #d7dce6; }.contact-map-preview iframe { width:100%; height:100%; border:0; }
+.contact-schedule { display:grid; gap:0; border-top:1px solid var(--line); }.contact-schedule>div { display:grid; grid-template-columns:minmax(120px,.8fr) minmax(0,1.2fr); gap:24px; padding:18px 0; border-bottom:1px solid var(--line); }.contact-schedule>div>strong { font-size:16px; color:var(--ink); }.contact-schedule>div>span { display:grid; gap:6px; color:#54545c; }.contact-schedule b { color:var(--ink); font-weight:650; }
+@media(max-width:680px){ .contact-schedule>div { grid-template-columns:1fr; gap:8px; } }
 .home-contact-map { height:140px; margin:0 0 18px; overflow:hidden; border-radius:12px; border:1px solid #d7dce6; }.home-contact-map iframe { width:100%; height:100%; border:0; }
 .schedule-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); color:#5d6170; }.schedule-grid strong:first-child { color:var(--ink); }.schedule-grid-head { padding-top:0; color:var(--ink); font-size:11px; text-transform:uppercase; letter-spacing:1px; border-bottom:2px solid var(--ink); }.schedule-grid-head strong { color:var(--ink); }
 @media (max-width: 700px) { .project-directory .album-directory-controls { margin-top:0; justify-content:stretch; } }
@@ -613,6 +615,7 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
   background:linear-gradient(90deg,rgba(17,19,67,.96) 0%,rgba(23,71,158,.83) 45%,rgba(45,51,147,.38) 100%),url('/images/demo/aula-em-grupo-noritmo.png') center 42%/cover no-repeat;
 }
 .subpage-hero.subpage-hero-photo h1 { margin:0; font-size:42px; line-height:1.12; letter-spacing:-2px; }
+.subpage-hero.subpage-hero-photo>p { margin:0 0 18px; color:#d6e1ff; text-transform:uppercase; letter-spacing:3px; font-size:10px; font-weight:700; }
 @media(max-width:680px) {
   .subpage-hero.subpage-hero-photo { padding:130px 24px 36px; }
   .subpage-hero.subpage-hero-photo h1 { font-size:36px; }

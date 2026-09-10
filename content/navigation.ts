@@ -9,8 +9,8 @@ export const primaryNavigation = [
     children: [
       { label: "Sobre a No Ritmo", href: "/sobre" },
       { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
-      { label: "Professores e equipe", href: "/professores" },
-      { label: "Formação CFP e CFA", href: "/formacao" },
+      { label: "CFP — Formação de Professores", href: "/formacao/cfp" },
+      { label: "CFA — Formação de Assistentes", href: "/formacao/cfa" },
     ],
   },
   {
@@ -20,7 +20,6 @@ export const primaryNavigation = [
       { label: "Todos os serviços", href: "/servicos" },
       { label: "Aulas em grupo", href: "/aulas" },
       { label: "Modalidades", href: "/modalidades" },
-      { label: "Turmas e horários", href: "/horarios" },
       { label: "Aulas particulares", href: "/aulas-particulares" },
       { label: "Coreografias para casamentos", href: "/coreografias/casamentos" },
       { label: "Coreografias para debutantes", href: "/coreografias/debutantes" },
@@ -41,7 +40,6 @@ export const footerNavigation = {
   participar: [
     { label: "Aulas", href: "/aulas" },
     { label: "Modalidades", href: "/modalidades" },
-    { label: "Horários", href: "/horarios" },
     { label: "Eventos e projetos", href: "/projetos" },
     { label: "Contato", href: "/contato" },
   ],

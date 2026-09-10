@@ -30,7 +30,7 @@ export const classFormats: ClassFormat[] = [
     name: "Aulas em grupo",
     summary: "Aprender e praticar junto.",
     detail: "Prática guiada e convivência em turmas organizadas conforme o momento de aprendizagem.",
-    href: "/horarios",
+    href: "/aulas",
   },
   {
     slug: "aulas-particulares",
