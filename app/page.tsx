@@ -87,7 +87,7 @@ export default function Home() {
 
     <section className="home-modalities" id="estilos">
       <div className="v4-section-heading"><p>Estilos</p><h2>Estilos diferentes, novas formas de entrar na dança.</h2></div>
-      <div className="home-modality-grid">{danceModalities.filter((item) => ["forro", "zouk", "samba-de-gafieira", "tango", "sertanejo", "vaneira", "bachata"].includes(item.slug)).map((item) => <Link href={`/modalidades#${item.slug}`} key={item.name}><h3>{item.name}</h3><p>{item.summary}</p><strong>Conhecer estilo</strong></Link>)}<Link className="home-modality-all" href="/modalidades"><h3>Conheça todos os estilos</h3><p>Explore os 23 estilos trabalhados pela Academia No Ritmo.</p><strong className="home-modality-arrow" aria-hidden="true">→</strong></Link></div>
+      <div className="home-modality-grid">{danceModalities.filter((item) => ["forro", "zouk", "samba-de-gafieira", "tango", "sertanejo", "vaneira", "bachata"].includes(item.slug)).map((item) => <Link href={`/modalidades#${item.slug}`} key={item.name}><h3>{item.name}</h3><p>{item.summary}</p><strong>Conhecer estilo</strong></Link>)}<Link className="home-modality-all" href="/modalidades"><h3>Conheça todos os estilos</h3><p>Explore os 22 estilos trabalhados pela Academia No Ritmo.</p><strong className="home-modality-arrow" aria-hidden="true">→</strong></Link></div>
     </section>
 
     <section className="home-team" id="equipe" aria-labelledby="home-team-title">
@@ -95,7 +95,7 @@ export default function Home() {
       <div className="home-team-grid">{[
         { role: "Luciano", image: "/images/propostas/modelo-casal-maduro.png" },
         { role: "Leonardo", image: "/images/propostas/modelo-aula-orientada.png" },
-        { role: "Lilian", image: "/images/propostas/modelo-aula-espelho.png" },
+        { role: "Lilian", image: "/images/propostas/modelo-aula-espelho.png", subtitle: "Professora e aluna do CFA", bio: "Lilian conheceu a No Ritmo em 2023, por meio de um projeto da prefeitura no Pirapó. O desejo de aprender a dançar se tornou profissão: com o apoio técnico e o acolhimento da escola, superou inseguranças e concluiu a formação de professores. Hoje, segue aprendendo no CFA e compartilhando a transformação que viveu: “Foi aqui na No Ritmo que descobri o ritmo da minha vida.”" },
         { role: "Paulo Menossi", image: "/images/propostas/paulo-menossi-aula.png", subtitle: "Formado pelo CFP da No Ritmo", bio: "Aluno da No Ritmo há três anos, Paulo decidiu aprofundar sua trajetória na dança e se preparar para ensinar. Concluiu o Curso de Formação de Professores (CFP) da academia com muito estudo, dedicação e empenho em cada etapa, incluindo o estágio e a prática de aulas assistidas." },
       ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image"><img src={profile.image} alt={`Imagem ilustrativa para ${profile.role.toLowerCase()} da No Ritmo`} loading="lazy" /><span>0{index + 1}</span></div><div className="home-team-card-content"><strong>{profile.role}</strong><small>{profile.subtitle ?? "Perfil em atualização"}</small><p>{profile.bio ?? "Breve resumo sobre o professor, sua trajetória, formação e áreas de atuação será adicionado após validação com a equipe."}</p></div></div>)}</div>
     </section>

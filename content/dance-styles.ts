@@ -22,6 +22,30 @@ export const danceStyles: DanceStyle[] = [
     ]
   },
   {
+    "slug": "vaneira",
+    "name": "Vaneira",
+    "paragraphs": [
+      "A Vaneira é uma das danças mais representativas dos bailes do Sul do Brasil e possui forte presença na cultura gaúcha. Sua formação recebeu diferentes influências culturais e musicais ao longo do desenvolvimento das tradições regionais.",
+      "É dançada a dois e pode apresentar diferentes velocidades e maneiras de interpretação. Sua movimentação característica, condução e relação com a musicalidade fazem dela presença praticamente indispensável nos tradicionais bailes gaúchos."
+    ]
+  },
+  {
+    "slug": "arrasta-pe",
+    "name": "Arrasta-pé",
+    "paragraphs": [
+      "O Arrasta-pé está ligado ao universo das festas populares brasileiras e, especialmente, à cultura nordestina e às festas juninas. O termo também aparece historicamente associado ao próprio ato de dançar e aos espaços populares onde se realizavam bailes.",
+      "É uma dança alegre e energética, marcada por movimentação ritmada e descontração. Sua identidade combina muito bem com ambientes festivos e com a espontaneidade característica das manifestações populares brasileiras."
+    ]
+  },
+  {
+    "slug": "sertanejo",
+    "name": "Sertanejo",
+    "paragraphs": [
+      "A dança Sertaneja acompanha as transformações da própria música sertaneja brasileira. Com a expansão do gênero e o surgimento de novas vertentes, diferentes maneiras de dançar a dois também foram se desenvolvendo nos bailes, festas e casas noturnas.",
+      "É uma dança social versátil, marcada pela condução, giros, deslocamentos e interação entre os parceiros. Sua proximidade com um repertório amplamente conhecido pelo público brasileiro faz dela uma excelente opção para quem deseja levar a dança para situações sociais do cotidiano."
+    ]
+  },
+  {
     "slug": "xote-gaucho",
     "name": "Xote Gaúcho",
     "paragraphs": [
@@ -35,14 +59,6 @@ export const danceStyles: DanceStyle[] = [
     "paragraphs": [
       "Originária da República Dominicana, a bachata surgiu no século XX ligada inicialmente às camadas populares e, durante muito tempo, sofreu preconceito social em seu próprio país.",
       "Com sua crescente popularização internacional, transformou-se em um dos grandes fenômenos da dança social contemporânea. É conhecida pela proximidade entre os parceiros, interpretação musical e diferentes possibilidades de movimentação corporal."
-    ]
-  },
-  {
-    "slug": "vaneira",
-    "name": "Vaneira",
-    "paragraphs": [
-      "A Vaneira é uma das danças mais representativas dos bailes do Sul do Brasil e possui forte presença na cultura gaúcha. Sua formação recebeu diferentes influências culturais e musicais ao longo do desenvolvimento das tradições regionais.",
-      "É dançada a dois e pode apresentar diferentes velocidades e maneiras de interpretação. Sua movimentação característica, condução e relação com a musicalidade fazem dela presença praticamente indispensável nos tradicionais bailes gaúchos."
     ]
   },
   {
@@ -75,22 +91,6 @@ export const danceStyles: DanceStyle[] = [
     "paragraphs": [
       "O Casino, frequentemente chamado internacionalmente de Salsa Cubana ou Salsa Casino, desenvolveu-se em Cuba e está associado aos clubes e espaços sociais onde os cubanos se reuniam para dançar.",
       "Uma de suas características marcantes é a movimentação circular do casal e a riqueza das trocas de posição. Do Casino também se desenvolveu a famosa Rueda de Casino, em que vários casais dançam em roda realizando figuras e trocas comandadas coletivamente."
-    ]
-  },
-  {
-    "slug": "arrasta-pe",
-    "name": "Arrasta-pé",
-    "paragraphs": [
-      "O Arrasta-pé está ligado ao universo das festas populares brasileiras e, especialmente, à cultura nordestina e às festas juninas. O termo também aparece historicamente associado ao próprio ato de dançar e aos espaços populares onde se realizavam bailes.",
-      "É uma dança alegre e energética, marcada por movimentação ritmada e descontração. Sua identidade combina muito bem com ambientes festivos e com a espontaneidade característica das manifestações populares brasileiras."
-    ]
-  },
-  {
-    "slug": "arrocha",
-    "name": "Arrocha",
-    "paragraphs": [
-      "O Arrocha surgiu na Bahia e ganhou projeção principalmente a partir dos anos 2000, tornando-se um fenômeno da música popular brasileira.",
-      "Na dança, caracteriza-se pela proximidade do casal, movimentos corporais e interpretação das músicas românticas características do gênero. Com sua popularização, diferentes formas de dançar arrocha passaram a circular pelo Brasil."
     ]
   },
   {
@@ -179,14 +179,6 @@ export const danceStyles: DanceStyle[] = [
     "paragraphs": [
       "O Zouk Brasileiro desenvolveu-se no Brasil a partir de transformações ocorridas principalmente na dança conhecida como lambada, dialogando posteriormente com músicas do gênero zouk caribenho.",
       "Ao longo das décadas, tornou-se uma dança com identidade própria e grande projeção internacional. É reconhecido pela fluidez, conexão, movimentos corporais e possibilidades de interpretação musical, incluindo técnicas específicas para movimentos de cabeça e tronco."
-    ]
-  },
-  {
-    "slug": "sertanejo",
-    "name": "Sertanejo",
-    "paragraphs": [
-      "A dança Sertaneja acompanha as transformações da própria música sertaneja brasileira. Com a expansão do gênero e o surgimento de novas vertentes, diferentes maneiras de dançar a dois também foram se desenvolvendo nos bailes, festas e casas noturnas.",
-      "É uma dança social versátil, marcada pela condução, giros, deslocamentos e interação entre os parceiros. Sua proximidade com um repertório amplamente conhecido pelo público brasileiro faz dela uma excelente opção para quem deseja levar a dança para situações sociais do cotidiano."
     ]
   }
 ];
