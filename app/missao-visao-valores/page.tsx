@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Missão, Visão e Valores | No Ritmo Academia de Dança",
   description: "Conheça a missão, a visão e os valores que orientam o ensino e o desenvolvimento humano na No Ritmo Academia de Dança.",
   alternates: { canonical: "/missao-visao-valores" },
+  openGraph: { title: "Missão, Visão e Valores | No Ritmo Academia de Dança", description: "Conheça a missão, a visão e os valores que orientam o ensino e o desenvolvimento humano na No Ritmo Academia de Dança.", url: "/missao-visao-valores", images: ["/logo-fundo-claro.png"] },
 };
 
 export default function PrinciplesPage() {

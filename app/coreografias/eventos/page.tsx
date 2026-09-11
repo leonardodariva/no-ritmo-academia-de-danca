@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/coreografias/eventos" },
-  openGraph: { title, description, url: "/coreografias/eventos" },
+  openGraph: { title, description, url: "/coreografias/eventos", images: ["/logo-fundo-claro.png"] },
 };
 
 const eventSections = [

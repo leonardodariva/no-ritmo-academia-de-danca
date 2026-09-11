@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/coreografias/gincanas" },
-  openGraph: { title, description, url: "/coreografias/gincanas" },
+  openGraph: { title, description, url: "/coreografias/gincanas", images: ["/logo-fundo-claro.png"] },
 };
 
 const schoolCompetitionSections = [

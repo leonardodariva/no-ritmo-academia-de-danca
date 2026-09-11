@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 const testimonials = [
   ["Uma experiência maravilhosa e transformadora! Esta academia de dança de salão é simplesmente excepcional. Não apenas pelo profissionalismo e competência dos instrutores, mas também pela magia que ela traz para a alma. Ao entrar neste espaço, você é envolvido por uma atmosfera calorosa e acolhedora. Os instrutores não são apenas mestres em seus ofícios, mas também verdadeiros artistas que ensinam com paixão e paciência. Dançar aqui não é apenas aprender passos; é uma jornada para descobrir a beleza da dança, a conexão com o parceiro e a expressão da sua própria alma. Cada aula é uma terapia para a mente e o corpo, uma fuga do estresse diário. Recomendo esta academia a todos que desejam aprender dança de salão, independentemente do nível de habilidade. Além de ganhar confiança na pista de dança, você vai descobrir uma alegria profunda que vai muito além dos movimentos. É realmente um lugar maravilhoso que faz bem para a alma. Não perca a oportunidade de fazer parte desta incrível comunidade de dançarinos!", "Thaisa Vidal", "https://maps.app.goo.gl/f8PicJpGzmwf5HTo9"],
@@ -16,7 +17,32 @@ const testimonials = [
 
 export default function TestimonialRotator() {
   const [active, setActive] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isUserPaused, setIsUserPaused] = useState(false);
+  const [isPointerInside, setIsPointerInside] = useState(false);
+  const [isFocusInside, setIsFocusInside] = useState(false);
+  const [isInteractionDismissed, setIsInteractionDismissed] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () => setIsReducedMotion(mediaQuery.matches);
+    updateMotionPreference();
+    mediaQuery.addEventListener("change", updateMotionPreference);
+    return () => mediaQuery.removeEventListener("change", updateMotionPreference);
+  }, []);
+
+  const isPaused = isUserPaused || ((isPointerInside || isFocusInside) && !isInteractionDismissed) || isReducedMotion;
+
+  const togglePlayback = () => {
+    if (isPaused) {
+      setIsUserPaused(false);
+      setIsInteractionDismissed(true);
+      return;
+    }
+    setIsUserPaused(true);
+    setIsInteractionDismissed(false);
+  };
+
   useEffect(() => {
     if (isPaused) return;
     const timer = window.setTimeout(() => setActive((current) => (current + 1) % testimonials.length), 18000);
@@ -27,5 +53,5 @@ export default function TestimonialRotator() {
   const fullQuote = testimonials[active][0];
   const quoteDesktop = fullQuote.length > 420 ? `${fullQuote.slice(0, 420).trimEnd()}…` : fullQuote;
   const quoteMobile = fullQuote.length > 280 ? `${fullQuote.slice(0, 280).trimEnd()}…` : fullQuote;
-  return <div className="home-testimonial-rotator" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}><button className="testimonial-arrow testimonial-arrow-prev" type="button" onClick={previous} aria-label="Depoimento anterior">←</button><article key={active}><p><span className="testimonial-quote-desktop">{quoteDesktop}</span><span className="testimonial-quote-mobile">{quoteMobile}</span></p><small>{testimonials[active][1]}</small>{testimonials[active][2] && <a className="testimonial-google-review" href={testimonials[active][2]} target="_blank" rel="noopener noreferrer">Ver esta avaliação no Google <span aria-hidden="true">↗</span></a>}</article><button className="testimonial-arrow testimonial-arrow-next" type="button" onClick={next} aria-label="Próximo depoimento">→</button></div>;
+  return <div className="home-testimonial-rotator" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de alunos" onMouseEnter={() => { setIsPointerInside(true); setIsInteractionDismissed(false); }} onMouseLeave={() => { setIsPointerInside(false); setIsInteractionDismissed(false); }} onFocus={() => { setIsFocusInside(true); setIsInteractionDismissed(false); }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) { setIsFocusInside(false); setIsInteractionDismissed(false); } }}><span className="sr-only" aria-live="polite" aria-atomic="true">Depoimento {active + 1} de {testimonials.length}: {testimonials[active][1]}</span><button className="testimonial-arrow testimonial-arrow-prev" type="button" onClick={previous} aria-label="Depoimento anterior">←</button><article key={active} aria-label={`Depoimento ${active + 1} de ${testimonials.length}`} aria-live="polite"><p><span className="testimonial-quote-desktop">{quoteDesktop}</span><span className="testimonial-quote-mobile">{quoteMobile}</span></p><small>{testimonials[active][1]}</small>{testimonials[active][2] && <a className="testimonial-google-review" href={testimonials[active][2]} target="_blank" rel="noopener noreferrer">Ver esta avaliação no Google <span aria-hidden="true">↗</span></a>}</article><button className="testimonial-arrow testimonial-arrow-next" type="button" onClick={next} aria-label="Próximo depoimento">→</button><button className="testimonial-rotation-toggle" type="button" onClick={togglePlayback} aria-label={isPaused ? "Reproduzir depoimentos" : "Pausar depoimentos"} aria-pressed={isPaused} title={isPaused ? "Reproduzir depoimentos" : "Pausar depoimentos"} disabled={isReducedMotion}>{isPaused ? <FaPlay aria-hidden="true" /> : <FaPause aria-hidden="true" />}</button></div>;
 }

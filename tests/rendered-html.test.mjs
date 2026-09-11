@@ -36,7 +36,7 @@ test("renderiza a página inicial da No Ritmo", async () => {
 });
 
 test("todas as rotas públicas principais respondem sem erro", async () => {
-  const routes = ["/sobre", "/aulas", "/aulas-particulares", "/modalidades", "/servicos", "/formacao", "/coreografias/casamentos", "/coreografias/debutantes", "/coreografias/eventos", "/coreografias/gincanas", "/professores", "/horarios", "/galeria", "/faq", "/contato", "/conhecimento", "/conhecimento/danca-de-salao", "/artigos", "/artigos/comecar-a-dancar", "/artigos/categoria/comunicacao", "/eventos", "/autores", "/autores/equipe-no-ritmo"];
+  const routes = ["/sobre", "/missao-visao-valores", "/aulas", "/aulas-particulares", "/modalidades", "/servicos", "/formacao", "/formacao/cfp", "/formacao/cfa", "/coreografias/casamentos", "/coreografias/debutantes", "/coreografias/eventos", "/coreografias/gincanas", "/horarios", "/galeria", "/galeria/aulas-e-encontros", "/galeria/pratica-de-danca", "/galeria/projetos-e-comunidade", "/projetos", "/projetos/danca-de-salao-gratuita-apucarana", "/faq", "/contato", "/area-do-aluno"];
   for (const route of routes) { const response = await render(route); assert.equal(response.status, 200, `${route} deveria responder 200`); }
 });
 
@@ -48,7 +48,8 @@ test("contato e horários exibem os dados centralizados", async () => {
 
   const scheduleHtml = await (await render("/horarios")).text();
   assert.match(scheduleHtml, /Segunda-feira/);
-  assert.match(scheduleHtml, /Turma iniciante, das 7h às 8h30/);
+  assert.match(scheduleHtml, /19h00 — 20h30/);
+  assert.match(scheduleHtml, /22h00/);
 });
 
 test("modalidades e aulas apresentam conteúdo útil sem texto de preparação", async () => {
@@ -94,22 +95,25 @@ test("entra diretamente na home sem tela de carregamento e sem título duplicado
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
 });
 
-test("a V4 conecta artigos e páginas de conhecimento", async () => {
-  const knowledgeHtml = await (await render("/conhecimento/comunicacao")).text();
-  assert.match(knowledgeHtml, /O que sabemos \/ conceito/i);
-  assert.match(knowledgeHtml, /Como a No Ritmo trabalha esse conceito/i);
-  assert.match(knowledgeHtml, /href="\/artigos\/danca-e-comunicacao"/i);
+test("a galeria e os projetos conectam listagens e detalhes", async () => {
+  const galleryHtml = await (await render("/galeria")).text();
+  assert.match(galleryHtml, /Explore nossos álbuns/i);
+  assert.match(galleryHtml, /href="\/galeria\/pratica-de-danca"/i);
 
-  const articleHtml = await (await render("/artigos/danca-e-comunicacao")).text();
-  assert.match(articleHtml, /Transparência editorial/i);
-  assert.match(articleHtml, /href="\/conhecimento\/comunicacao"/i);
-  assert.match(articleHtml, /Sobre a autoria/i);
+  const albumHtml = await (await render("/galeria/pratica-de-danca")).text();
+  assert.match(albumHtml, /Cada foto, um novo olhar/i);
+  assert.match(albumHtml, /Voltar a todos os álbuns/i);
+
+  const projectsHtml = await (await render("/projetos")).text();
+  assert.match(projectsHtml, /Explore nossos projetos/i);
+  assert.match(projectsHtml, /danca-de-salao-gratuita-apucarana/i);
 });
 
 test("a formação apresenta CFP e CFA com responsabilidades claras", async () => {
   const html = await (await render("/formacao")).text();
-  assert.match(html, /CFP — Curso de Formação de Professores/);
+  assert.match(html, /CFP — Curso de Formação Profissional em Dança de Salão/);
   assert.match(html, /CFA — Curso de Formação de Assistentes/);
-  assert.match(html, /apoiar aulas, acompanhar alunos/i);
+  assert.match(html, /planejar e conduzir o processo de ensino/i);
+  assert.match(html, /linha de frente da aprendizagem/i);
   assert.doesNotMatch(html, /duração garantida|certificação reconhecida/i);
 });

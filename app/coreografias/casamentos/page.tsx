@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/coreografias/casamentos" },
-  openGraph: { title, description, url: "/coreografias/casamentos" },
+  openGraph: { title, description, url: "/coreografias/casamentos", images: ["/logo-fundo-claro.png"] },
 };
 
 const weddingSections = [

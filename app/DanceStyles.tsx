@@ -13,7 +13,7 @@ export default function DanceStyles() {
       <div className="modality-grid">
         {classFormats.map((item, index) => (
           <article className={`modality-card modality-card-${tones[index]}`} key={item.slug}>
-            <div className="modality-photo"><span>Foto em breve</span></div>
+            <div className="modality-photo" aria-label={`Aula de ${item.name}`} role="img" />
             <div className="modality-copy">
               <p>{item.summary}</p>
               <h3>{item.name}</h3>

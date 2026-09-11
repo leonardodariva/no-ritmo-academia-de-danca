@@ -6,12 +6,17 @@ export type ContactChannel = {
 
 export type ScheduleDay = {
   day: string;
+  teacher: string;
   sessions: { level: string; time: string }[];
 };
 
 export const siteContact = {
   city: "Apucarana",
   state: "PR",
+  street: "Rua Arthur Bernardes",
+  streetNumber: "680",
+  neighborhood: "Vila do Colégio",
+  postalCode: "86808-060",
   phoneDisplay: "(43) 99921-6027",
   phoneHref: "tel:+5543999216027",
   whatsappHref: "https://wa.me/5543999216027",
@@ -21,6 +26,8 @@ export const siteContact = {
   emailHref: "mailto:noritmo@live.com",
   mapsHref: "https://www.google.com/maps?cid=11367344094392465475",
   mapsEmbedHref: "https://maps.google.com/maps?cid=11367344094392465475&output=embed",
+  latitude: -23.5470848,
+  longitude: -51.4490368,
 } as const;
 
 export const contactChannels: ContactChannel[] = [
@@ -37,10 +44,10 @@ export const contactChannels: ContactChannel[] = [
 ];
 
 export const weeklySchedule: ScheduleDay[] = [
-  { day: "Segunda-feira", sessions: [{ level: "Nível iniciante 1", time: "19h00 — 20h30" }, { level: "Nível iniciados 1", time: "20h30 — 22h00" }] },
-  { day: "Terça-feira", sessions: [{ level: "Nível iniciante 1", time: "19h30 — 21h00" }] },
-  { day: "Quarta-feira", sessions: [{ level: "Nível iniciante 1", time: "20h00 — 21h30" }] },
-  { day: "Quinta-feira", sessions: [{ level: "Nível 2", time: "20h00 — 21h30" }] },
-  { day: "Sexta-feira", sessions: [] },
-  { day: "Sábado", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h00" }, { level: "Turma de iniciados", time: "15h00 — 16h30" }] },
+  { day: "Segunda-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante 1", time: "19h00 — 20h30" }, { level: "Nível iniciados 1", time: "20h30 — 22h00" }] },
+  { day: "Terça-feira", teacher: "Professor Leonardo", sessions: [{ level: "Nível iniciante 1", time: "19h30 — 21h00" }] },
+  { day: "Quarta-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante 1", time: "20h00 — 21h30" }] },
+  { day: "Quinta-feira", teacher: "Professor Luciano", sessions: [{ level: "Nível 2", time: "20h00 — 21h30" }] },
+  { day: "Sexta-feira", teacher: "", sessions: [] },
+  { day: "Sábado", teacher: "Professor Luciano", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h00" }, { level: "Turma de iniciados", time: "15h00 — 16h30" }] },
 ];

@@ -24,7 +24,7 @@ export default function AlbumPhotos({ album }: { album: GalleryAlbum }) {
         <img src={album.photos[active].src} alt={album.photos[active].alt} />
         <button type="button" aria-label="Próxima foto" onClick={() => step(1)}><ChevronRight aria-hidden="true" /></button>
       </div>
-      <p className="album-lightbox-caption">Imagem ilustrativa gerada por IA · Use as setas ou deslize para navegar.</p>
+      <p className="album-lightbox-caption">Use as setas ou deslize para navegar.</p>
     </dialog>
   </>;
 }

@@ -1,20 +1,29 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SubpageShell from "../SubpageShell";
 
 export const metadata: Metadata = {
   title: "Formação de professores e assistentes | No Ritmo",
   description: "Conheça o CFP e o CFA, programas de formação da No Ritmo para quem deseja ensinar, apoiar aulas e desenvolver experiência em dança.",
   alternates: { canonical: "/formacao" },
+  openGraph: { title: "Formação de professores e assistentes | No Ritmo", description: "Conheça o CFP e o CFA, programas de formação da No Ritmo para quem deseja ensinar, apoiar aulas e desenvolver experiência em dança.", url: "/formacao", images: ["/logo-fundo-claro.png"] },
 };
 
 export default function FormacaoPage() {
   return <SubpageShell
     wideCopy
     compactHero
+    breadcrumbParent={{ label: "A No Ritmo", href: "/sobre" }}
     kicker="Cursos No Ritmo"
     title="Formação para ensinar e apoiar a dança."
     intro="A Academia No Ritmo oferece dois caminhos de formação: o CFP prepara professores para planejar e conduzir o processo de ensino; já o CFA forma assistentes para atuar ao lado dos professores e na linha de frente da aprendizagem, mantendo contato direto com os alunos em sala de aula, auxiliando, acolhendo, observando dificuldades e contribuindo ativamente para o desenvolvimento de cada aluno."
     sections={[
+      {
+        number: "00",
+        title: "Escolha seu caminho de formação",
+        content: <div className="formation-shortcuts"><Link href="/formacao/cfp"><strong>CFP — Curso de Formação Profissional</strong><span>Planejamento e condução do processo de ensino.</span><b>Conhecer o CFP →</b></Link><Link href="/formacao/cfa"><strong>CFA — Curso de Formação de Assistentes</strong><span>Apoio à equipe e aos alunos na linha de frente da aprendizagem.</span><b>Conhecer o CFA →</b></Link></div>,
+        fullWidth: true,
+      },
       {
         number: "01",
         title: "CFP — Curso de Formação Profissional em Dança de Salão",

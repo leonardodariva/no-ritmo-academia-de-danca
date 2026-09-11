@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/coreografias/debutantes" },
-  openGraph: { title, description, url: "/coreografias/debutantes" },
+  openGraph: { title, description, url: "/coreografias/debutantes", images: ["/logo-fundo-claro.png"] },
 };
 
 const debutanteSections = [

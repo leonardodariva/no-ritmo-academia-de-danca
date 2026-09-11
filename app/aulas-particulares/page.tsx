@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/aulas-particulares" },
-  openGraph: { title, description, url: "/aulas-particulares" },
+  openGraph: { title, description, url: "/aulas-particulares", images: ["/logo-fundo-claro.png"] },
 };
 
 export default function AulasParticularesPage() {
