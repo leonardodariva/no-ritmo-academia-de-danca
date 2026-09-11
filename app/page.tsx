@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaGoogle, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { AtSign, MapPin, Phone } from "lucide-react";
 
 import { danceModalities } from "../content/classes";
@@ -100,9 +100,8 @@ export default function Home() {
       ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image"><img src={profile.image} alt={`Imagem ilustrativa para ${profile.role.toLowerCase()} da No Ritmo`} loading="lazy" /><span>0{index + 1}</span></div><div className="home-team-card-content"><strong>{profile.role}</strong><small>{profile.subtitle ?? "Perfil em atualização"}</small><p>{profile.bio ?? "Breve resumo sobre o professor, sua trajetória, formação e áreas de atuação será adicionado após validação com a equipe."}</p></div></div>)}</div>
     </section>
 
-    <section className="home-testimonials" id="depoimentos" aria-labelledby="home-testimonials-title">
-      <div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title"><span className="testimonial-title-line">Quem dança</span><span className="testimonial-title-line">também <span className="testimonial-title-quote">“conta”</span></span></h2><span>Relatos reais de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades que mostram como a dança pode transformar a rotina, fortalecer a confiança e criar vínculos para a vida.</span><a className="google-review-button" href="https://www.google.com/maps?cid=11367344094392465475" target="_blank" rel="noopener noreferrer"><FaGoogle aria-hidden="true" />Deixe sua avaliação no Google</a></div></div><TestimonialRotator /></div>
-    </section>
+
+    <section className="home-testimonials" id="depoimentos" aria-labelledby="home-testimonials-title"><div className="home-testimonial-layout"><div className="home-testimonial-copy"><div className="v4-section-heading"><p>Depoimentos</p><h2 id="home-testimonials-title"><span className="testimonial-title-line">Quem dança</span><span className="testimonial-title-line">também <span className="testimonial-title-quote">“conta”</span></span></h2><span>Relatos de alunos que encontraram na No Ritmo muito mais do que aulas de dança. São experiências de aprendizagem, superação, acolhimento e novas amizades.</span><a className="google-review-button" href="https://www.google.com/maps?cid=11367344094392465475" target="_blank" rel="noopener noreferrer"><FaGoogle aria-hidden="true" />Deixe sua avaliação no Google</a></div></div><TestimonialRotator /></div></section>
 
     <section className="home-events" id="eventos" aria-labelledby="home-events-title">
       <div className="v4-section-heading"><p>Eventos e projetos</p><h2 id="home-events-title">A dança continua fora da sala.</h2><Link className="section-action" href="/projetos">Acessar todos os projetos</Link></div>
@@ -114,17 +113,19 @@ export default function Home() {
       <div className="gallery-grid">{galleryAlbums.slice(0, 3).map((album, index) => <Link className={"gallery-item home-album" + (index === 0 ? " gallery-large" : "")} href={"/galeria/" + album.slug} key={album.slug}><img src={album.photos[0].src} alt={album.photos[0].alt} loading="lazy" /><div className="home-album-copy"><small>{album.category} · {album.photos.length} fotos · Demonstração</small><h3>{album.title}</h3><span>Ver álbum</span></div></Link>)}</div>
     </section>
 
-    <section className="home-practical" id="pratico">
-      <div className="v4-section-heading"><p>Contato</p><h2>Fale com a No Ritmo.</h2><Link className="button" href="/contato">Ver todas as informações</Link></div>
-      <div className="home-practical-grid">
-        <div className="home-schedule"><h3>Turmas e horários</h3>{weeklySchedule.filter((day) => day.sessions.length).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => <span key={`${day.day}-${session.level}`}><b>{session.level}</b>: {session.time}</span>)}</span></div>)}</div>
-        <div className="home-contact-card"><p>Meios de contato</p><div className="home-contact-map"><iframe title="Mapa da No Ritmo em Apucarana" src="https://www.google.com/maps?q=No+Ritmo+Academia+de+Dança+Apucarana+PR&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div><a className="home-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer"><MapPin size={18} aria-hidden="true" />Abrir localização no mapa</a><div className="home-contact-details"><a className="contact-with-icon" href={siteContact.phoneHref}><Phone size={18} aria-hidden="true" />{siteContact.phoneDisplay}</a><a className="contact-with-icon" href={siteContact.emailHref}><AtSign size={18} aria-hidden="true" />{siteContact.email}</a></div></div>
-      </div>
+    <section className="home-practical home-schedule-section" id="horarios" aria-labelledby="home-schedule-section-title">
+      <div className="v4-section-heading"><p>Aulas em turma</p><h2 id="home-schedule-section-title">Programação semanal.</h2><Link className="button schedule-action" href="/contato">Agende sua aula</Link></div>
+      <article className="home-schedule" aria-labelledby="home-schedule-section-title">{weeklySchedule.filter((day) => day.sessions.length).map((day) => <div key={day.day}><strong>{day.day}</strong><span>{day.sessions.map((session) => <span key={`${day.day}-${session.level}`}><b>{session.level}</b>: {session.time}</span>)}</span></div>)}</article>
+    </section>
+
+    <section className="home-practical home-contact-section" id="pratico" aria-labelledby="home-contact-section-title">
+      <div className="v4-section-heading"><p>Contato</p><h2 id="home-contact-section-title">Fale com a No Ritmo.</h2></div>
+      <div className="home-contact-split"><article className="home-contact-channels" aria-labelledby="home-contact-channels-title"><p id="home-contact-channels-title">Canais de contato</p><a className="contact-with-icon" href={siteContact.phoneHref}><Phone aria-hidden="true" />{siteContact.phoneDisplay}</a><a className="contact-with-icon" href={siteContact.whatsappHref} target="_blank" rel="noreferrer"><FaWhatsapp aria-hidden="true" />Conversar pelo WhatsApp</a><a className="contact-with-icon" href={siteContact.emailHref}><AtSign aria-hidden="true" />{siteContact.email}</a><a className="contact-with-icon" href="https://www.instagram.com/noritmoacademiadedanca/" target="_blank" rel="noreferrer"><FaInstagram aria-hidden="true" />Instagram</a><a className="contact-with-icon" href="https://www.facebook.com/NoRitmoAcademiadeDanca?locale=pt_BR" target="_blank" rel="noreferrer"><FaFacebookF aria-hidden="true" />Facebook</a></article><article className="home-contact-card" aria-labelledby="home-contact-map-title"><p id="home-contact-map-title">Onde estamos</p><div className="home-contact-map"><iframe title="Mapa da No Ritmo em Apucarana" src={siteContact.mapsEmbedHref} loading="eager" referrerPolicy="no-referrer-when-downgrade" /></div><a className="home-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer"><MapPin size={18} aria-hidden="true" />Abrir localização no mapa</a></article></div>
     </section>
 
     <section className="home-faq" id="faq" aria-labelledby="home-faq-title">
       <div className="v4-section-heading faq-heading"><p>Perguntas frequentes</p><div className="faq-heading-row"><div><h2 id="home-faq-title">Antes de começar, tire suas dúvidas.</h2></div><Link className="button faq-all-button" href="/faq">Ver perguntas frequentes</Link></div></div>
-      <div className="home-faq-list">{frequentlyAskedQuestions.map((item, index) => <details key={item.question}><summary><span>0{index + 1}</span>{item.question}</summary><p>{item.answer}</p></details>)}</div>
+      <div className="home-faq-list">{frequentlyAskedQuestions.map((item) => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
     </section>
 
     <SiteFooter />

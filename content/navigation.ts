@@ -19,6 +19,7 @@ export const primaryNavigation = [
     children: [
       { label: "Todos os serviços", href: "/servicos" },
       { label: "Aulas em grupo", href: "/aulas" },
+      { label: "Turmas e horários", href: "/horarios" },
       { label: "Modalidades", href: "/modalidades" },
       { label: "Aulas particulares", href: "/aulas-particulares" },
       { label: "Coreografias para casamentos", href: "/coreografias/casamentos" },
@@ -40,6 +41,7 @@ export const footerNavigation = {
   participar: [
     { label: "Aulas", href: "/aulas" },
     { label: "Modalidades", href: "/modalidades" },
+    { label: "Horários", href: "/horarios" },
     { label: "Eventos e projetos", href: "/projetos" },
     { label: "Contato", href: "/contato" },
   ],

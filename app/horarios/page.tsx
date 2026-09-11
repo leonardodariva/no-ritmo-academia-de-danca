@@ -1,10 +1,8 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import SubpageShell from "../SubpageShell";
 import { weeklySchedule } from "../../content/site";
 
-export default function HorariosPage() { return <SubpageShell kicker="Planeje sua semana" title="Turmas e horários" intro="Confira a grade atual e converse com a equipe para confirmar vagas e agendar uma aula experimental." sections={[
-  ...weeklySchedule.map((item, index) => ({
-    number: String(index + 1).padStart(2, "0"),
-    title: item.day,
-    text: item.sessions.length > 0 ? `${item.sessions.map((session) => `${session.level}, das ${session.time.replace(" — ", " às ")}`).join(". ")}.` : "Não há turma regular neste dia.",
-  })),
-]} />; }
+export const metadata: Metadata = { title: "Turmas e horários | No Ritmo", description: "Confira os horários das aulas em turma da No Ritmo.", alternates: { canonical: "/horarios" } };
+
+export default function HorariosPage() { return <SubpageShell compactHero kicker="Aulas em turma" title="Turmas e horários" intro="Confira a programação das aulas em grupo e converse com a equipe para confirmar vagas, níveis e disponibilidade." sections={[{ number:"01", title:"Aulas em grupo", text:"As turmas são organizadas por nível de aprendizagem. Você pode começar sem ter parceiro ou parceira e avançar no seu ritmo, com orientação da equipe." }, { number:"02", title:"Programação semanal", content:<div className="contact-schedule schedule-page-table">{weeklySchedule.filter((item) => item.sessions.length > 0).map((item) => <div key={item.day}><strong>{item.day}</strong><span>{item.sessions.map((session) => <span key={`${item.day}-${session.level}`}><b>{session.level}</b>: {session.time}</span>)}</span></div>)}</div> }, { number:"03", title:"Confirme sua turma", content:<><p>Horários e vagas podem mudar conforme a abertura de novas turmas. Fale com a equipe antes de se deslocar.</p><Link className="button" href="/contato">Falar com a equipe</Link></> }]} />; }
