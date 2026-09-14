@@ -5,10 +5,10 @@ import Link from "next/link";
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from "react-icons/fa";
 
 const slides = [
-  { title: "Conhecer", description: "História, pessoas e visão da No Ritmo.", image: "hero-carousel-media-1", href: "/sobre" },
-  { title: "Aprender", description: "Aulas e estilos para descobrir a dança.", image: "hero-carousel-media-2", href: "/modalidades" },
-  { title: "Participar", description: "Aulas, estilos e experiências para cada objetivo.", image: "hero-carousel-media-3", href: "/aulas" },
-  { title: "Conviver", description: "Encontros e projetos em comunidade.", image: "hero-carousel-media-4", href: "/projetos" },
+  { title: "Conhecer", description: "História, pessoas e visão da No Ritmo.", image: "hero-carousel-media-1", src: "/images/propostas/modelo-casal-proximo.png", href: "/sobre" },
+  { title: "Aprender", description: "Aulas e estilos para descobrir a dança.", image: "hero-carousel-media-2", src: "/images/propostas/modelo-aula-dinamica.png", href: "/modalidades" },
+  { title: "Participar", description: "Aulas, estilos e experiências para cada objetivo.", image: "hero-carousel-media-3", src: "/images/propostas/modelo-aula-espelho.png", href: "/aulas" },
+  { title: "Conviver", description: "Encontros e projetos em comunidade.", image: "hero-carousel-media-4", src: "/images/propostas/modelo-casal-maduro.png", href: "/projetos" },
 ] as const;
 
 export default function HeroCarousel() {
@@ -54,7 +54,7 @@ export default function HeroCarousel() {
   return <div className="hero-carousel" role="region" aria-roledescription="carrossel" aria-label="Caminhos principais da No Ritmo" onMouseEnter={() => { setIsPointerInside(true); setIsInteractionDismissed(false); }} onMouseLeave={() => { setIsPointerInside(false); setIsInteractionDismissed(false); }} onFocus={() => { setIsFocusInside(true); setIsInteractionDismissed(false); }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) { setIsFocusInside(false); setIsInteractionDismissed(false); } }}>
     <span className="sr-only" aria-live="polite" aria-atomic="true">Slide {activeIndex + 1} de {slides.length}: {activeSlide.title}. {activeSlide.description}</span>
     <Link id="hero-carousel-slide" className="hero-carousel-card" href={activeSlide.href} aria-label={`Slide ${activeIndex + 1} de ${slides.length}: ${activeSlide.title}. ${activeSlide.description}`}>
-      <div className={`hero-carousel-media ${activeSlide.image}`} aria-hidden="true" />
+      <img className={`hero-carousel-media ${activeSlide.image}`} src={activeSlide.src} alt="" aria-hidden="true" loading={activeIndex === 0 ? "eager" : "lazy"} fetchPriority={activeIndex === 0 ? "high" : "auto"} decoding={activeIndex === 0 ? "sync" : "async"} />
       <div className="hero-carousel-shade" aria-hidden="true" />
       <div className="hero-carousel-caption"><span>0{activeIndex + 1} / 04</span><strong>{activeSlide.title}</strong><small>{activeSlide.description}</small></div>
     </Link>

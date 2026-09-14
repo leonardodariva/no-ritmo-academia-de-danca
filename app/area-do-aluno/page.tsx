@@ -10,7 +10,7 @@ export default function StudentAreaPage() {
 
   return <main className="student-area-page">
     <section className="student-area-login" aria-labelledby="student-area-title">
-      <img className="student-login-logo" src="/logo-fundo-claro.png" alt="No Ritmo Academia de Dança" />
+      <img className="student-login-logo" src="/logo-fundo-claro.png" alt="No Ritmo Academia de Dança" width="190" height="64" fetchPriority="high" decoding="async" />
       <h1 id="student-area-title">Bem-vindo de volta</h1>
       <p className="student-area-subtitle">Digite suas credenciais para acessar sua conta</p>
       <form noValidate onSubmit={(event) => { event.preventDefault(); showNotice(); }}>

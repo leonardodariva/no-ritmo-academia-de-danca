@@ -21,7 +21,7 @@ export default function MapEmbed({ src, title, address, mapsHref }: MapEmbedProp
   }
 
   return <>
-    <iframe title={title} src={src} loading="eager" referrerPolicy="no-referrer-when-downgrade" onError={() => setHasError(true)} />
+    <iframe title={title} src={src} loading="lazy" referrerPolicy="no-referrer-when-downgrade" onError={() => setHasError(true)} />
     <noscript><div className="map-fallback"><strong>Consulte a localização da academia:</strong><p>{address}</p><a href={mapsHref} target="_blank" rel="noreferrer">Abrir localização no Google Maps</a></div></noscript>
   </>;
 }

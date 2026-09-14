@@ -18,7 +18,7 @@ export default function GalleryDirectory() {
     </div>
     {albums.length === 0 && <p className="album-empty">Nenhum álbum encontrado. Tente outro termo ou escolha outra categoria.</p>}
     <div className="album-directory-grid">{albums.map((album) => <Link className="album-card" key={album.slug} href={"/galeria/" + album.slug}>
-      <div className="album-cover"><img src={album.photos[0].src} alt={album.photos[0].alt} loading="lazy" /></div>
+      <div className="album-cover"><img src={album.photos[0].src} alt={album.photos[0].alt} width="1536" height="1024" loading="lazy" decoding="async" /></div>
       <div className="album-card-copy"><h3>{album.title}</h3><p>{album.description}</p><div className="album-card-footer"><small>{album.category} · {album.photos.length} fotos</small><strong>Ver álbum <ChevronRight size={18} aria-hidden="true" /></strong></div></div>
     </Link>)}</div>
   </div>;

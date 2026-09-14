@@ -43,44 +43,44 @@ export default function Home() {
       <div className="home-services-grid">
         <article>
           <Link className="service-card-hitarea" href="/aulas-particulares" aria-label="Abrir serviço de aulas particulares" />
-          <img src="/images/propostas/modelo-aula-orientada.png" alt="Professor orientando uma aula particular na Academia No Ritmo" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-orientada.png" alt="Professor orientando uma aula particular na Academia No Ritmo" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Aulas particulares</h3><p className="private-lessons-summary">Se o capital tempo for o seu maior ativo, as aulas particulares são a sua melhor opção.</p><Link href="/aulas-particulares" aria-label="Saiba mais sobre aulas particulares">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/aulas" aria-label="Abrir serviço de aulas em grupo" />
-          <img src="/images/propostas/modelo-aula-dinamica.png" alt="Alunos em uma aula de dança em grupo na Academia No Ritmo" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-dinamica.png" alt="Alunos em uma aula de dança em grupo na Academia No Ritmo" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Aulas em grupo</h3><p className="group-lessons-summary">Aprenda a dançar, pratique e conheça pessoas. Você não precisa ter um par.</p><Link href="/aulas" aria-label="Saiba mais sobre aulas em grupo">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/coreografias/casamentos" aria-label="Abrir serviço de coreografias para casamento" />
-          <img src="/images/propostas/modelo-casal-proximo.png" alt="Casal dançando em preparação para uma coreografia de casamento" loading="lazy" />
+          <img src="/images/propostas/modelo-casal-proximo.png" alt="Casal dançando em preparação para uma coreografia de casamento" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Coreografias para casamento</h3><p>Uma dança que celebra a história do casal, com coreografia e ensaios personalizados.</p><Link href="/coreografias/casamentos" aria-label="Saiba mais sobre coreografias para casamento">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/coreografias/debutantes" aria-label="Abrir serviço de coreografias para debutantes" />
-          <img src="/images/propostas/modelo-aula-espelho.png" alt="Ensaio de movimento para uma coreografia de debutante" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-espelho.png" alt="Ensaio de movimento para uma coreografia de debutante" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Coreografias para debutantes</h3><p>Celebre seus 15 anos com uma coreografia especial, feita para expressar sua personalidade.</p><Link href="/coreografias/debutantes" aria-label="Saiba mais sobre coreografias para debutantes">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
       <div className="home-services-grid home-services-extra">
         <article>
           <Link className="service-card-hitarea" href="/coreografias/eventos" aria-label="Abrir serviço de coreografias para eventos" />
-          <img src="/images/propostas/modelo-casal-proximo.png" alt="Casal dançando em preparação para um evento" loading="lazy" />
+          <img src="/images/propostas/modelo-casal-proximo.png" alt="Casal dançando em preparação para um evento" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Coreografias para eventos em geral</h3><p>Projetos personalizados para escolas, empresas e eventos, de pequenos grupos a mais de mil participantes.</p><Link href="/coreografias/eventos" aria-label="Saiba mais sobre coreografias para eventos em geral">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/coreografias/gincanas" aria-label="Abrir serviço de coreografias para gincanas" />
-          <img src="/images/propostas/modelo-aula-espelho.png" alt="Equipe ensaiando uma coreografia em grupo" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-espelho.png" alt="Equipe ensaiando uma coreografia em grupo" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>Coreografias para gincanas</h3><p>Uma apresentação pensada para o regulamento, o perfil da equipe e o tempo disponível.</p><Link href="/coreografias/gincanas" aria-label="Saiba mais sobre coreografias para gincanas">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/formacao/cfp" aria-label="Abrir serviço CFP" />
-          <img src="/images/propostas/modelo-aula-orientada.png" alt="Formação de professores de dança" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-orientada.png" alt="Formação de professores de dança" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>CFP — Curso de Formação Profissional em Dança de Salão</h3><p>Conhecimento para dançar. Método para ensinar. Autonomia para continuar aprendendo.</p><Link href="/formacao/cfp" aria-label="Saiba mais sobre o CFP">Saiba mais sobre o serviço</Link></div>
         </article>
         <article>
           <Link className="service-card-hitarea" href="/formacao/cfa" aria-label="Abrir serviço CFA" />
-          <img src="/images/propostas/modelo-aula-espelho.png" alt="Formação de assistentes de dança" loading="lazy" />
+          <img src="/images/propostas/modelo-aula-espelho.png" alt="Formação de assistentes de dança" width="1536" height="1024" loading="lazy" decoding="async" />
           <div><h3>CFA — Curso de Formação de Assistentes</h3><p>Muito além de aprender a dançar: compreenda como as pessoas aprendem e prepare-se para apoiar o professor e acolher os alunos.</p><Link href="/formacao/cfa" aria-label="Saiba mais sobre o CFA">Saiba mais sobre o serviço</Link></div>
         </article>
       </div>
@@ -98,7 +98,7 @@ export default function Home() {
         { role: "Leonardo", initials: "L", subtitle: "Professor de dança de salão", bio: "Leonardo Dariva é aluno de dança de salão há 14 anos e atua há quase 4 anos como professor na No Ritmo Academia de Dança. Ao longo dessa trajetória, construiu sua experiência tanto pela vivência contínua como aluno quanto pela prática em sala de aula, acompanhando pessoas com diferentes níveis de experiência e objetivos." },
         { role: "Lilian", initials: "L", subtitle: "Professora e aluna do CFA", bio: "Eu conheci a No Ritmo em 2023, através de um projeto da Prefeitura que chegou até o Pirapó. O que era apenas um desejo de aprender a dançar se transformou em algo muito maior: hoje, minha profissão. Logo recebi o convite para participar do curso de formação de professores e, a princípio, duvidei da minha capacidade. Mas, com o apoio da escola, que proporciona um ensino técnico excelente e um cuidado com cada pessoa, superei minhas travas e medos durante o curso e me formei. Atualmente, como professora e aluna do curso de assistente, sinto que aprender nunca é demais. A dança me transformou e ainda está me transformando. Foi aqui, na No Ritmo, que descobri o ritmo da minha vida." },
         { role: "Paulo Menossi", initials: "P", image: "/images/propostas/paulo-menossi-aula.png", subtitle: "Formado pelo CFP da No Ritmo", bio: "Aluno da No Ritmo há três anos, Paulo decidiu aprofundar sua trajetória na dança e se preparar para ensinar. Concluiu o Curso de Formação de Professores (CFP) da academia com muito estudo, dedicação e empenho em cada etapa, incluindo o estágio e a prática de aulas assistidas." },
-      ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image">{profile.image ? <img src={profile.image} alt={`Paulo Menossi em uma aula de dança na No Ritmo`} loading="lazy" /> : <span className="home-team-card-initials" aria-hidden="true">{profile.initials}</span>}</div><div className="home-team-card-content"><strong>{profile.role}</strong><small>{profile.subtitle}</small>{profile.bio && <p>{profile.bio}</p>}</div></div>)}</div>
+      ].map((profile, index) => <div className={`home-team-card home-team-card-${index + 1}`} key={profile.role}><div className="home-team-card-image">{profile.image ? <img src={profile.image} alt={`Paulo Menossi em uma aula de dança na No Ritmo`} width="1536" height="1024" loading="lazy" decoding="async" /> : <span className="home-team-card-initials" aria-hidden="true">{profile.initials}</span>}</div><div className="home-team-card-content"><strong>{profile.role}</strong><small>{profile.subtitle}</small>{profile.bio && <p>{profile.bio}</p>}</div></div>)}</div>
     </section>
 
 
@@ -111,7 +111,7 @@ export default function Home() {
 
     <section className="gallery home-gallery" id="galeria" aria-labelledby="home-gallery-title">
       <div className="gallery-heading-row"><div className="gallery-heading"><p>Galeria</p><h2 id="home-gallery-title">Momentos em movimento.</h2><p>Entre no clima da No Ritmo: sorrisos, novos passos e encontros que dão vontade de viver tudo de novo.</p></div><Link className="button gallery-all-button" href="/galeria">Ver todos os álbuns</Link></div>
-      <div className="gallery-grid">{galleryAlbums.slice(0, 3).map((album, index) => <Link className={"gallery-item home-album" + (index === 0 ? " gallery-large" : "")} href={"/galeria/" + album.slug} key={album.slug}><img src={album.photos[0].src} alt={album.photos[0].alt} loading="lazy" /><div className="home-album-copy"><small>{album.category} · {album.photos.length} fotos</small><h3>{album.title}</h3><span>Ver álbum</span></div></Link>)}</div>
+      <div className="gallery-grid">{galleryAlbums.slice(0, 3).map((album, index) => <Link className={"gallery-item home-album" + (index === 0 ? " gallery-large" : "")} href={"/galeria/" + album.slug} key={album.slug}><img src={album.photos[0].src} alt={album.photos[0].alt} width="1536" height="1024" loading="lazy" decoding="async" /><div className="home-album-copy"><small>{album.category} · {album.photos.length} fotos</small><h3>{album.title}</h3><span>Ver álbum</span></div></Link>)}</div>
     </section>
 
     <section className="home-practical home-schedule-section" id="horarios" aria-labelledby="home-schedule-section-title">
