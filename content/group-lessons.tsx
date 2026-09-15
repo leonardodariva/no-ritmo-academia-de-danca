@@ -78,7 +78,7 @@ export const groupLessonSections = [
   },
   {
     number: "09",
-    title: "Parte do Ecossistema de Aprendizagem No Ritmo",
+    title: "Parte do ecossistema de aprendizagem No Ritmo",
     content: <>
       <p>As aulas em grupo também fazem parte do nosso <strong>Ecossistema de Aprendizagem No Ritmo</strong>.</p>
       <p>Quem combina aulas particulares e aulas em grupo encontra duas experiências que se complementam:</p>

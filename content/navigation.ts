@@ -41,9 +41,9 @@ export const footerNavigation = {
   conhecer: primaryNavigation[1].children,
   aprender: [],
   participar: [
-    { label: "Aulas", href: "/aulas" },
-    { label: "Modalidades", href: "/modalidades" },
-    { label: "Horários", href: "/horarios" },
+    { label: "Serviços", href: "/servicos" },
+    { label: "Estilos de dança", href: "/modalidades" },
+    { label: "Turmas e horários", href: "/horarios" },
     { label: "Eventos e projetos", href: "/projetos" },
     { label: "Contato", href: "/contato" },
   ],
