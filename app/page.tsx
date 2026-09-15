@@ -35,7 +35,7 @@ export default function Home() {
     <section className="v4-statement" id="sobre">
       <p className="statement-eyebrow">Sobre a No Ritmo</p>
       <div className="statement-visual" role="img" aria-label="Dança de salão em movimento" />
-      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Muito além de aprender a dançar</h2><div className="statement-body"><p>Desde&nbsp;2010, a No Ritmo Academia de Dança conecta pessoas por meio da dança de salão. Em Apucarana, mais de 10 mil pessoas já fizeram parte dessa história.</p><p>Nosso ensino integra técnica, consciência corporal, comunicação e convivência, respeitando o ritmo de cada pessoa e desenvolvendo autonomia para aprender e dançar.</p><p>Acreditamos que dançar é perceber a si mesmo, compreender o outro e aprender juntos.</p></div><Link className="statement-button" href="/sobre">Saiba mais sobre a No Ritmo</Link></div>
+      <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Muito além de aprender a dançar</h2><p>Desde&nbsp;2010, a No Ritmo Academia de Dança conecta pessoas por meio da dança de salão. Em Apucarana, mais de 10 mil pessoas já fizeram parte dessa história.</p><p>Nosso ensino integra técnica, consciência corporal, comunicação e convivência, respeitando o ritmo de cada pessoa e desenvolvendo autonomia para aprender e dançar.</p><p>Acreditamos que dançar é perceber a si mesmo, compreender o outro e aprender juntos.</p><Link className="statement-button" href="/sobre">Saiba mais sobre a No Ritmo</Link></div>
     </section>
 
     <section className="home-music-section" id="musicalidade" aria-labelledby="home-music-title">
