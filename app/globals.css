@@ -1071,6 +1071,9 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 }
 .subpage-sections .subpage-section-copy p,
 .subpage-sections-wide .subpage-section-copy p { color:#54545c; }
+.contact-whatsapp-link { justify-self:start; gap:10px; background:#25d366; color:#082b17; }
+.contact-whatsapp-link:hover,
+.contact-whatsapp-link:focus-visible { background:#1fb85a; color:#082b17; }
 @media(max-width:680px) {
   .subpage-sections article,
   .subpage-sections-wide article {

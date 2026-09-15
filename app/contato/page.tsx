@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SubpageShell from "../SubpageShell";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 import { contactChannels, siteContact } from "../../content/site";
 import MapEmbed from "../MapEmbed";
 
@@ -10,7 +11,11 @@ export default function ContatoPage() { return <SubpageShell wideCopy compactHer
   ...contactChannels.map((channel, index) => ({
     number: String(index + 1).padStart(2, "0"),
     title: channel.label,
-    text: channel.value,
+    ...(channel.label === "WhatsApp"
+      ? {
+          content: <><p>{channel.value}</p><a className="button contact-whatsapp-link" href={siteContact.whatsappHref} target="_blank" rel="noreferrer"><FaWhatsapp aria-hidden="true" />Conversar no WhatsApp</a></>,
+        }
+      : { text: channel.value }),
   })),
   {number:"03",title:"Onde estamos",content:<><div className="contact-map-preview"><MapEmbed src={siteContact.mapsEmbedHref} title={`Mapa da No Ritmo em ${siteContact.city}`} address={`${siteContact.street}, ${siteContact.streetNumber} — ${siteContact.neighborhood}, ${siteContact.city} — ${siteContact.state}, ${siteContact.postalCode}`} mapsHref={siteContact.mapsHref} /></div><p>{siteContact.street}, {siteContact.streetNumber} — {siteContact.neighborhood}, {siteContact.city} — {siteContact.state}, {siteContact.postalCode}. Anexo ao Colégio São José.</p><a className="button contact-map-link" href={siteContact.mapsHref} target="_blank" rel="noreferrer">Abrir localização no mapa</a></>},
   {number:"04",title:"Como podemos ajudar",text:"Envie uma mensagem contando se procura uma turma, aula particular, aula experimental ou coreografia. A equipe orientará o próximo passo."},
