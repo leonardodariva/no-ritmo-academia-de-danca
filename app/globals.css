@@ -1151,3 +1151,16 @@ img, iframe, video { max-width:100%; }
   .home-contact-channels .contact-with-icon { min-width:0; }
   .home-contact-channels .contact-with-icon span { min-width:0; overflow-wrap:anywhere; }
 }
+
+/* Em telas compactas, cada seção interna segue uma única coluna:
+   título, texto e ação ficam empilhados e legíveis. */
+@media(max-width:900px) {
+  .subpage-sections article,
+  .subpage-sections-wide article { grid-template-columns:minmax(0,1fr); row-gap:24px; }
+  .subpage-sections .subpage-section-title,
+  .subpage-sections-wide .subpage-section-title,
+  .subpage-sections .subpage-section-copy,
+  .subpage-sections-wide .subpage-section-copy { grid-column:1; }
+  .subpage-sections .subpage-section-copy,
+  .subpage-sections-wide .subpage-section-copy { font-size:16px; }
+}
