@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   title: "No Ritmo Academia de Dança | Apucarana",
   description: "No Ritmo é uma academia de dança em Apucarana, com aulas, estilos, projetos e experiências para todos os ritmos.",
   icons: {
-    icon: [{ url: "/icon_nr.jpeg", type: "image/jpeg" }],
-    shortcut: "/icon_nr.jpeg",
-    apple: "/icon_nr.jpeg",
+    icon: [{ url: "/icon_nr.png", type: "image/png" }],
+    shortcut: "/icon_nr.png",
+    apple: "/icon_nr.png",
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
@@ -67,5 +67,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       siteContact.mapsHref,
     ],
   };
-  return <html lang="pt-BR"><head><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="icon" href="/icon_nr.jpeg" type="image/jpeg" /><link rel="shortcut icon" href="/icon_nr.jpeg" type="image/jpeg" /><link rel="apple-touch-icon" href="/icon_nr.jpeg" /></head><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="pt-BR"><head><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="icon" href="/icon_nr.png" type="image/png" /><link rel="shortcut icon" href="/icon_nr.png" type="image/png" /><link rel="apple-touch-icon" href="/icon_nr.png" /></head><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
