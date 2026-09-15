@@ -67,5 +67,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       siteContact.mapsHref,
     ],
   };
-  return <html lang="pt-BR"><head><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></head><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="pt-BR"><head><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="icon" href="/icon_nr.jpeg" type="image/jpeg" /><link rel="shortcut icon" href="/icon_nr.jpeg" type="image/jpeg" /><link rel="apple-touch-icon" href="/icon_nr.jpeg" /></head><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
