@@ -38,6 +38,12 @@ export default function Home() {
       <div className="statement-copy"><p className="statement-eyebrow">Sobre a No Ritmo</p><h2>Muito além de aprender a dançar</h2><div className="statement-body"><p>Desde&nbsp;2010, a No Ritmo Academia de Dança conecta pessoas por meio da dança de salão. Em Apucarana, mais de 10 mil pessoas já fizeram parte dessa história.</p><p>Nosso ensino integra técnica, consciência corporal, comunicação e convivência, respeitando o ritmo de cada pessoa e desenvolvendo autonomia para aprender e dançar.</p><p>Acreditamos que dançar é perceber a si mesmo, compreender o outro e aprender juntos.</p></div><Link className="statement-button" href="/sobre">Saiba mais sobre a No Ritmo</Link></div>
     </section>
 
+    <section className="home-music-section" id="musicalidade" aria-labelledby="home-music-title">
+      <div className="home-music-heading"><p>Música aplicada à dança</p><h2 id="home-music-title">O espaço entre ouvir e compreender</h2></div>
+      <div className="home-music-copy"><p>Na dança de salão, aprender passos é apenas parte do caminho. Também é preciso compreender o que a música está dizendo ao corpo.</p><p>Nosso ensino aproxima música e movimento, trabalhando pulsação, frases, acentos, pausas e interpretação para que cada escolha de dança aconteça com mais consciência e intenção.</p><Link className="home-music-link" href="/musicalidade">Conheça o curso de música aplicada à dança <span aria-hidden="true">→</span></Link></div>
+      <div className="home-music-visual"><img src="/images/propostas/modelo-aula-dinamica.png" alt="Alunos dançando juntos em uma aula da No Ritmo" width="1536" height="1024" loading="lazy" decoding="async" /></div>
+    </section>
+
 <section className="home-classes home-services" id="produtos">
       <div className="v4-section-heading light"><p>Serviços No Ritmo</p><h2>Nossos serviços</h2><Link className="services-all-button" href="/servicos">Acessar todos os serviços</Link></div>
       <div className="home-services-grid">

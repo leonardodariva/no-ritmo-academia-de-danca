@@ -8,6 +8,7 @@ export const primaryNavigation = [
     href: "/sobre",
     children: [
       { label: "Sobre a No Ritmo", href: "/sobre" },
+      { label: "Música e musicalidade", href: "/musicalidade" },
       { label: "Missão, Visão e Valores", href: "/missao-visao-valores" },
       { label: "Estilos de dança", href: "/modalidades" },
       { label: "Formação No Ritmo", href: "/formacao" },
