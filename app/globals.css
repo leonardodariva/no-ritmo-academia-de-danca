@@ -811,6 +811,12 @@ footer { background:#0b0b0f; color:var(--cream); padding:80px 8vw 25px; }.brand-
 .subpage-cta-about a { display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:999px; }
 .subpage-cta-about a svg { width:20px; height:20px; flex-shrink:0; }
 .subpage-cta-about a { background:#25d366; color:#082b17; }
+.subpage-cta-whatsapp { display:inline-flex; align-items:center; justify-content:center; gap:10px; width:max-content; min-width:190px; background:#25d366 !important; color:#082b17 !important; font-weight:700 !important; }
+.subpage-cta-whatsapp svg { width:18px; height:18px; flex:0 0 18px; }
+.subpage-cta-whatsapp:hover,.subpage-cta-whatsapp:focus-visible { background:#1fb85a !important; color:#082b17 !important; }
+@media(max-width:680px) {
+  .subpage-cta-whatsapp { width:100%; max-width:100%; margin-top:10px; }
+}
 
 .home-principles-intro { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; }
 .home-principles-intro h3,.home-principles-values-title { margin:0 0 18px; font-size:28px; }
@@ -1160,7 +1166,7 @@ img, iframe, video { max-width:100%; }
 
 /* Em telas compactas, cada seção interna segue uma única coluna:
    título, texto e ação ficam empilhados e legíveis. */
-@media(max-width:900px) {
+@media(max-width:1024px) {
   .subpage-sections article,
   .subpage-sections-wide article { grid-template-columns:minmax(0,1fr); row-gap:24px; }
   .subpage-sections .subpage-section-title,
@@ -1169,4 +1175,47 @@ img, iframe, video { max-width:100%; }
   .subpage-sections-wide .subpage-section-copy { grid-column:1; }
   .subpage-sections .subpage-section-copy,
   .subpage-sections-wide .subpage-section-copy { font-size:16px; }
+}
+
+/* Subpáginas: padroniza o recuo e evita colunas estreitas em tablet/mobile. */
+@media(max-width:1100px) {
+  /* Mantém o mesmo recuo lateral em hero, breadcrumb e conteúdo. */
+  .subpage-hero,
+  .subpage-hero.subpage-hero-photo,
+  .subpage-breadcrumb,
+  .subpage-sections,
+  .subpage-sections-wide,
+  .subpage-cta,
+  .subpage-footer {
+    padding-inline:clamp(20px,5vw,64px);
+  }
+  .subpage-sections article { padding-inline:0; }
+  .subpage-sections p,
+  .subpage-sections-wide p { grid-column:auto !important; }
+  .subpage:has(.contact-map-preview) .subpage-sections article {
+    grid-template-columns:minmax(0,1fr) !important;
+    row-gap:24px;
+  }
+  .subpage:has(.contact-map-preview) .subpage-section-title,
+  .subpage:has(.contact-map-preview) .subpage-section-copy {
+    grid-column:1 !important;
+    width:100%;
+    max-width:100%;
+    text-align:left;
+  }
+  .subpage:has(.contact-map-preview) .subpage-section-copy {
+    display:flex;
+    flex-direction:column;
+    justify-items:start;
+    align-items:start;
+  }
+  .subpage:has(.contact-map-preview) .subpage-section-copy > p,
+  .subpage:has(.contact-map-preview) .subpage-section-copy > a,
+  .subpage:has(.contact-map-preview) .subpage-section-copy > .contact-map-preview {
+    width:100%;
+    text-align:left !important;
+  }
+  .subpage:has(.contact-map-preview) .subpage-section-copy .button {
+    justify-self:start;
+  }
 }

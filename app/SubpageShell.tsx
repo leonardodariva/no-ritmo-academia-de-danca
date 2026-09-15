@@ -33,7 +33,7 @@ export default function SubpageShell({ kicker, title, intro, sections, wideCopy 
           return <article key={section.number} id={section.id} className={section.fullWidth ? "subpage-section-full" : undefined}><div className="subpage-section-title"><h2>{section.title}</h2>{section.titleAddon}</div><div className="subpage-section-copy">{section.content}{paragraphs.map((paragraph, index) => <p key={`${section.number}-${index}`}>{paragraph}</p>)}{section.quote && <blockquote>{section.quote}</blockquote>}{section.closing && <p className="subpage-section-closing">{section.closing}</p>}</div></article>;
         })}
       </section>
-      <section className={wideCopy ? "subpage-cta subpage-cta-about" : "subpage-cta"}><p>{ctaIntro ?? "Fale diretamente com a equipe"}</p><h2>{ctaTitle ?? (wideCopy ? "Para dar o seu primeiro passo na dança de salão, clique no botão abaixo." : "Vamos encontrar a melhor experiência para você?")}</h2><a href={siteContact.whatsappHref} target="_blank" rel="noreferrer">{wideCopy && <FaWhatsapp aria-hidden="true" />}Conversar no WhatsApp</a></section>
+      <section className={wideCopy ? "subpage-cta subpage-cta-about" : "subpage-cta"}><p>{ctaIntro ?? "Fale diretamente com a equipe"}</p><h2>{ctaTitle ?? (wideCopy ? "Para dar o seu primeiro passo na dança de salão, clique no botão abaixo." : "Vamos encontrar a melhor experiência para você?")}</h2><a className="button subpage-cta-whatsapp" href={siteContact.whatsappHref} target="_blank" rel="noreferrer"><FaWhatsapp aria-hidden="true" />Conversar no WhatsApp</a></section>
       <SiteFooter />
     </main>
   );
