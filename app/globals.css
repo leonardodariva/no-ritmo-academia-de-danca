@@ -1270,3 +1270,14 @@ img, iframe, video { max-width:100%; }
     justify-self:start;
   }
 }
+
+/* Home: alinha o conteúdo editorial de “Sobre a No Ritmo” à direita
+   em telas maiores, mantendo a leitura natural em dispositivos móveis. */
+@media(min-width:681px) {
+  .v4-statement .statement-copy,
+  .v4-statement .statement-copy .statement-eyebrow,
+  .v4-statement .statement-copy h2,
+  .v4-statement .statement-copy > p:not(.statement-eyebrow) {
+    text-align:right;
+  }
+}
