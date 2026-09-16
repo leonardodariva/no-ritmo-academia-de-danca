@@ -26,7 +26,7 @@ const debutanteSections = [
     title: "Quanto mais a festa se aproxima, maior é a correria",
     content: <>
       <p>Nos últimos meses antes dos 15 anos, a quantidade de compromissos tende a aumentar.</p>
-      <p>Vestido, decoração, fotografia e filmagem, convites, confirmação de convidados, cabelo, maquiagem, cerimonial, fornecedores, escolha das músicas, últimos ajustes da festa — tudo começa a exigir atenção ao mesmo tempo.</p>
+      <p>Vestido, decoração, fotografia e filmagem, convites, confirmação de convidados, cabelo, maquiagem, cerimonial, fornecedores, escolha das músicas, últimos ajustes da festa - tudo começa a exigir atenção ao mesmo tempo.</p>
       <p>Para a debutante, ainda existe a rotina normal: escola, estudos, família, amigos e outros compromissos.</p>
       <p>E essa correria não envolve somente ela.</p>
       <p><strong>Pai e mãe também estão diretamente envolvidos na organização</strong>, tomando decisões, resolvendo detalhes e acompanhando fornecedores.</p>
@@ -51,7 +51,7 @@ const debutanteSections = [
     content: <>
       <p>Existe uma grande diferença entre <strong>decorar uma coreografia</strong> e realmente <strong>sentir-se confortável dançando-a</strong>.</p>
       <p>Quando há tempo, os movimentos são assimilados aos poucos. A debutante ganha segurança, expressão e confiança, e aquilo que inicialmente exigia muita concentração começa a acontecer de maneira muito mais natural.</p>
-      <p>O mesmo vale para o pai, familiares e amigos que participarão da apresentação — principalmente quando são pessoas que nunca tiveram contato com a dança.</p>
+      <p>O mesmo vale para o pai, familiares e amigos que participarão da apresentação - principalmente quando são pessoas que nunca tiveram contato com a dança.</p>
       <p>Com antecedência, podemos respeitar o ritmo de aprendizagem de cada participante, sem transformar os ensaios em uma corrida contra o calendário.</p>
     </>,
   },
@@ -87,7 +87,7 @@ export default function DebutantesPage() {
     compactHero
     kicker="Uma celebração única"
     title="Coreografias para debutantes"
-    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
+    breadcrumbParent={{ label: "Serviços", href: "/servicos" }}
     intro="Uma noite de 15 anos merece uma coreografia preparada sem pressa."
     sections={debutanteSections}
     ctaIntro="Prepare esse momento"

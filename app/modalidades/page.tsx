@@ -19,7 +19,7 @@ export default function ModalidadesPage() {
     kicker="Encontre seu estilo"
     title="Estilos de dança"
     intro="Um repertório com 22 estilos para conhecer diferentes culturas, musicalidades e formas de dançar."
-    breadcrumbParent={{ label: "A No Ritmo", href: "/sobre" }}
+    breadcrumbParent={{ label: "Serviços", href: "/servicos" }}
     sections={danceStyles.map((style, index) => ({
       number: String(index + 1).padStart(2, "0"),
       title: style.name,

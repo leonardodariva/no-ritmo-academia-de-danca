@@ -21,15 +21,15 @@ export default function FormacaoPage() {
       {
         number: "00",
         title: "Escolha seu caminho de formação",
-        content: <div className="formation-shortcuts"><Link href="/formacao/cfp"><strong>CFP — Curso de Formação Profissional</strong><span>Planejamento e condução do processo de ensino.</span><b>Conhecer o CFP →</b></Link><Link href="/formacao/cfa"><strong>CFA — Curso de Formação de Assistentes</strong><span>Apoio à equipe e aos alunos na linha de frente da aprendizagem.</span><b>Conhecer o CFA →</b></Link></div>,
+        content: <div className="formation-shortcuts"><Link href="/formacao/cfp"><strong>CFP - Curso de Formação Profissional</strong><span>Planejamento e condução do processo de ensino.</span><b>Conhecer o CFP →</b></Link><Link href="/formacao/cfa"><strong>CFA - Curso de Formação de Assistentes</strong><span>Apoio à equipe e aos alunos na linha de frente da aprendizagem.</span><b>Conhecer o CFA →</b></Link></div>,
         fullWidth: true,
       },
       {
         number: "01",
-        title: "CFP — Curso de Formação Profissional em Dança de Salão",
+        title: "CFP - Curso de Formação Profissional em Dança de Salão",
         content: <>
           <p><strong>Saber dançar é uma coisa. Saber ensinar alguém a dançar é outra.</strong></p>
-          <p>O <strong>CFP — Curso de Formação Profissional da No Ritmo</strong> é uma formação voltada para quem deseja compreender a dança de salão para além dos passos e desenvolver conhecimentos para atuar profissionalmente com o seu ensino.</p>
+          <p>O <strong>CFP - Curso de Formação Profissional da No Ritmo</strong> é uma formação voltada para quem deseja compreender a dança de salão para além dos passos e desenvolver conhecimentos para atuar profissionalmente com o seu ensino.</p>
           <p><strong>Desde 2014, o CFP acontece nesses mesmos moldes na No Ritmo</strong>, integrando conhecimentos técnicos, pedagógicos e humanos à formação profissional em dança de salão.</p>
           <p>A proposta nasceu da percepção de que um bom professor não é necessariamente aquele que possui o maior repertório de movimentos, mas aquele que consegue <strong>transformar conhecimento em aprendizagem</strong>.</p>
           <p>Por isso, desde suas primeiras edições, o CFP reúne conhecimentos de diferentes áreas aplicados à dança de salão, abordando conteúdos como <strong>didática, andragogia, cinesiologia, comunicação verbal e não verbal, análise comportamental, musicalidade, universo rítmico, oratória, empreendedorismo e marketing pessoal</strong>, além do estudo técnico dos principais estilos de dança.</p>
@@ -57,15 +57,15 @@ export default function FormacaoPage() {
           <p>Porque ensinar dança de salão envolve muito mais do que passos.</p>
           <p>Envolve pessoas.</p>
         </>,
-        closing: "CFP No Ritmo — Conhecimento para dançar. Método para ensinar. Autonomia para continuar aprendendo.",
+        closing: "CFP No Ritmo - Conhecimento para dançar. Método para ensinar. Autonomia para continuar aprendendo.",
         id: "cfp",
       },
       {
         number: "02",
-        title: "CFA — Curso de Formação de Assistentes",
+        title: "CFA - Curso de Formação de Assistentes",
         content: <h3>Muito além de aprender a dançar. Aprenda a compreender o processo de ensinar.</h3>,
         paragraphs: [
-          <>O <strong>CFA — Curso de Formação de Assistentes da No Ritmo</strong> foi desenvolvido para alunos que desejam aprofundar seus conhecimentos na dança de salão e dar os primeiros passos dentro do universo do ensino.</>,
+          <>O <strong>CFA - Curso de Formação de Assistentes da No Ritmo</strong> foi desenvolvido para alunos que desejam aprofundar seus conhecimentos na dança de salão e dar os primeiros passos dentro do universo do ensino.</>,
           <><strong>O CFA acontece desde 2010, ano em que a Academia No Ritmo nasceu.</strong> A formação de assistentes faz parte da história da escola desde o seu início.</>,
           <>A proposta vai além de aprender novos passos e movimentações. Durante a formação, o participante começa a compreender <strong>como as pessoas aprendem</strong>, como observar uma turma, identificar dificuldades, comunicar uma orientação e colaborar com o professor durante uma aula.</>,
           <>O curso integra conhecimentos técnicos da dança com temas fundamentais para a formação humana e pedagógica, como <strong>comunicação, escuta ativa, sistemas representacionais, fisiologia, percepção corporal, acolhimento, voluntariado, oratória e responsabilidade no processo de ensino-aprendizagem</strong>.</>,

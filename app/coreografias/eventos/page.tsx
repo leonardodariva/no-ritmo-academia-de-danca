@@ -35,7 +35,7 @@ const eventSections = [
         <li>escolas e colégios;</li><li>aniversários e comemorações institucionais;</li><li>festas temáticas;</li><li>eventos empresariais;</li><li>confraternizações;</li><li>abertura ou encerramento de eventos;</li><li>apresentações de professores, funcionários ou colaboradores;</li><li>grupos de alunos;</li><li>ações culturais;</li><li>festivais e celebrações;</li><li>grandes grupos e apresentações coletivas;</li><li>intervenções coreográficas;</li><li>momentos especiais dentro de eventos.</li>
       </ul>
       <p>A proposta pode envolver poucas pessoas ou centenas de participantes.</p>
-      <p><strong>O projeto é construído de acordo com o objetivo do evento — e não o evento adaptado a uma coreografia pronta.</strong></p>
+      <p><strong>O projeto é construído de acordo com o objetivo do evento - e não o evento adaptado a uma coreografia pronta.</strong></p>
     </>,
   },
   {
@@ -105,7 +105,7 @@ export default function EventosPage() {
     compactHero
     kicker="De pequenos grupos a grandes projetos"
     title="Coreografias para eventos"
-    breadcrumbParent={{ label: "Conheça os serviços da No Ritmo", href: "/servicos" }}
+    breadcrumbParent={{ label: "Serviços", href: "/servicos" }}
     intro="Projetos personalizados para escolas, empresas e eventos, de pequenos grupos a mais de mil participantes."
     sections={eventSections}
     ctaIntro="Cada projeto começa com uma conversa"

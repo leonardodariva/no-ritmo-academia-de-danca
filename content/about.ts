@@ -10,7 +10,7 @@ export const institutionalSections: InstitutionalSection[] = [
   {
     title: "Muito além de aprender a dançar",
     paragraphs: [
-      "Fundada em 15 de junho de 2010, em Apucarana–PR, a No Ritmo Academia de Dança nasceu para ensinar dança de salão, mas, ao longo de sua trajetória, desenvolveu uma compreensão muito mais ampla sobre o que acontece quando duas pessoas aprendem a dançar juntas.",
+      "Fundada em 15 de junho de 2010, em Apucarana-PR, a No Ritmo Academia de Dança nasceu para ensinar dança de salão, mas, ao longo de sua trajetória, desenvolveu uma compreensão muito mais ampla sobre o que acontece quando duas pessoas aprendem a dançar juntas.",
       "Aprender passos é parte do processo. Mas não é tudo.",
       "A dança também exige comunicação, percepção, escuta, consciência corporal, atenção, adaptação, confiança e convivência. Por isso, entendemos a dança de salão como uma poderosa ferramenta de aprendizagem e desenvolvimento humano.",
       "Ao longo de nossa história, mais de 10 mil pessoas já passaram pela No Ritmo, entre crianças, jovens, adultos e idosos, em aulas particulares, turmas regulares, projetos sociais, ações culturais, eventos e parcerias com instituições públicas e privadas.",
@@ -79,6 +79,6 @@ export const institutionalSections: InstitutionalSection[] = [
       "E continuar aprendendo.",
       "Aprender no seu ritmo é parte desse propósito: cada pessoa pode avançar com segurança, autonomia e espaço para errar.",
     ],
-    closing: "No Ritmo Academia de Dança — Dança de salão, aprendizagem e desenvolvimento humano desde 2010.",
+    closing: "No Ritmo Academia de Dança - Dança de salão, aprendizagem e desenvolvimento humano desde 2010.",
   },
 ];

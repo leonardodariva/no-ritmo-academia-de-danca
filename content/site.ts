@@ -33,7 +33,7 @@ export const siteContact = {
 export const contactChannels: ContactChannel[] = [
   {
     label: "WhatsApp",
-    value: `${siteContact.phoneDisplay} — aulas, turmas, coreografias e atendimento.`,
+    value: `${siteContact.phoneDisplay} - aulas, turmas, coreografias e atendimento.`,
     href: siteContact.whatsappHref,
   },
   {
@@ -44,10 +44,10 @@ export const contactChannels: ContactChannel[] = [
 ];
 
 export const weeklySchedule: ScheduleDay[] = [
-  { day: "Segunda-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante", time: "19h00 — 20h30" }, { level: "Nível iniciados", time: "20h30 — 22h00" }] },
-  { day: "Terça-feira", teacher: "Professor Leonardo", sessions: [{ level: "Nível iniciante", time: "19h30 — 21h00" }] },
-  { day: "Quarta-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante", time: "20h00 — 21h30" }] },
-  { day: "Quinta-feira", teacher: "Professor Luciano", sessions: [{ level: "Nível 2", time: "20h00 — 21h30" }] },
+  { day: "Segunda-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante", time: "19h00 - 20h30" }, { level: "Nível iniciados", time: "20h30 - 22h00" }] },
+  { day: "Terça-feira", teacher: "Professor Leonardo", sessions: [{ level: "Nível iniciante", time: "19h30 - 21h00" }] },
+  { day: "Quarta-feira", teacher: "Professora Lilian", sessions: [{ level: "Nível iniciante", time: "20h00 - 21h30" }] },
+  { day: "Quinta-feira", teacher: "Professor Luciano", sessions: [{ level: "Nível 2", time: "20h00 - 21h30" }] },
   { day: "Sexta-feira", teacher: "", sessions: [] },
-  { day: "Sábado", teacher: "Professor Luciano", sessions: [{ level: "Turma iniciante", time: "13h30 — 15h00" }, { level: "Turma de iniciados", time: "15h00 — 16h30" }] },
+  { day: "Sábado", teacher: "Professor Luciano", sessions: [{ level: "Turma iniciante", time: "13h30 - 15h00" }, { level: "Turma de iniciados", time: "15h00 - 16h30" }] },
 ];
